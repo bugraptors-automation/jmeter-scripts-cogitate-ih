@@ -1,0 +1,5 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1692613191508,0,Transaction Controller - Login,200,"Number of samples in transaction : 0, number of failing samples : 0",Thread Group 1-1,,true,,0,0,1,1,null,0,1,0
+1692613191510,0,Transaction Controller - Logout,200,"Number of samples in transaction : 0, number of failing samples : 0",Thread Group 1-1,,true,,0,0,1,1,null,0,0,0
+1692613191944,0,Transaction Controller - Login,200,"Number of samples in transaction : 0, number of failing samples : 0",Thread Group 1-2,,true,,0,0,1,1,null,0,0,0
+1692613191945,0,Transaction Controller - Logout,200,"Number of samples in transaction : 0, number of failing samples : 0",Thread Group 1-2,,true,,0,0,1,1,null,0,0,0
