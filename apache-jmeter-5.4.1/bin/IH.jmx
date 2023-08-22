@@ -752,7 +752,7 @@ WDS.sampleResult.sampleEnd();
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename"></stringProp>
+          <stringProp name="filename">D:\Test\jmeter-scripts-cogitate-ih\apache-jmeter-5.4.1\bin\results.jtl</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
