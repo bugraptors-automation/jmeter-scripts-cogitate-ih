@@ -1,48 +1,48 @@
-2023-08-22 06:59:11,343 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2023-08-22 06:59:11,377 INFO o.a.j.JMeter: Loading user properties from: user.properties
-2023-08-22 06:59:11,377 INFO o.a.j.JMeter: Loading system properties from: system.properties
-2023-08-22 06:59:11,386 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
-2023-08-22 06:59:11,386 INFO o.a.j.JMeter: Version 5.4.1
-2023-08-22 06:59:11,386 INFO o.a.j.JMeter: java.version=11.0.20
-2023-08-22 06:59:11,386 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
-2023-08-22 06:59:11,386 INFO o.a.j.JMeter: os.name=Linux
-2023-08-22 06:59:11,386 INFO o.a.j.JMeter: os.arch=amd64
-2023-08-22 06:59:11,387 INFO o.a.j.JMeter: os.version=5.10.0-24-cloud-amd64
-2023-08-22 06:59:11,387 INFO o.a.j.JMeter: file.encoding=UTF-8
-2023-08-22 06:59:11,387 INFO o.a.j.JMeter: java.awt.headless=true
-2023-08-22 06:59:11,387 INFO o.a.j.JMeter: Max memory     =1073741824
-2023-08-22 06:59:11,387 INFO o.a.j.JMeter: Available Processors =4
-2023-08-22 06:59:11,401 INFO o.a.j.JMeter: Default Locale=English (EN)
-2023-08-22 06:59:11,401 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2023-08-22 06:59:11,401 INFO o.a.j.JMeter: JMeterHome=/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.4.1
-2023-08-22 06:59:11,401 INFO o.a.j.JMeter: user.dir  =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.4.1/bin
-2023-08-22 06:59:11,402 INFO o.a.j.JMeter: PWD       =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.4.1/bin
-2023-08-22 06:59:11,402 INFO o.a.j.JMeter: IP: 10.128.0.2 Name: master FullName: master.us-central1-a.c.ih-project-396106.internal
-2023-08-22 06:59:11,409 INFO o.a.j.s.FileServer: Default base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.4.1/bin'
-2023-08-22 06:59:11,410 INFO o.a.j.s.FileServer: Set new base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.4.1/bin'
-2023-08-22 06:59:11,728 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2023-08-22 06:59:11,756 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2023-08-22 06:59:11,760 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2023-08-22 06:59:11,764 INFO o.a.j.s.SaveService: Loading file: IH.jmx
-2023-08-22 06:59:11,968 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2023-08-22 06:59:11,969 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
-2023-08-22 06:59:11,969 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2023-08-22 06:59:11,969 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2023-08-22 06:59:12,383 INFO o.a.j.JMeter: Creating summariser <summary>
-2023-08-22 06:59:12,390 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2023-08-22 06:59:12,392 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2023-08-22 06:59:12,395 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2023-08-22 06:59:12,416 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2023-08-22 06:59:12,416 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2023-08-22 06:59:12,513 INFO o.a.j.JMeter: Running test (1692687552513)
-2023-08-22 06:59:12,541 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
-2023-08-22 06:59:12,541 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group Thread Group.
-2023-08-22 06:59:12,542 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
-2023-08-22 06:59:12,542 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=2 ramp-up=1 delayedStart=false
-2023-08-22 06:59:12,567 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2023-08-22 06:59:12,567 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2023-08-22 06:59:12,618 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
-2023-08-22 06:59:12,650 ERROR o.a.j.t.JMeterThread: Error calling threadStarted
+2023-08-22 09:34:54,329 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-08-22 09:34:54,373 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2023-08-22 09:34:54,374 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2023-08-22 09:34:54,391 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2023-08-22 09:34:54,392 INFO o.a.j.JMeter: Version 5.4.1
+2023-08-22 09:34:54,392 INFO o.a.j.JMeter: java.version=11.0.20
+2023-08-22 09:34:54,392 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2023-08-22 09:34:54,392 INFO o.a.j.JMeter: os.name=Linux
+2023-08-22 09:34:54,392 INFO o.a.j.JMeter: os.arch=amd64
+2023-08-22 09:34:54,393 INFO o.a.j.JMeter: os.version=5.10.0-25-cloud-amd64
+2023-08-22 09:34:54,393 INFO o.a.j.JMeter: file.encoding=UTF-8
+2023-08-22 09:34:54,393 INFO o.a.j.JMeter: java.awt.headless=true
+2023-08-22 09:34:54,393 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-08-22 09:34:54,393 INFO o.a.j.JMeter: Available Processors =4
+2023-08-22 09:34:54,418 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-08-22 09:34:54,419 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-08-22 09:34:54,419 INFO o.a.j.JMeter: JMeterHome=/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.4.1
+2023-08-22 09:34:54,419 INFO o.a.j.JMeter: user.dir  =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.4.1/bin
+2023-08-22 09:34:54,420 INFO o.a.j.JMeter: PWD       =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.4.1/bin
+2023-08-22 09:34:54,420 INFO o.a.j.JMeter: IP: 10.128.0.2 Name: master FullName: master.us-central1-a.c.ih-project-396106.internal
+2023-08-22 09:34:54,432 INFO o.a.j.s.FileServer: Default base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.4.1/bin'
+2023-08-22 09:34:54,433 INFO o.a.j.s.FileServer: Set new base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.4.1/bin'
+2023-08-22 09:34:54,793 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-08-22 09:34:54,842 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-08-22 09:34:54,847 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-08-22 09:34:54,851 INFO o.a.j.s.SaveService: Loading file: IH.jmx
+2023-08-22 09:34:55,148 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2023-08-22 09:34:55,149 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2023-08-22 09:34:55,149 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-08-22 09:34:55,149 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-08-22 09:34:55,617 INFO o.a.j.JMeter: Creating summariser <summary>
+2023-08-22 09:34:55,624 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-08-22 09:34:55,626 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-08-22 09:34:55,626 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-08-22 09:34:55,655 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2023-08-22 09:34:55,655 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2023-08-22 09:34:55,787 INFO o.a.j.JMeter: Running test (1692696895787)
+2023-08-22 09:34:55,814 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2023-08-22 09:34:55,814 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group Thread Group.
+2023-08-22 09:34:55,815 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2023-08-22 09:34:55,815 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=2 ramp-up=1 delayedStart=false
+2023-08-22 09:34:55,839 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-08-22 09:34:55,842 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-08-22 09:34:55,947 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2023-08-22 09:34:55,992 ERROR o.a.j.t.JMeterThread: Error calling threadStarted
 java.lang.IllegalStateException: Actual executable Unable to find executable for: /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.4.1/bin/chromedriver
 	at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314) ~[selenium-api-4.9.1.jar:?]
 	at org.openqa.selenium.os.OsProcess.<init>(OsProcess.java:65) ~[selenium-remote-driver-4.9.1.jar:?]
@@ -60,9 +60,9 @@ java.lang.IllegalStateException: Actual executable Unable to find executable for
 	at org.apache.jmeter.threads.JMeterThread.initRun(JMeterThread.java:740) [ApacheJMeter_core.jar:5.4.1]
 	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:252) [ApacheJMeter_core.jar:5.4.1]
 	at java.lang.Thread.run(Thread.java:829) [?:?]
-2023-08-22 06:59:12,674 INFO o.a.j.s.FileServer: Stored: AdvanceSearch.csv
-2023-08-22 06:59:12,680 INFO o.a.j.s.FileServer: Stored: LoginDetails.csv
-2023-08-22 06:59:12,681 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'Get Login'.
+2023-08-22 09:34:56,012 INFO o.a.j.s.FileServer: Stored: AdvanceSearch.csv
+2023-08-22 09:34:56,022 INFO o.a.j.s.FileServer: Stored: LoginDetails.csv
+2023-08-22 09:34:56,024 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'Get Login'.
 java.lang.IllegalArgumentException: Browser has not been configured.  Please ensure at least 1 WebDriverConfig is created for a ThreadGroup.
 	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:65) ~[jmeter-plugins-webdriver-4.10.0.0.jar:?]
 	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:638) ~[ApacheJMeter_core.jar:5.4.1]
@@ -70,7 +70,7 @@ java.lang.IllegalArgumentException: Browser has not been configured.  Please ens
 	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489) [ApacheJMeter_core.jar:5.4.1]
 	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256) [ApacheJMeter_core.jar:5.4.1]
 	at java.lang.Thread.run(Thread.java:829) [?:?]
-2023-08-22 06:59:12,682 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'Login'.
+2023-08-22 09:34:56,024 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'Login'.
 java.lang.IllegalArgumentException: Browser has not been configured.  Please ensure at least 1 WebDriverConfig is created for a ThreadGroup.
 	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:65) ~[jmeter-plugins-webdriver-4.10.0.0.jar:?]
 	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:638) ~[ApacheJMeter_core.jar:5.4.1]
@@ -78,7 +78,7 @@ java.lang.IllegalArgumentException: Browser has not been configured.  Please ens
 	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489) [ApacheJMeter_core.jar:5.4.1]
 	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256) [ApacheJMeter_core.jar:5.4.1]
 	at java.lang.Thread.run(Thread.java:829) [?:?]
-2023-08-22 06:59:12,682 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'Logout'.
+2023-08-22 09:34:56,025 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'Logout'.
 java.lang.IllegalArgumentException: Browser has not been configured.  Please ensure at least 1 WebDriverConfig is created for a ThreadGroup.
 	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:65) ~[jmeter-plugins-webdriver-4.10.0.0.jar:?]
 	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:638) ~[ApacheJMeter_core.jar:5.4.1]
@@ -86,10 +86,10 @@ java.lang.IllegalArgumentException: Browser has not been configured.  Please ens
 	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489) [ApacheJMeter_core.jar:5.4.1]
 	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256) [ApacheJMeter_core.jar:5.4.1]
 	at java.lang.Thread.run(Thread.java:829) [?:?]
-2023-08-22 06:59:12,683 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
-2023-08-22 06:59:12,683 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
-2023-08-22 06:59:13,106 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
-2023-08-22 06:59:13,108 ERROR o.a.j.t.JMeterThread: Error calling threadStarted
+2023-08-22 09:34:56,025 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2023-08-22 09:34:56,025 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2023-08-22 09:34:56,429 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2023-08-22 09:34:56,431 ERROR o.a.j.t.JMeterThread: Error calling threadStarted
 java.lang.IllegalStateException: Actual executable Unable to find executable for: /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.4.1/bin/chromedriver
 	at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:314) ~[selenium-api-4.9.1.jar:?]
 	at org.openqa.selenium.os.OsProcess.<init>(OsProcess.java:65) ~[selenium-remote-driver-4.9.1.jar:?]
@@ -107,7 +107,7 @@ java.lang.IllegalStateException: Actual executable Unable to find executable for
 	at org.apache.jmeter.threads.JMeterThread.initRun(JMeterThread.java:740) [ApacheJMeter_core.jar:5.4.1]
 	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:252) [ApacheJMeter_core.jar:5.4.1]
 	at java.lang.Thread.run(Thread.java:829) [?:?]
-2023-08-22 06:59:13,109 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'Get Login'.
+2023-08-22 09:34:56,433 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'Get Login'.
 java.lang.IllegalArgumentException: Browser has not been configured.  Please ensure at least 1 WebDriverConfig is created for a ThreadGroup.
 	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:65) ~[jmeter-plugins-webdriver-4.10.0.0.jar:?]
 	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:638) ~[ApacheJMeter_core.jar:5.4.1]
@@ -115,7 +115,7 @@ java.lang.IllegalArgumentException: Browser has not been configured.  Please ens
 	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489) [ApacheJMeter_core.jar:5.4.1]
 	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256) [ApacheJMeter_core.jar:5.4.1]
 	at java.lang.Thread.run(Thread.java:829) [?:?]
-2023-08-22 06:59:13,109 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'Login'.
+2023-08-22 09:34:56,433 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'Login'.
 java.lang.IllegalArgumentException: Browser has not been configured.  Please ensure at least 1 WebDriverConfig is created for a ThreadGroup.
 	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:65) ~[jmeter-plugins-webdriver-4.10.0.0.jar:?]
 	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:638) ~[ApacheJMeter_core.jar:5.4.1]
@@ -123,7 +123,7 @@ java.lang.IllegalArgumentException: Browser has not been configured.  Please ens
 	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489) [ApacheJMeter_core.jar:5.4.1]
 	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256) [ApacheJMeter_core.jar:5.4.1]
 	at java.lang.Thread.run(Thread.java:829) [?:?]
-2023-08-22 06:59:13,110 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'Logout'.
+2023-08-22 09:34:56,437 ERROR o.a.j.t.JMeterThread: Error while processing sampler: 'Logout'.
 java.lang.IllegalArgumentException: Browser has not been configured.  Please ensure at least 1 WebDriverConfig is created for a ThreadGroup.
 	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:65) ~[jmeter-plugins-webdriver-4.10.0.0.jar:?]
 	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:638) ~[ApacheJMeter_core.jar:5.4.1]
@@ -131,9 +131,9 @@ java.lang.IllegalArgumentException: Browser has not been configured.  Please ens
 	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489) [ApacheJMeter_core.jar:5.4.1]
 	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256) [ApacheJMeter_core.jar:5.4.1]
 	at java.lang.Thread.run(Thread.java:829) [?:?]
-2023-08-22 06:59:13,110 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-2
-2023-08-22 06:59:13,110 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
-2023-08-22 06:59:13,110 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2023-08-22 06:59:13,111 INFO o.a.j.s.FileServer: Close: LoginDetails.csv
-2023-08-22 06:59:13,112 INFO o.a.j.s.FileServer: Close: AdvanceSearch.csv
-2023-08-22 06:59:13,113 INFO o.a.j.r.Summariser: summary =      0 in 00:00:00 = ******/s Avg:     0 Min: 9223372036854775807 Max: -9223372036854775808 Err:     0 (0.00%)
+2023-08-22 09:34:56,438 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-2
+2023-08-22 09:34:56,438 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
+2023-08-22 09:34:56,438 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-08-22 09:34:56,438 INFO o.a.j.s.FileServer: Close: LoginDetails.csv
+2023-08-22 09:34:56,440 INFO o.a.j.s.FileServer: Close: AdvanceSearch.csv
+2023-08-22 09:34:56,441 INFO o.a.j.r.Summariser: summary =      0 in 00:00:00 = ******/s Avg:     0 Min: 9223372036854775807 Max: -9223372036854775808 Err:     0 (0.00%)
