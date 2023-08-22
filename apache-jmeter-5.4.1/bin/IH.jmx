@@ -80,22 +80,16 @@
           <stringProp name="variableNames">status,insuredName,fromDate,toDate,policyNo,applicationNo,phoneNo</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - Login" enabled="true">
-          <boolProp name="TransactionController.includeTimers">false</boolProp>
-          <boolProp name="TransactionController.parent">true</boolProp>
-        </TransactionController>
-        <hashTree>
-          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
-            <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
+          <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
 WDS.browser.get(&apos;${APP_URL}&apos;);
-WDS.sampleResult.sampleEnd();
-</stringProp>
-            <stringProp name="WebDriverSampler.parameters"></stringProp>
-            <stringProp name="WebDriverSampler.language">javascript</stringProp>
-          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-          <hashTree/>
-          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login" enabled="true">
-            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+WDS.sampleResult.sampleEnd();</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">javascript</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login" enabled="true">
+          <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
@@ -118,11 +112,32 @@ wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.i
 
 WDS.sampleResult.sampleEnd();
 </stringProp>
-            <stringProp name="WebDriverSampler.parameters"></stringProp>
-            <stringProp name="WebDriverSampler.language">javascript</stringProp>
-          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-          <hashTree/>
-        </hashTree>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">javascript</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Logout" enabled="true">
+          <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+WDS.browser.findElement(pkg.By.id(&quot;logout&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">javascript</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - Login" enabled="false">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree/>
         <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - New Business" enabled="false">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">false</boolProp>
@@ -652,29 +667,11 @@ WDS.sampleResult.sampleEnd();</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - Logout" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - Logout" enabled="false">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
-        <hashTree>
-          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Logout" enabled="true">
-            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
-var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
-var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
-
-WDS.sampleResult.sampleStart();
-WDS.browser.findElement(pkg.By.id(&quot;logout&quot;)).click();
-
-wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-
-WDS.sampleResult.sampleEnd();
-</stringProp>
-            <stringProp name="WebDriverSampler.parameters"></stringProp>
-            <stringProp name="WebDriverSampler.language">javascript</stringProp>
-          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-          <hashTree/>
-        </hashTree>
+        <hashTree/>
         <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
           <boolProp name="displayJMeterProperties">false</boolProp>
           <boolProp name="displayJMeterVariables">true</boolProp>
@@ -718,7 +715,7 @@ WDS.sampleResult.sampleEnd();
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -752,7 +749,7 @@ WDS.sampleResult.sampleEnd();
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">D:\Test\jmeter-scripts-cogitate-ih\apache-jmeter-5.4.1\bin\results.jtl</stringProp>
+          <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
