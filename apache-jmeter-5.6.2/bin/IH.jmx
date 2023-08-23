@@ -10,7 +10,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="APP_URL" elementType="Argument">
             <stringProp name="Argument.name">APP_URL</stringProp>
-            <stringProp name="Argument.value">${__P(url,https://testapps.cogitate.us/ih/)}</stringProp>
+            <stringProp name="Argument.value">${__P(url,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
