@@ -1759,10 +1759,9 @@ WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, upload
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, uploadButton);
 
 wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
-java.lang.Thread.sleep(2000);
+java.lang.Thread.sleep(1000);//Loader bar appearing randomly
 //WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;C:/Users/kumarmohit1/Downloads/Cancellation_cogitate/jmeter-scripts-cogitate-ih/UploadFile.pdf&quot;]);
 WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;${__escapeOroRegexpChars(${pdfFilePath},)}&quot;]);
-
 java.lang.Thread.sleep(3000);//NOTE:Getting Loader Bar randomly in headless mode
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
