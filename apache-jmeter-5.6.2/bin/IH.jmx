@@ -29,9 +29,9 @@
           <boolProp name="WebDriverConfig.acceptinsecurecerts">true</boolProp>
           <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
           <stringProp name="WebDriverConfig.driver_path">chromedriver-linux64\chromedriver</stringProp>
-          <boolProp name="WebDriverConfig.dev_mode">true</boolProp>
-          <boolProp name="WebDriverConfig.headless">false</boolProp>
-          <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+          <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+          <boolProp name="WebDriverConfig.headless">true</boolProp>
+          <boolProp name="WebDriverConfig.maximize_browser">false</boolProp>
           <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
           <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
           <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
