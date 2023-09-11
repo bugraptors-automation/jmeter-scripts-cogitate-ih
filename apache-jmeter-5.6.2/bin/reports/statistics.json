@@ -1,0 +1,34 @@
+{
+  "Debug Sampler" : {
+    "transaction" : "Debug Sampler",
+    "sampleCount" : 1,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 4.0,
+    "medianResTime" : 4.0,
+    "minResTime" : 4.0,
+    "maxResTime" : 4.0,
+    "pct1ResTime" : 4.0,
+    "pct2ResTime" : 4.0,
+    "pct3ResTime" : 4.0,
+    "throughput" : 250.0,
+    "receivedKBytesPerSec" : 104.00390625,
+    "sentKBytesPerSec" : 0.0
+  },
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 1,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 4.0,
+    "medianResTime" : 4.0,
+    "minResTime" : 4.0,
+    "maxResTime" : 4.0,
+    "pct1ResTime" : 4.0,
+    "pct2ResTime" : 4.0,
+    "pct3ResTime" : 4.0,
+    "throughput" : 250.0,
+    "receivedKBytesPerSec" : 104.00390625,
+    "sentKBytesPerSec" : 0.0
+  }
+}
