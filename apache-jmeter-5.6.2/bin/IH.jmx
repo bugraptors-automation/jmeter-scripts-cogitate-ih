@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.2">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
-      <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-        <collectionProp name="Arguments.arguments">
-          <elementProp name="APP_URL" elementType="Argument">
-            <stringProp name="Argument.name">APP_URL</stringProp>
-            <stringProp name="Argument.value">${__P(url,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-        </collectionProp>
+        <collectionProp name="Arguments.arguments"/>
       </elementProp>
-      <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">${__P(threads, 1)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(rampup, 1)}</stringProp>
@@ -30,15 +22,16 @@
         <stringProp name="ThreadGroup.duration">${__P(duration, 900)}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+        <boolProp name="ThreadGroup.delayedStart">false</boolProp>
       </ThreadGroup>
       <hashTree>
         <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="Chrome Driver Config" enabled="true">
           <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
           <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
-          <stringProp name="WebDriverConfig.driver_path">chromedriver-linux64/chromedriver</stringProp>
-          <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+          <stringProp name="WebDriverConfig.driver_path">chromedriver-linux64\chromedriver.exe</stringProp>
+          <boolProp name="WebDriverConfig.dev_mode">true</boolProp>
           <boolProp name="WebDriverConfig.headless">true</boolProp>
-          <boolProp name="WebDriverConfig.maximize_browser">false</boolProp>
+          <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
           <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
           <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
           <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
@@ -56,99 +49,138 @@
           <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
         </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Login Details" enabled="true">
-          <stringProp name="delimiter">,</stringProp>
-          <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="filename">LoginDetails.csv</stringProp>
-          <boolProp name="ignoreFirstLine">true</boolProp>
-          <boolProp name="quotedData">false</boolProp>
-          <boolProp name="recycle">true</boolProp>
-          <stringProp name="shareMode">shareMode.all</stringProp>
-          <boolProp name="stopThread">false</boolProp>
-          <stringProp name="variableNames">primaryRole,agentUsername,agentPassword,underwriterUsername,underwriterPasssword</stringProp>
-        </CSVDataSet>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="APP_URL" elementType="Argument">
+              <stringProp name="Argument.name">APP_URL</stringProp>
+              <stringProp name="Argument.value">https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="FILE_PATH" elementType="Argument">
+              <stringProp name="Argument.name">FILE_PATH</stringProp>
+              <stringProp name="Argument.value">${__BeanShell(import org.apache.jmeter.services.FileServer; FileServer.getFileServer().getBaseDir();)}${__BeanShell(import java.io.File;File.separator,)}UploadFile.pdf</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Advanced Search" enabled="true">
-          <stringProp name="delimiter">,</stringProp>
-          <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="filename">AdvanceSearch.csv</stringProp>
-          <boolProp name="ignoreFirstLine">true</boolProp>
-          <boolProp name="quotedData">false</boolProp>
-          <boolProp name="recycle">true</boolProp>
-          <stringProp name="shareMode">shareMode.all</stringProp>
-          <boolProp name="stopThread">false</boolProp>
-          <stringProp name="variableNames">status,insuredName,fromDate,toDate,policyNo,applicationNo,phoneNo</stringProp>
-        </CSVDataSet>
+        <PoissonRandomTimer guiclass="PoissonRandomTimerGui" testclass="PoissonRandomTimer" testname="Poisson Random Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__P(constantDelay,2000)}</stringProp>
+          <stringProp name="RandomTimer.range">${__P(lambdaDelay,200)}</stringProp>
+        </PoissonRandomTimer>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - Login" enabled="true">
-          <boolProp name="TransactionController.includeTimers">false</boolProp>
-          <boolProp name="TransactionController.parent">true</boolProp>
-        </TransactionController>
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - New Business" enabled="true">
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <stringProp name="ThroughputController.percentThroughput">${__P(newBusiness, 40.00)}</stringProp>
+        </ThroughputController>
         <hashTree>
-          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
-            <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
-WDS.browser.get(&apos;${APP_URL}&apos;);
-WDS.sampleResult.sampleEnd();</stringProp>
-            <stringProp name="WebDriverSampler.parameters"></stringProp>
-            <stringProp name="WebDriverSampler.language">javascript</stringProp>
-          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - New Business Login Details" enabled="true">
+            <stringProp name="filename">NewBusinessLoginDetails.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames"></stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
           <hashTree/>
-          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login" enabled="true">
-            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - New Business PolicyInfo" enabled="true">
+            <stringProp name="filename">NewBusinessPolicyInfo.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames"></stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - New Business DriversDetails" enabled="true">
+            <stringProp name="filename">NewBusinessDriversDetails.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames"></stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - New Business VehiclesDetails" enabled="true">
+            <stringProp name="filename">NewBusinessVehiclesDetails.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames"></stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - New Business CoverageDetails" enabled="true">
+            <stringProp name="filename">NewBusinessCoveragesDetails.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames"></stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller -  New Business" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
+              <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
+WDS.browser.get(&apos;${APP_URL}&apos;);
+WDS.sampleResult.sampleEnd();
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login " enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
-if(&quot;${primaryRole}&quot; == &quot;agent&quot;)
-{
+
 WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${agentUsername}&quot;);
 WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${agentPassword}&quot;);
-}
-else if(&quot;${primaryRole}&quot; == &quot;underwriter&quot;)
-{
-WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${underwriterUsername}&quot;);
-WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${underwriterPasssword}&quot;);
-}
+
 WDS.browser.findElement(pkg.By.cssSelector(&quot;.buttonLogin&quot;)).click();
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
-WDS.sampleResult.sampleEnd();
-</stringProp>
-            <stringProp name="WebDriverSampler.parameters"></stringProp>
-            <stringProp name="WebDriverSampler.language">javascript</stringProp>
-          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-          <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="-275651551">Account Dashboard</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">2</intProp>
-            </ResponseAssertion>
-            <hashTree/>
-          </hashTree>
-        </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - New Business" enabled="false">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">false</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>40.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
-        <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller -  New Business" enabled="true">
-            <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">false</boolProp>
-          </TransactionController>
-          <hashTree>
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-275651551">Account Dashboard</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Select New Business" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
@@ -192,15 +224,20 @@ var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
 
 WDS.sampleResult.sampleStart();
+java.lang.Thread.sleep(2000);
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
-WDS.browser.findElement(pkg.By.id(&quot;firstname&quot;)).sendKeys(&quot;fname&quot;);
-WDS.browser.findElement(pkg.By.id(&quot;lastname&quot;)).sendKeys(&quot;lname&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;firstname&quot;)).sendKeys(&quot;${firstName}&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;lastname&quot;)).sendKeys(&quot;${lastName}&quot;);
 
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-addmanualaddress-0&apos;]&quot;)));
 
-WDS.browser.findElement(pkg.By.id(&quot;streetname&quot;)).sendKeys(&quot;street&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;streetname&quot;)).sendKeys(&quot;${streetAddress}&quot;);
+
 
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-authorizationforreports-0&apos;]&quot;)));
+
 
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-authorizationforinsurancecreditscore-0&apos;]&quot;)));
 
@@ -208,30 +245,134 @@ WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
+//WDS.browser.manage.timeouts.implicitWait(Duration.ofSeconds(10))
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
             </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
             <hashTree/>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Drivers" enabled="true">
-              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler - Driver" enabled="true">
+              <stringProp name="BeanShellSampler.query">vars.put(&quot;counter&quot;,&quot;1&quot;);</stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller - Driver" enabled="true">
+              <stringProp name="WhileController.condition">${__javaScript(parseInt(vars.get(&quot;counter&quot;))&lt;=${__P(noOfDriver, 1)},)}</stringProp>
+            </WhileController>
+            <hashTree>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Drivers" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
 
 WDS.sampleResult.sampleStart();
 
-WDS.browser.findElement(pkg.By.id(&quot;dob&quot;)).sendKeys(&quot;25121988&quot;);
-
-WDS.browser.findElement(pkg.By.id(&quot;OccupationDescribe&quot;)).sendKeys(&quot;Test&quot;);
-
-WDS.browser.findElement(pkg.By.id(&quot;driversLicenseNo&quot;)).sendKeys(&quot;798789789&quot;);
-
-WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
-
-WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+java.lang.Thread.sleep(3000);
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+if(${counter}&gt;1){
+	WDS.browser.findElement(pkg.By.cssSelector(&quot;.col-md-6.my-auto.text-end .btn.btnStyle.btnPrim&quot;)).click();
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.browser.findElement(pkg.By.id(&quot;firstname&quot;)).sendKeys(&quot;${__V(firstNameDriver${counter})}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;lastname&quot;)).sendKeys(&quot;${__V(lastNameDriver${counter})}&quot;);
+
+var selectRelation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;relationship&quot;)));
+selectRelation.selectByVisibleText(&quot;${__V(relationshipToApplicantDriver${counter})}&quot;);
+
+}
+WDS.browser.findElement(pkg.By.id(&quot;dob&quot;)).sendKeys(&quot;${__V(dobDriver${counter})}&quot;);
+
+var selectGender = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;gender&quot;)));
+selectGender.selectByVisibleText(&quot;${__V(genderOfDriver${counter})}&quot;);
+
+
+var selectMaritalStatus = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;maritalstatus&quot;)));
+selectMaritalStatus.selectByVisibleText(&quot;${__V(maritalStatusDriver${counter})}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;OccupationDescribe&quot;)).sendKeys(&quot;${__V(descriptionDriver${counter})}&quot;);
+
+if(${counter}&gt;1){
+var selectDriverType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;drivertypeGA&quot;)));
+selectDriverType.selectByVisibleText(&quot;${__V(driverTypeDriver${counter})}&quot;);
+}
+WDS.browser.findElement(pkg.By.id(&quot;driversLicenseNo&quot;)).sendKeys(&quot;${__V(licenseNoDriver${counter})}&quot;);
+
+if(&quot;${addViolationDriver}&quot; == &quot;Yes&quot;)
+{
+WDS.browser.findElement(pkg.By.id(&quot;violationDate&quot;)).sendKeys(&quot;${__V(violationDateDriver${counter})}&quot;);
+java.lang.Thread.sleep(1000);
+var selectViolation = WDS.browser.findElement(pkg.By.xpath(&quot;/html/body/div/div/div[2]/div[1]/div[2]/div/div[2]/div/div[1]/div[1]/div/form/div/div/div/div[3]/div/div/div[1]/div[2]/input&quot;));
+selectViolation.sendKeys(&quot;${__V(violationByDriver${counter})}&quot;);
+selectViolation.sendKeys(org.openqa.selenium.Keys.ENTER);
+
+var selectAccidentWithViolation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;accidentWithViolation&quot;)));
+selectAccidentWithViolation.selectByValue(&quot;${__V(accidentWithViolationDriver${counter})}&quot;);
+java.lang.Thread.sleep(2000);
+
+WDS.browser.findElement(pkg.By.id(&quot;submitsetViolationForm&quot;)).click();
+}
+java.lang.Thread.sleep(2000);
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+java.lang.Thread.sleep(5000);
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree>
+                <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Driver" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">int counter = Integer.parseInt(vars.get(&quot;counter&quot;)) +1;
+vars.put(&quot;counter&quot;,Integer.toString(counter));</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223PostProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Drivers" enabled="false">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(40));
+
+WDS.sampleResult.sampleStart();
+java.lang.Thread.sleep(2000);
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+WDS.browser.findElement(pkg.By.id(&quot;dob&quot;)).sendKeys(&quot;${dobDriver &quot;+ counter +&quot;}&quot;);
+
+var selectGender = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;gender&quot;)));
+selectGender.selectByValue(&quot;${genderOfDriver1}&quot;);
+
+var selectMaritalStatus = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;maritalstatus&quot;)));
+selectMaritalStatus.selectByValue(&quot;${maritalStatusDriver1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;OccupationDescribe&quot;)).sendKeys(&quot;${descriptionDriver1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;driversLicenseNo&quot;)).sendKeys(&quot;${licenceNoDriver1}&quot;);
+//good student discount
+//WDS.browser.findElement(pkg.By.xpath(&quot;label[@for=&apos;radio-studentDiscount-0&apos;]&quot;)).click();
+if(&quot;${addViolationDriver1}&quot; == &quot;Yes&quot;){
+WDS.browser.findElement(pkg.By.id(&quot;violationDate&quot;)).sendKeys(&quot;${violationDateDriver1}&quot;);
+
+var selectViolation = WDS.browser.findElement(pkg.By.cssSelector(&quot;.css-19bb58m input#react-select-5-input&quot;));
+selectViolation.sendKeys(&quot;${violationByDriver1}&quot;);
+selectViolation.sendKeys(org.openqa.selenium.Keys.ENTER);
+
+var selectAccidentWithViolation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;accidentWithViolation&quot;)));
+selectAccidentWithViolation.selectByValue(&quot;${accidentWithViolationDriver1}&quot;);
+java.lang.Thread.sleep(2000);
+
+WDS.browser.findElement(pkg.By.id(&quot;submitsetViolationForm&quot;)).click();
+}
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
@@ -242,48 +383,116 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
 
 WDS.sampleResult.sampleStart();
 
-WDS.browser.findElement(pkg.By.id(&quot;vehiclevin&quot;)).sendKeys(&quot;1GCGTEEN6M1115905&quot;);
-
-WDS.browser.findElement(pkg.By.id(&quot;singleVehicleForm&quot;)).click();
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
 
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
             </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
             <hashTree/>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Vehicles" enabled="true">
-              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler - Vehicles" enabled="true">
+              <stringProp name="BeanShellSampler.query">vars.put(&quot;counterV&quot;,&quot;1&quot;);</stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller  - Vehicles" enabled="true">
+              <stringProp name="WhileController.condition">${__javaScript(parseInt(vars.get(&quot;counterV&quot;))&lt;=${__P(noOfVehicles, 1)},)}</stringProp>
+            </WhileController>
+            <hashTree>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Vehicles" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
 
 WDS.sampleResult.sampleStart();
 
-var selectUse = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;vehicleuse&quot;)));
-selectUse.selectByValue(&quot;PL&quot;);
+java.lang.Thread.sleep(1000);
+if(${counterV}&gt;1){
+	WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;ADD VEHICLE&apos;]&quot;)).click();
+}
+var enterVIN = WDS.browser.findElement(pkg.By.id(&quot;vehiclevin&quot;));
+enterVIN.sendKeys(&quot;${__V(vehicleIdenficationNumVehicle${counterV})}&quot;);
+enterVIN.sendKeys(org.openqa.selenium.Keys.ENTER);
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+var selectUse = WDS.browser.findElement(pkg.By.id(&quot;vehicleuse&quot;));
+selectUse.sendKeys(&quot;${__V(vehicleUseVehicle${counterV})}&quot;);
 
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-vehicleListed-1&apos;]&quot;)));
 
-var selectMileage = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;annualmileage&quot;)));
-selectMileage.selectByValue(&quot;&lt;5000&quot;);
+var selectMileage = WDS.browser.findElement(pkg.By.id(&quot;annualmileage&quot;));
+selectMileage.sendKeys(&quot;${__V(annualMileageVehicle${counterV})}&quot;);
+
+var selectOTC = WDS.browser.findElement(pkg.By.id(&quot;otcdeductibleGA&quot;));
+selectOTC.sendKeys(&quot;${__V(otcVehicle${counterV})}&quot;);
+
+//garaging address
+if(&quot;${garrageAddressSame}&quot; == &quot;No&quot;){
+java.lang.Thread.sleep(500);
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-isGaragingAddressMailing-1&apos;]&quot;)));
+
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-addGaragingAddressManually-0&apos;]&quot;)));
+
+WDS.browser.findElement(pkg.By.id(&quot;garagingaddressdetailsstreetname&quot;)).sendKeys(&quot;${__V(garagingAddressVehicle${counterV})}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;garagingaddressdetailsaptsuite&quot;)).sendKeys(&quot;${__V(apartmentVehicle${counterV})}&quot;);
+java.lang.Thread.sleep(500);
+WDS.browser.findElement(pkg.By.xpath(&quot;/html/body/div/div/div[2]/div[1]/div[2]/div/div/div/form/div[3]/div/div/div[6]/div/div/div[1]/div[2]/input&quot;)).sendKeys(&quot;${__V(zipVehicle${counterV})}&quot;);
+selectZip.sendKeys(org.openqa.selenium.Keys.ENTER);
+selectViolation.sendKeys(org.openqa.selenium.Keys.ENTER);
+java.lang.Thread.sleep(1000);
+}
+
+//Lien Holder &quot;Yes&quot;
+if(&quot;${lienHolderVehicle1}&quot; == &quot;Yes&quot;){
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-hasAdditionalInterestDetails-0&apos;]&quot;)));
+java.lang.Thread.sleep(1000);
+var selectLhType = WDS.browser.findElement(pkg.By.id(&quot;Type&quot;));
+selectLhType.sendKeys(&quot;${lienHolderTypeVehicle1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;InterestName&quot;)).sendKeys(&quot;${__V(lienHolderNameVehicle${counterV})}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;StreetName&quot;)).sendKeys(&quot;${__V(lienHolderAddressVehicle${counterV})}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;zipCode&quot;)).sendKeys(&quot;${__V(lienHolderZipVehicle${counterV})}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;City&quot;)).sendKeys(&quot;${__V(lienHolderCityVehicle${counterV})}&quot;);
+
+var selectViolation = WDS.browser.findElement(pkg.By.cssSelector(&quot;.css-19bb58m input#react-select-6-input&quot;));
+selectViolation.sendKeys(&quot;${__V(lienHolderStateVehicle${counterV})}&quot;);
+selectViolation.sendKeys(org.openqa.selenium.Keys.ENTER);
+java.lang.Thread.sleep(500);
+}
 
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+java.lang.Thread.sleep(3000);
 
-WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
-
-wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
 WDS.sampleResult.sampleEnd();</stringProp>
-              <stringProp name="WebDriverSampler.parameters"></stringProp>
-              <stringProp name="WebDriverSampler.language">javascript</stringProp>
-            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-            <hashTree/>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree>
+                <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Vehicles" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">int counterV = Integer.parseInt(vars.get(&quot;counterV&quot;)) +1;
+vars.put(&quot;counterV&quot;,Integer.toString(counterV));</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223PostProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Underwriting" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
@@ -291,7 +500,9 @@ var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 //Q1=No
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-physicalImpairment-1&apos;]&quot;)));
 //Q2=Yes
@@ -339,18 +550,44 @@ var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
+java.lang.Thread.sleep(500);
+
+var selectStackedUninsured = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;selectstackedum&quot;)));
+selectStackedUninsured.selectByVisibleText(&quot;${stackedUninsuredMotorist}&quot;);
+
+java.lang.Thread.sleep(500);
+if(&quot;${medicalPaymentLimit}&quot; != &quot;&quot;){
+	var selectMedicalPayment = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;medicalpaymentlimitsGA&quot;)));
+	selectMedicalPayment.selectByValue(&quot;${medicalPaymentLimit}&quot;);
+}
+
+if(&quot;${towingAndLabour}&quot; != &quot;&quot;){
+	var selectTowing = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;towingAndLaborGA&quot;)));
+	selectTowing.selectByValue(&quot;${towingAndLabour}&quot;);
+}
+
+if(&quot;${rentalReimburse}&quot; != &quot;&quot;){
+	var selectReimburse = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;rentalReimburseGA&quot;)));
+	selectReimburse.selectByValue(&quot;${rentalReimburse}&quot;);
+}
 
 var selectSignature = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;signatureType&quot;)));
-selectSignature.selectByValue(&quot;Wet/Handwritten&quot;);
+selectSignature.selectByVisibleText(&quot;${signatureType}&quot;);
 
-WDS.browser.findElement(pkg.By.id(&quot;emailaddress&quot;)).sendKeys(&quot;test@test.com&quot;);
+//click to calculate premium button
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;,WDS.browser.findElement(pkg.By.xpath(&quot;//button[normalize-space()=&apos;Calculate Premium&apos;]&quot;)));
 
-WDS.browser.findElement(pkg.By.id(&quot;mobilephonenumber&quot;)).sendKeys(&quot;7897897890&quot;);
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.browser.findElement(pkg.By.id(&quot;emailaddress&quot;)).sendKeys(&quot;${email}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;mobilephonenumber&quot;)).sendKeys(&quot;${mobileNo}&quot;);
 
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
@@ -360,69 +597,376 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(120));
+
+WDS.sampleResult.sampleStart();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Order Report&apos;]&quot;)).click();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
+java.lang.Thread.sleep(500);
+WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+java.lang.Thread.sleep(5000); //Note: website taking time shoe next progress loader
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Make a Payment&apos;]&quot;)).click();
+WDS.browser.findElement(pkg.By.cssSelector(&quot;tr:nth-child(1) input[name=&apos;groupOptions&apos;]&quot;)).click();
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;,WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;PAY &amp; BIND&apos;]&quot;)));
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+WDS.browser.navigate().refresh();
+java.lang.Thread.sleep(2000);
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
+WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;)).click();
+
+wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
+var selectDocumentType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;documentType&quot;)));
+selectDocumentType.selectByVisibleText(&quot;Signed New Business forms&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;C:/Users/kumarmohit1/Downloads/Cancellation_cogitate/jmeter-scripts-cogitate-ih/UploadFile.pdf&quot;]);
+
+WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="AddDrivers3" enabled="false">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart()
+
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;jiggmxe&quot;))));
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.col-md-6.my-auto.text-end .btn.btnStyle.btnPrim&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.browser.findElement(pkg.By.id(&quot;firstname&quot;)).sendKeys(&quot;${fnameD3}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;lastname&quot;)).sendKeys(&quot;${lnameD3}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;dob&quot;)).sendKeys(&quot;${DOBD3}&quot;)
+
+var selectGender = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;gender&quot;));
+selectGender.selectByText(&quot;${genderD3}&quot;);
+
+var selectMaritalStatus = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;maritalstatus&quot;)));
+selectMaritalStatus.selectByText(&quot;${maritalStatusD3}&quot;);
+
+var selectRelation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;relationship&quot;)));
+selectRelation.selectByVisibleText(&quot;${relationshipToApplicantD3}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;OccupationDescribe&quot;)).sendKeys(&quot;${descriptionD3}&quot;); 
+
+var selectDriverType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;drivertypeGA&quot;)));
+selectDriverType.selectByText(&quot;${driverTypeD3}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;driversLicenseNo&quot;)).sendKeys(&quot;${license#D3}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;violationDate&quot;)).sendKeys(&quot;${violationDateD3}&quot;);
+
+var selectViolation = WDS.browser.findElement(pkg.By.cssSelector(&quot;.css-19bb58m input#react-select-14-input&quot;));
+selectViolation.sendKeys(&quot;${violationD3}&quot;);
+selectViolation.sendKeys(org.openqa.selenium.Keys.ENTER);
+
+var selectAccidentWithViolation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;accidentWithViolation&quot;)));
+selectAccidentWithViolation.selectByVisibleText(&quot;${accidentWithViolationD3}&quot;);
+java.lang.Thread.sleep(2000);
+
+WDS.browser.findElement(pkg.By.id(&quot;submitsetViolationForm&quot;)).click();
+
+
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();//click to save
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+
+WDS.sampleResult.sampleEnd()
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="AddDrivers1" enabled="false">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart()
+
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;jiggmxe&quot;))));
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.col-md-6.my-auto.text-end .btn.btnStyle.btnPrim&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.browser.findElement(pkg.By.id(&quot;firstname&quot;)).sendKeys(&quot;${fnameD1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;lastname&quot;)).sendKeys(&quot;${lnameD1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;dob&quot;)).sendKeys(&quot;${DOBD1}&quot;)
+
+var selectGender = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;gender&quot;));
+selectGender.selectByText(&quot;${genderD1}&quot;);
+
+var selectMaritalStatus = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;maritalstatus&quot;)));
+selectMaritalStatus.selectByText(&quot;${maritalStatusD1}&quot;);
+
+var selectRelation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;relationship&quot;)));
+selectRelation.selectByVisibleText(&quot;${relationshipToApplicantD1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;OccupationDescribe&quot;)).sendKeys(&quot;${descriptionD1}&quot;); 
+
+var selectDriverType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;drivertypeGA&quot;)));
+selectDriverType.selectByText(&quot;${driverTypeD1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;driversLicenseNo&quot;)).sendKeys(&quot;${license#D1}&quot;);
+//voilation field
+
+WDS.browser.findElement(pkg.By.id(&quot;violationDate&quot;)).sendKeys(&quot;${violationDateD1}&quot;);
+
+var selectViolation = WDS.browser.findElement(pkg.By.cssSelector(&quot;.css-19bb58m input#react-select-8-input&quot;));
+selectViolation.sendKeys(&quot;${violationD1}&quot;);
+selectViolation.sendKeys(org.openqa.selenium.Keys.ENTER);
+
+var selectAccidentWithViolation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;accidentWithViolation&quot;)));
+selectAccidentWithViolation.selectByVisibleText(&quot;${accidentWithViolationD1}&quot;);
+java.lang.Thread.sleep(2000);
+
+WDS.browser.findElement(pkg.By.id(&quot;submitsetViolationForm&quot;)).click();
+
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();//click to save
+
+
+WDS.sampleResult.sampleEnd()
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="AddDrivers2" enabled="false">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart()
+
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;jiggmxe&quot;))));
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.col-md-6.my-auto.text-end .btn.btnStyle.btnPrim&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.browser.findElement(pkg.By.id(&quot;firstname&quot;)).sendKeys(&quot;${fnameD2}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;lastname&quot;)).sendKeys(&quot;${lnameD2}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;dob&quot;)).sendKeys(&quot;${DOBD2}&quot;)
+
+var selectGender = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;gender&quot;));
+selectGender.selectByText(&quot;${genderD2}&quot;);
+
+var selectMaritalStatus = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;maritalstatus&quot;)));
+selectMaritalStatus.selectByText(&quot;${maritalStatusD2}&quot;);
+
+var selectRelation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;relationship&quot;)));
+selectRelation.selectByVisibleText(&quot;${relationshipToApplicantD2}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;OccupationDescribe&quot;)).sendKeys(&quot;${descriptionD2}&quot;); 
+
+var selectDriverType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;drivertypeGA&quot;)));
+selectDriverType.selectByText(&quot;${driverTypeD2}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;driversLicenseNo&quot;)).sendKeys(&quot;${license#D2}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;violationDate&quot;)).sendKeys(&quot;${violationDateD2}&quot;);
+
+var selectViolation = WDS.browser.findElement(pkg.By.cssSelector(&quot;.css-19bb58m input#react-select-11-input&quot;));
+selectViolation.sendKeys(&quot;${violationD2}&quot;);
+selectViolation.sendKeys(org.openqa.selenium.Keys.ENTER);
+
+var selectAccidentWithViolation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;accidentWithViolation&quot;)));
+selectAccidentWithViolation.selectByVisibleText(&quot;${accidentWithViolationD2}&quot;);
+java.lang.Thread.sleep(2000);
+
+WDS.browser.findElement(pkg.By.id(&quot;submitsetViolationForm&quot;)).click();
+
+
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();//click to save
+
+
+WDS.sampleResult.sampleEnd()
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="AddVehicles1" enabled="false">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
 
 WDS.sampleResult.sampleStart();
 
-WDS.browser.findElement(pkg.By.xpath(&quot;//div[@id=&apos;summ-sec3-butt&apos;]/button[2]&quot;)).click();
+var selectUse = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;vehicleuse&quot;)));
+selectUse.selectByText(&quot;${vehicleUse1}&quot;);
 
-wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-vehicleListed-1&apos;]&quot;)));
+
+var selectMileage = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;annualmileage&quot;)));
+selectMileage.selectByText(&quot;${annualMileage1}&quot;);
+
+var selectOTC = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;otcdeductibleGA&quot;)));
+selectOTC.selectByText(&quot;${OTC1}&quot;);
+//garaging address
+WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-isGaragingAddressMailing-1&apos;]&quot;)).click();
+
+WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-addGaragingAddressManually-0&apos;]&quot;)).click();
+
+WDS.browser.findElement(pkg.By.id(&quot;garagingaddressdetailsstreetname&quot;)).sendKeys(&quot;${garagingAddress1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;garagingaddressdetailsaptsuite&quot;)).sendKeys(&quot;${apartment1}&quot;);
+
+WDS.browser.findElement(pkg.By.cssSelector(&quot;css-19bb58m&quot;)).sendKeys(&quot;${Zip1}&quot;);
+
+//Lien Holder &quot;Yes&quot;
+WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-hasAdditionalInterestDetails-0&apos;]&quot;)).click();
+
+var selectLhType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;Type&quot;)));
+selectLhType.selectByValue(&quot;${LHtype1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;InterestName&quot;)).sendKeys(&quot;${Lhname1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;StreetName&quot;)).sendKeys(&quot;${Lhaddress1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;zipCode&quot;)).sendKeys(&quot;${LHzip1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;City&quot;)).sendKeys(&quot;${LHcity1}&quot;);
+
+var selectState = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;react-select-44-input&quot;)));
+selectState.selectByText(&quot;${LHstate1}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+
+//WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 
 //wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
-WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
-java.lang.Thread.sleep(10000);
-WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
-
-wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-
-wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-
-WDS.browser.findElement(pkg.By.xpath(&quot;//div[@id=&apos;summ-sec3-butt&apos;]/button[3]&quot;)).click();
-
-
-WDS.browser.findElement(pkg.By.xpath(&quot;//div[@id=&apos;downPayDatatable&apos;]//tbody/tr[1]/td/input&quot;)).click();
-
-WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
-
-wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-java.lang.Thread.sleep(10000);
 WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Logout" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;logout&quot;)));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
             </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - Endorsement" enabled="false">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - Endorsement" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">false</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>10.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
+          <stringProp name="ThroughputController.percentThroughput">${__P(endorsement, 10.00)}</stringProp>
         </ThroughputController>
         <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Endorsement Details" enabled="true">
+            <stringProp name="filename">EndorsementDetails.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames"></stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - Endorsement" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
+              <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
+WDS.browser.get(&apos;${APP_URL}&apos;);
+WDS.sampleResult.sampleEnd();
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login " enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+if(&quot;${primaryRole}&quot; == &quot;agent&quot;)
+{
+WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${agentUsername}&quot;);
+WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${agentPassword}&quot;);
+}
+else if(&quot;${primaryRole}&quot; == &quot;underwriter&quot;)
+{
+WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${underwriterUsername}&quot;);
+WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${underwriterPasssword}&quot;);
+}
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.buttonLogin&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-275651551">Account Dashboard</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Search" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
 
-//WDS.browser.findElement(pkg.By.id(&quot;search-bar-0&quot;)).sendKeys(&quot;${}&quot;);
-//WDS.browser.findElement(pkg.By.id(&quot;search-bar-0&quot;)).sendKeys(pkg.Keys.TAB);
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.advSearch&quot;)).click();
+WDS.browser.findElement(pkg.By.id(&quot;policynumber&quot;)).sendKeys(&quot;${policyNumToEndorse}&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;submitAdvSearch&quot;)).click();
 
-wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//tbody/tr[1]/td/a[@title=&apos;Endorse&apos;]&quot;))));
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
@@ -433,14 +977,15 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
+
 var endorseBtn = WDS.browser.findElement(pkg.By.xpath(&quot;//tbody/tr[1]/td/a[@title=&apos;Endorse&apos;]&quot;));
-WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,endorseBtn);
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, endorseBtn);
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, endorseBtn);
 
-java.lang.Thread.sleep(1000);//NOTE: needed this wait as there is delay in website itself.
+wait.until(ui.ExpectedConditions.invisibilityOf(endorseBtn));
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
@@ -449,24 +994,678 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
             </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
             <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Start Endorsement" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+
+java.lang.Thread.sleep(3000);
+//WDS.browser.findElement(pkg.By.id(&quot;endorsementeffectivedate&quot;)).sendKeys(&quot;${endorseEffectiveDate}&quot;);
+wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.cssSelector(&quot;button[form=&apos;endorsementForm&apos;]&quot;))));
+WDS.browser.findElement(pkg.By.cssSelector(&quot;button[form=&apos;endorsementForm&apos;]&quot;)).click();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Policy Info" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller- Add Driver" enabled="true">
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <stringProp name="IfController.condition">&quot;${editDriver}&quot; == &quot;Add&quot;</stringProp>
+              <boolProp name="IfController.useExpression">false</boolProp>
+            </IfController>
+            <hashTree>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Add Driver" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+
+WDS.sampleResult.sampleStart();
+
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+java.lang.Thread.sleep(2000);//website taking time for loading
+wait.until(ui.ExpectedConditions.elementToBeClickable(WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;ADD DRIVER&apos;]&quot;))));
+WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;ADD DRIVER&apos;]&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Add Driver Details" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+java.lang.Thread.sleep(1000);//website taking time for loading
+WDS.browser.findElement(pkg.By.cssSelector(&quot;input[id=&apos;firstname&apos;]&quot;)).sendKeys(&quot;${firstName}&quot;);
+WDS.browser.findElement(pkg.By.cssSelector(&quot;input[id=&apos;lastname&apos;]&quot;)).sendKeys(&quot;${lastName}&quot;);
+WDS.browser.findElement(pkg.By.cssSelector(&quot;input[id=&apos;dob&apos;]&quot;)).sendKeys(&quot;${dateOfBirth}&quot;);
+java.lang.Thread.sleep(1000);//date takes time get entered in field
+var selectRelation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;relationship&quot;)));
+selectRelation.selectByVisibleText(&quot;${relationToApplicant}&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;OccupationDescribe&quot;)).sendKeys(&quot;${description}&quot;);
+
+var selectDriverType = new ui.Select(WDS.browser.findElement(pkg.By.cssSelector(&quot;select[id=&apos;drivertypeGA&apos;]&quot;)));
+selectDriverType.selectByVisibleText(&quot;${driverType}&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;driversLicenseNo&quot;)).sendKeys(&quot;${driverLicenseNo}&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;violationDate&quot;)).sendKeys(&quot;${violationDate}&quot;);
+
+var selectViolation = WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-hlgwow&apos;]//div[text()=&apos;Please Select&apos;]&quot;));
+selectViolation.sendKeys(&quot;${violation}&quot;);
+selectViolation.sendKeys(org.openqa.selenium.Keys.ENTER);
+
+var selectAccidentViolation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;accidentWithViolation&quot;)));
+selectAccidentViolation.selectByVisibleText(&quot;${accidentWithVoilation}&quot;);
+java.lang.Thread.sleep(2000);//NOTE: needed this wait as there is delay in website itself.
+wait.until(ui.ExpectedConditions.elementToBeClickable(WDS.browser.findElement(pkg.By.cssSelector(&quot;button[id=&apos;submitsetViolationForm&apos;]&quot;))));
+WDS.browser.findElement(pkg.By.cssSelector(&quot;button[id=&apos;submitsetViolationForm&apos;]&quot;)).click();
+
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller- Delete Driver" enabled="true">
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <stringProp name="IfController.condition">&quot;${editDriver}&quot; == &quot;Delete&quot;</stringProp>
+              <boolProp name="IfController.useExpression">false</boolProp>
+            </IfController>
+            <hashTree>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Delete Driver" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+
+
+WDS.browser.findElement(pkg.By.cssSelector(&quot;tbody tr:nth-child(2) a[title=&apos;Delete&apos;]&quot;)).click();
+WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Edit Driver" enabled="true">
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <stringProp name="IfController.condition">&quot;${editDriver}&quot; == &quot;Edit&quot;</stringProp>
+              <boolProp name="IfController.useExpression">false</boolProp>
+            </IfController>
+            <hashTree>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Edit Driver" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+WDS.browser.findElement(pkg.By.cssSelector(&quot;a[title=&apos;Edit&apos;]&quot;)).click();
+WDS.browser.findElement(pkg.By.cssSelector(&quot;input[id=&apos;dob&apos;]&quot;)).sendKeys(&quot;${dateOfBirth}&quot;);
+java.lang.Thread.sleep(1000);//date takes time get entered in field
+
+WDS.browser.findElement(pkg.By.id(&quot;OccupationDescribe&quot;)).sendKeys(&quot;${description}&quot;);
+
+var selectDriverType = new ui.Select(WDS.browser.findElement(pkg.By.cssSelector(&quot;select[id=&apos;drivertypeGA&apos;]&quot;)));
+selectDriverType.selectByVisibleText(&quot;${driverType}&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;driversLicenseNo&quot;)).sendKeys(&quot;${driverLicenseNo}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;violationDate&quot;)).sendKeys(&quot;${violationDate}&quot;);
+var selectViolation = WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-hlgwow&apos;]//div[text()=&apos;Please Select&apos;]&quot;));
+selectViolation.sendKeys(&quot;${violation}&quot;);
+selectViolation.sendKeys(org.openqa.selenium.Keys.ENTER);
+
+var selectAccidentViolation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;accidentWithViolation&quot;)));
+selectAccidentViolation.selectByVisibleText(&quot;${accidentWithVoilation}&quot;);
+java.lang.Thread.sleep(2000);//NOTE: needed this wait as there is delay in website itself.
+wait.until(ui.ExpectedConditions.elementToBeClickable(WDS.browser.findElement(pkg.By.cssSelector(&quot;button[id=&apos;submitsetViolationForm&apos;]&quot;))));
+WDS.browser.findElement(pkg.By.cssSelector(&quot;button[id=&apos;submitsetViolationForm&apos;]&quot;)).click();
+
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+            </hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Driver Information" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+java.lang.Thread.sleep(2000);
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller -Add Vehicle" enabled="true">
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <stringProp name="IfController.condition">&quot;${editVehicle}&quot; == &quot;Add&quot;</stringProp>
+              <boolProp name="IfController.useExpression">false</boolProp>
+            </IfController>
+            <hashTree>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Add Vehicle" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+java.lang.Thread.sleep(2500);
+WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;ADD VEHICLE&apos;]&quot;)).click();
+java.lang.Thread.sleep(2000);
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Add Vehicle Details" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+java.lang.Thread.sleep(2000);
+var enterVIN = WDS.browser.findElement(pkg.By.cssSelector(&quot;input[id=&apos;vehiclevin&apos;]&quot;));
+enterVIN.sendKeys(&quot;${vehicleIdenficationNum}&quot;);
+enterVIN.sendKeys(org.openqa.selenium.Keys.ENTER);
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+java.lang.Thread.sleep(1000);//Taking time to load in headless execution
+var selectVehicleUse = new ui.Select(WDS.browser.findElement(pkg.By.cssSelector(&quot;select[id=&apos;vehicleuse&apos;]&quot;)));
+selectVehicleUse.selectByVisibleText(&quot;${vehicleUse}&quot;);
+java.lang.Thread.sleep(1000);
+WDS.browser.findElement(pkg.By.xpath(&quot;//*[@id=&apos;singleVehicleForm&apos;]/div[1]/div/div/div[9]/div/div/div/label[2]&quot;)).click();
+java.lang.Thread.sleep(1000);//wait for next field 
+var selectVehicleMileage = new ui.Select(WDS.browser.findElement(pkg.By.cssSelector(&quot;select[id=&apos;annualmileage&apos;]&quot;)));
+selectVehicleMileage.selectByValue(&quot;${annualMileage}&quot;);
+
+var selectOTCollison = WDS.browser.findElement(pkg.By.cssSelector(&quot;select[id=&apos;otcdeductibleGA&apos;]&quot;));
+selectOTCollison.sendKeys(&quot;${otherThanCollision}&quot;);
+//Garging Address
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;,WDS.browser.findElement(pkg.By.cssSelector(&quot;label[for=&apos;radio-isGaragingAddressMailing-1&apos;]&quot;)));
+
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;,WDS.browser.findElement(pkg.By.cssSelector(&quot;label[for=&apos;radio-addGaragingAddressManually-0&apos;]&quot;)));
+
+WDS.browser.findElement(pkg.By.id(&quot;garagingaddressdetailsstreetname&quot;)).sendKeys(&quot;${streetAddress}&quot;);
+var selectZip = WDS.browser.findElement(pkg.By.xpath(&quot;/html/body/div/div/div[2]/div[1]/div[2]/div/div/div/form/div[3]/div/div/div[6]/div/div/div[1]/div[2]/input&quot;));
+selectZip.sendKeys(&quot;${zip}&quot;);
+selectZip.sendKeys(org.openqa.selenium.Keys.ENTER);
+
+java.lang.Thread.sleep(1000);
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller- Delete Vehicle" enabled="true">
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <stringProp name="IfController.condition">&quot;${editVehicle}&quot; == &quot;Delete&quot;</stringProp>
+              <boolProp name="IfController.useExpression">false</boolProp>
+            </IfController>
+            <hashTree>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Delete Vehicle" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.findElement(pkg.By.cssSelector(&quot;tr:nth-child(1) a.display-inblock.actionIcon.me-1[title=&apos;Delete&apos;]&quot;)).click();
+
+WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Edit Vehicle" enabled="true">
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <stringProp name="IfController.condition">&quot;${editVehicle}&quot; == &quot;Edit&quot;</stringProp>
+              <boolProp name="IfController.useExpression">false</boolProp>
+            </IfController>
+            <hashTree>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Edit Vehicle" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+WDS.browser.findElement(pkg.By.cssSelector(&quot;a[title=&apos;Edit&apos;]&quot;)).click();
+
+var selectOTCollison = WDS.browser.findElement(pkg.By.cssSelector(&quot;select[id=&apos;otcdeductibleGA&apos;]&quot;));
+selectOTCollison.sendKeys(&quot;${otherThanCollision}&quot;);
+//Garging Address
+//WDS.browser.executeScript(&quot;arguments[0].click();&quot;,WDS.browser.findElement(pkg.By.cssSelector(&quot;label[for=&apos;radio-isGaragingAddressMailing-1&apos;]&quot;)));
+//WDS.browser.executeScript(&quot;arguments[0].click();&quot;,WDS.browser.findElement(pkg.By.cssSelector(&quot;label[for=&apos;radio-addGaragingAddressManually-0&apos;]&quot;)));
+//WDS.browser.findElement(pkg.By.id(&quot;garagingaddressdetailsstreetname&quot;)).sendKeys(&quot;${streetAddress}&quot;);
+//WDS.browser.executeScript(&quot;arguments[0].click();&quot;,WDS.browser.findElement(pkg.By.cssSelector(&quot;.css-hlgwow&quot;)));
+//var selectZip = WDS.browser.findElement(pkg.By.cssSelector(&quot;.css-hlgwow&quot;));
+//selectZip.sendKeys(&quot;30016&quot;);
+//selectZip.sendKeys(&quot;${zip}&quot;);
+//selectZip.sendKeys(org.openqa.selenium.Keys.ENTER);
+
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+            </hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Vehicle Information" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+
+java.lang.Thread.sleep(2000);
+
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller-Underwriting " enabled="true">
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <stringProp name="IfController.condition">&quot;${underwriting}&quot; == &quot;Yes&quot;</stringProp>
+              <boolProp name="IfController.useExpression">false</boolProp>
+            </IfController>
+            <hashTree>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Underwriting " enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+if(&quot;${editDriver}&quot;==&quot;Add&quot; &amp;&amp; &quot;$driverType&quot; != &quot;Excluded&quot;)
+{
+//Q1=No
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-physicalImpairment-1&apos;]&quot;)));
+//Q2=Yes
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-infrequentBasis-0&apos;]&quot;)));
+//Q3=No
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-notStationed-1&apos;]&quot;)));
+//Q4=I Agree
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-agreeToNotify-0&apos;]&quot;)));
+//Q5=No
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-convictedOfFelony-1&apos;]&quot;)));
+}
+if(&quot;${editVehicle}&quot;==&quot;Add&quot;)
+{
+//Q1=I Agree
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-undisclosedDriver-0&apos;]&quot;)));
+//Q2=No
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-unrepairedDamage-1&apos;]&quot;)));
+//Q3=Yes
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-allVehicleTitled-0&apos;]&quot;)));
+//Q4=yes
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-requiredInspection-0&apos;]&quot;)));
+//Q5=Yes
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-garagedInState-0&apos;]&quot;)));
+//Q6=No
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-provideService-1&apos;]&quot;)));
+//Q7=No
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(
+&quot;//label[@for=&apos;radio-usedInDNP-1&apos;]&quot;)));
+//Q8=No
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-businessUse-1&apos;]&quot;)));
+}
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+            </hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Coverages" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+
+var selectMEdicalPaymentLimit = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;medicalpaymentlimitsGA&quot;)));
+selectMEdicalPaymentLimit.selectByValue(&quot;${medicalPaymentLimit}&quot;);
+
+var selectTowing = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;towingAndLaborGA&quot;)));
+selectTowing.selectByValue(&quot;${towing}&quot;);
+
+var selectRentalReimburse = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;rentalReimburseGA&quot;)));
+selectRentalReimburse.selectByValue(&quot;${rentalReimburse}&quot;);
+
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;,WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Calculate Premium&apos;]&quot;)));
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Endorsement Summary" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+
+WDS.sampleResult.sampleStart();
+
+if(&quot;${editDriver}&quot; == &quot;Add&quot; &amp;&amp; &quot;${driverType}&quot; != &quot;Excluded&quot;){
+java.lang.Thread.sleep(1000);
+WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Order Reports&apos;]&quot;)).click();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+java.lang.Thread.sleep(8000);//Note:Site taking wait 
+WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+java.lang.Thread.sleep(8000);
+WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;)).click();
+}
+else {
+java.lang.Thread.sleep(4000);
+WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+java.lang.Thread.sleep(2000);
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;))));
+java.lang.Thread.sleep(2000);//Note: Wait added for headless mode
+WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
+WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;)).click();
+
+wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
+
+WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;C:/Users/kumarmohit1/Downloads/Cancellation_cogitate/jmeter-scripts-cogitate-ih/UploadFile.pdf&quot;]);
+
+WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+}
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <stringProp name="IfController.condition">&quot;${underwriterApprovalReq}&quot; == &quot;Yes&quot;</stringProp>
+              <boolProp name="IfController.useExpression">false</boolProp>
+            </IfController>
+            <hashTree>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Logout" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;logout&quot;)));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="UnderWriter - Login " enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${underwriterUsername}&quot;);
+WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${underwriterPasssword}&quot;);
+
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.buttonLogin&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="UnderWriter - Search" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.advSearch&quot;)).click();
+WDS.browser.findElement(pkg.By.id(&quot;policynumber&quot;)).sendKeys(&quot;${policyNumToEndorse}&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;submitAdvSearch&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="UnderWriter - Select Policy" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart();
+
+var endorseBtn = WDS.browser.findElement(pkg.By.xpath(&quot;//tbody/tr[1]/td/a[@title=&apos;Endorse&apos;]&quot;));
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, endorseBtn);
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, endorseBtn);
+
+wait.until(ui.ExpectedConditions.invisibilityOf(endorseBtn));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Policy Endorsement" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Approve Endorsement&apos;]&quot;)).click();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+            </hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Logout" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;logout&quot;)));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - Cancellation" enabled="false">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - Cancellation" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">false</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>20.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
+          <stringProp name="ThroughputController.percentThroughput">${__P(cancellation, 20.00)}</stringProp>
         </ThroughputController>
         <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Cancellation Details" enabled="true">
+            <stringProp name="filename">CancellationDetails.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames"></stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">false</boolProp>
+            <boolProp name="stopThread">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - Cancellation" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
+              <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
+WDS.browser.get(&apos;${APP_URL}&apos;);
+WDS.sampleResult.sampleEnd();
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">import org.apache.jmeter.services.FileServer;
+
+def path = FileServer.getFileServer().getBaseDir();
+
+log.info(&quot;Path: &quot; + path);
+
+def separator = File.separator;
+
+def pdfPath = path + separator + &quot;UploadFile.pdf&quot;;
+
+vars.put(&quot;pdfFilePath&quot;, pdfPath);
+
+log.info(&quot;pdfFilePath: &quot; + pdfPath);</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login " enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+if(&quot;${primaryRole}&quot; == &quot;agent&quot;)
+{
+WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${agentUsername}&quot;);
+WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${agentPassword}&quot;);
+}
+else if(&quot;${primaryRole}&quot; == &quot;underwriter&quot;)
+{
+WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${underwriterUsername}&quot;);
+WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${underwriterPasssword}&quot;);
+}
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.buttonLogin&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-275651551">Account Dashboard</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Search" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
@@ -475,24 +1674,9 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 
 WDS.sampleResult.sampleStart();
 
-WDS.browser.findElement(pkg.By.id(&quot;search-bar-0&quot;)).sendKeys(&quot;${policyNumToCancel}&quot;);
-
-wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//tbody/tr[1]/td/a[@title=&apos;Cancel&apos;]&quot;))));
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-
-WDS.sampleResult.sampleEnd();</stringProp>
-              <stringProp name="WebDriverSampler.parameters"></stringProp>
-              <stringProp name="WebDriverSampler.language">javascript</stringProp>
-            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-            <hashTree/>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Select Policy" enabled="true">
-              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
-var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
-var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
-
-WDS.sampleResult.sampleStart();
-WDS.browser.findElement(pkg.By.xpath(&quot;//tbody/tr[1]/td/a[@title=&apos;Cancel&apos;]&quot;)).click();
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.advSearch&quot;)).click();
+WDS.browser.findElement(pkg.By.id(&quot;policynumber&quot;)).sendKeys(&quot;${policyNumToCancel}&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;submitAdvSearch&quot;)).click();
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
@@ -501,25 +1685,7 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
             </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
             <hashTree/>
-          </hashTree>
-        </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - Reinstate" enabled="false">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">false</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>10.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
-        <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - Reinstate" enabled="true">
-            <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
-          </TransactionController>
-          <hashTree>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Search" enabled="true">
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Select Policy" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
@@ -527,10 +1693,297 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 
 WDS.sampleResult.sampleStart();
 
-WDS.browser.findElement(pkg.By.id(&quot;search-bar-0&quot;)).sendKeys(&quot;${policyNumToReinstate}&quot;);
+var cancelBtn = WDS.browser.findElement(pkg.By.xpath(&quot;//tbody/tr[1]/td/a[@title=&apos;Cancel&apos;]&quot;));
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, cancelBtn);
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, cancelBtn);
 
-wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//tbody/tr[1]/td/a[@title=&apos;Reinstate&apos;]&quot;))));
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+wait.until(ui.ExpectedConditions.invisibilityOf(cancelBtn));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Cancellation Details" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(30));
+
+WDS.sampleResult.sampleStart();
+
+var selectReason = new ui.Select(WDS.browser.findElement(pkg.By.cssSelector(&quot;select[id=&apos;reason&apos;]&quot;)));
+selectReason.selectByVisibleText(&quot;${cancellationReason}&quot;);
+
+WDS.browser.findElement(pkg.By.id(&quot;cancellationeffectivedate&quot;)).sendKeys(&quot;${cancellationEffectiveDate}&quot;);
+
+var selectSignatureType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;signatureType&quot;)));
+selectSignatureType.selectByVisibleText(&quot;${cancellationSignatureType}&quot;);
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Calculate Premium" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.findElement(pkg.By.cssSelector(&quot;button[form=&apos;cancellationForm&apos;]&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Upload Document" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart()
+
+var uploadButton = WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Upload Document&apos;]&quot;));
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, uploadButton);
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, uploadButton);
+
+wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
+java.lang.Thread.sleep(1000);//Loader bar appearing randomly
+//WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;C:/Users/kumarmohit1/Downloads/Cancellation_cogitate/jmeter-scripts-cogitate-ih/UploadFile.pdf&quot;]);
+WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;${__escapeOroRegexpChars(${pdfFilePath},)}&quot;]);
+java.lang.Thread.sleep(3000);//NOTE:Getting Loader Bar randomly in headless mode
+WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <boolProp name="IfController.useExpression">true</boolProp>
+              <stringProp name="IfController.condition">&quot;${underwriterApprovalReq}&quot; == &quot;Yes&quot;</stringProp>
+            </IfController>
+            <hashTree>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Logout" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;logout&quot;)));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="UnderWriter - Login " enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${underwriterUsername}&quot;);
+WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${underwriterPasssword}&quot;);
+
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.buttonLogin&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="UnderWriter - Search" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.advSearch&quot;)).click();
+WDS.browser.findElement(pkg.By.id(&quot;policynumber&quot;)).sendKeys(&quot;${policyNumToCancel}&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;submitAdvSearch&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="UnderWriter - Select Policy" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart();
+
+var cancelBtn = WDS.browser.findElement(pkg.By.xpath(&quot;//tbody/tr[1]/td/a[@title=&apos;Cancel&apos;]&quot;));
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, cancelBtn);
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, cancelBtn);
+
+wait.until(ui.ExpectedConditions.invisibilityOf(cancelBtn));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Policy Cancellation" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart();
+
+java.lang.Thread.sleep(2000);
+
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;,WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;APPROVE&apos;]&quot;)));
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+            </hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Logout" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;logout&quot;)));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - Reinstate" enabled="true">
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <stringProp name="ThroughputController.percentThroughput">${__P(reinstatement, 10.00)}</stringProp>
+        </ThroughputController>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Reinstatement Details" enabled="true">
+            <stringProp name="filename">ReinstatementDetails.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames"></stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">false</boolProp>
+            <boolProp name="stopThread">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - Reinstate" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
+              <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
+WDS.browser.get(&apos;${APP_URL}&apos;);
+WDS.sampleResult.sampleEnd();
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login " enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+if(&quot;${primaryRole}&quot; == &quot;agent&quot;)
+{
+WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${agentUsername}&quot;);
+WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${agentPassword}&quot;);
+}
+else if(&quot;${primaryRole}&quot; == &quot;underwriter&quot;)
+{
+WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${underwriterUsername}&quot;);
+WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${underwriterPasssword}&quot;);
+}
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.buttonLogin&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-275651551">Account Dashboard</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Search" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(40));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.advSearch&quot;)).click();
+WDS.browser.findElement(pkg.By.id(&quot;policynumber&quot;)).sendKeys(&quot;${policyNumToReinstate}&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;submitAdvSearch&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
@@ -544,7 +1997,12 @@ var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
 
 WDS.sampleResult.sampleStart();
-WDS.browser.findElement(pkg.By.xpath(&quot;//tbody/tr[1]/td/a[@title=&apos;Reinstate&apos;]&quot;)).click();
+
+var reinstateBtn = WDS.browser.findElement(pkg.By.xpath(&quot;//tbody/tr[1]/td/a[@title=&apos;Reinstate&apos;]&quot;));
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, reinstateBtn);
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, reinstateBtn);
+
+wait.until(ui.ExpectedConditions.invisibilityOf(reinstateBtn));
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
@@ -561,7 +2019,19 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 
 WDS.sampleResult.sampleStart();
 
+//Add Signature
+var selectSignatureType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;signatureType&quot;)));
+selectSignatureType.selectByVisibleText(&quot;Wet/Handwritten&quot;);
 WDS.browser.findElement(pkg.By.id(&quot;reinstatementterms&quot;)).sendKeys(&quot;${reinstatementTerms}&quot;);
+
+var uploadButton = WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Upload Document&apos;]&quot;));
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, uploadButton);
+
+wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
+
+WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;C:/Users/kumarmohit1/Downloads/Cancellation_cogitate/jmeter-scripts-cogitate-ih/UploadFile.pdf&quot;]);
+
+WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
@@ -570,27 +2040,206 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
             </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
             <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <boolProp name="IfController.useExpression">true</boolProp>
+              <stringProp name="IfController.condition">&quot;${underwriterApprovalReq}&quot; == &quot;Yes&quot;</stringProp>
+            </IfController>
+            <hashTree>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Logout" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;logout&quot;)));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="UnderWriter - Login " enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${underwriterUsername}&quot;);
+WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${underwriterPasssword}&quot;);
+
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.buttonLogin&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="UnderWriter - Search" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.advSearch&quot;)).click();
+WDS.browser.findElement(pkg.By.id(&quot;policynumber&quot;)).sendKeys(&quot;${policyNumToReinstate}&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;submitAdvSearch&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="UnderWriter - Select Policy" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart();
+
+var reinstateBtn = WDS.browser.findElement(pkg.By.xpath(&quot;//tbody/tr[1]/td/a[@title=&apos;Reinstate&apos;]&quot;));
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, reinstateBtn);
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, reinstateBtn);
+
+wait.until(ui.ExpectedConditions.invisibilityOf(reinstateBtn));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+              <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Policy Reinstatement" enabled="true">
+                <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+
+WDS.sampleResult.sampleStart();
+
+java.lang.Thread.sleep(2000);
+
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;,WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;CALCULATE PREMIUM&apos;]&quot;)));
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;,WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;APPROVE&apos;]&quot;)));
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+
+WDS.sampleResult.sampleEnd();</stringProp>
+                <stringProp name="WebDriverSampler.parameters"></stringProp>
+                <stringProp name="WebDriverSampler.language">javascript</stringProp>
+              </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+              <hashTree/>
+            </hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Logout" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;logout&quot;)));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - View" enabled="false">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - View" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">false</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>20.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
+          <stringProp name="ThroughputController.percentThroughput">${__P(view, 20.00)}</stringProp>
         </ThroughputController>
         <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Advanced Search" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">AdvanceSearch.csv</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames"></stringProp>
+          </CSVDataSet>
+          <hashTree/>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - View" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
+              <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
+WDS.browser.get(&apos;${APP_URL}&apos;);
+WDS.sampleResult.sampleEnd();
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login " enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
+WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${username}&quot;);
+WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${password}&quot;);
+
+WDS.browser.findElement(pkg.By.cssSelector(&quot;.buttonLogin&quot;)).click();
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-275651551">Account Dashboard</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
             <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
               <stringProp name="IfController.condition">&quot;${status}&quot; != &quot;&quot; || &quot;${status}&quot; != &quot;All Status&quot;</stringProp>
               <boolProp name="IfController.evaluateAll">false</boolProp>
+              <boolProp name="IfController.useExpression">false</boolProp>
             </IfController>
             <hashTree>
               <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Search Filter" enabled="true">
@@ -646,12 +2295,11 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 WDS.sampleResult.sampleStart();
 
 var viewBtn = WDS.browser.findElement(pkg.By.xpath(&quot;//tbody/tr[1]/td/a[@title=&apos;View&apos;]&quot;));
-
 WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,viewBtn);
-
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, viewBtn);
 
-java.lang.Thread.sleep(1000);//NOTE: needed this wait as there is delay in website itself.
+wait.until(ui.ExpectedConditions.invisibilityOf(viewBtn));
+//java.lang.Thread.sleep(1000);//NOTE: needed this wait as there is delay in website itself.
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
@@ -660,38 +2308,33 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
             </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
             <hashTree/>
-          </hashTree>
-        </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - Logout" enabled="true">
-          <boolProp name="TransactionController.includeTimers">false</boolProp>
-          <boolProp name="TransactionController.parent">true</boolProp>
-        </TransactionController>
-        <hashTree>
-          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Logout" enabled="true">
-            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Logout" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
+
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;logout&quot;)));
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
 WDS.sampleResult.sampleEnd();
 </stringProp>
-            <stringProp name="WebDriverSampler.parameters"></stringProp>
-            <stringProp name="WebDriverSampler.language">javascript</stringProp>
-          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-          <hashTree/>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+          </hashTree>
         </hashTree>
-        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
           <boolProp name="displayJMeterProperties">false</boolProp>
           <boolProp name="displayJMeterVariables">true</boolProp>
           <boolProp name="displaySystemProperties">false</boolProp>
         </DebugSampler>
         <hashTree/>
-        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -728,7 +2371,7 @@ WDS.sampleResult.sampleEnd();
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
