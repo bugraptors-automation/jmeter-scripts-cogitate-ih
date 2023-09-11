@@ -1,2 +1,2 @@
-policyNumToCancel,cancellationReason,cancellationEffectiveDate,cancellationSignatureType,cancellationTerms
-GAPA006301794,Insured Request,25082023,Wet/Handwritten,test
+primaryRole,agentUsername,agentPassword,underwriterUsername,underwriterPasssword,underwriterApprovalReq,policyNumToCancel,cancellationReason,cancellationEffectiveDate,cancellationSignatureType,cancellationTerms
+agent,ih.testga2,10#Hammer,,,No,GAPA009002176,Insured Request,15122023,Wet/Handwritten,test

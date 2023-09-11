@@ -1,2 +1,2 @@
-policyNumToReinstate,reinstatementTerms
-GAPA006301794,test
+primaryRole,agentUsername,agentPassword,underwriterUsername,underwriterPasssword,underwriterApprovalReq,policyNumToReinstate,reinstatementTerms
+agent,ih.testga2,10#Hammer,,,No,GAPA4010035,test
