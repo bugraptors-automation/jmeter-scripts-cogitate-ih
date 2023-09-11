@@ -1,0 +1,23 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1694414590407,9757,Transaction Controller - Login,500,"Number of samples in transaction : 2, number of failing samples : 1",Thread Group 1-1,,false,,10200,0,2,2,null,0,812,0
+1694414590618,1592,Get Login,200,OK,Thread Group 1-1,text,true,,5884,0,2,2,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694414592807,8165,Login,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""#nprogress""}
+  (Session info: chrome=116.0.5845.96)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ca15c259c34bf60969502bc4c0654d9f, findElement {using=id, value=nprogress}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38633}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:38633/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ca15c259c34bf60969502bc4c0654d9f",Thread Group 1-1,text,false,Test failed: text expected to contain /Account Dashboard/,4316,0,2,2,null,0,0,0
+1694414590405,10887,Transaction Controller - Login,500,"Number of samples in transaction : 2, number of failing samples : 1",Thread Group 1-2,,false,,10200,0,1,1,null,0,672,0
+1694414590620,1741,Get Login,200,OK,Thread Group 1-2,text,true,,5884,0,2,2,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694414592817,9146,Login,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""#nprogress""}
+  (Session info: chrome=116.0.5845.96)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ecbc99fef6d7c73d1060c93c700d32cb, findElement {using=id, value=nprogress}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.96, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:34737}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:34737/devtoo..., se:cdpVersion: 116.0.5845.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ecbc99fef6d7c73d1060c93c700d32cb",Thread Group 1-2,text,false,Test failed: text expected to contain /Account Dashboard/,4316,0,1,1,null,0,0,0
