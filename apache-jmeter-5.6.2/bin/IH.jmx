@@ -16,7 +16,7 @@
           <stringProp name="LoopController.loops">1</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${__P(threads, 1)}</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(threads, 10)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(rampup, 1)}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">${__P(duration, 900)}</stringProp>
@@ -64,17 +64,37 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Flow" enabled="true">
+          <stringProp name="filename">Flow.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
         <PoissonRandomTimer guiclass="PoissonRandomTimerGui" testclass="PoissonRandomTimer" testname="Poisson Random Timer" enabled="true">
           <stringProp name="ConstantTimer.delay">${__P(constantDelay,2000)}</stringProp>
           <stringProp name="RandomTimer.range">${__P(lambdaDelay,200)}</stringProp>
         </PoissonRandomTimer>
         <hashTree/>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - New Business" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">false</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <stringProp name="ThroughputController.percentThroughput">${__P(newBusiness, 40.00)}</stringProp>
-        </ThroughputController>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
+          <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
+WDS.browser.get(&apos;${APP_URL}&apos;);
+WDS.sampleResult.sampleEnd();
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">javascript</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - NewBusiness" enabled="true">
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">false</boolProp>
+          <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;NewBusiness&quot;</stringProp>
+        </IfController>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - New Business Login Details" enabled="true">
             <stringProp name="filename">NewBusinessLoginDetails.csv</stringProp>
@@ -141,16 +161,7 @@
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
-              <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
-WDS.browser.get(&apos;${APP_URL}&apos;);
-WDS.sampleResult.sampleEnd();
-</stringProp>
-              <stringProp name="WebDriverSampler.parameters"></stringProp>
-              <stringProp name="WebDriverSampler.language">javascript</stringProp>
-            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-            <hashTree/>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login " enabled="true">
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login   ${flow}" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
@@ -610,12 +621,11 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - Endorsement" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">false</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <stringProp name="ThroughputController.percentThroughput">${__P(endorsement, 10.00)}</stringProp>
-        </ThroughputController>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Endorsement" enabled="true">
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">false</boolProp>
+          <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;Endorsement&quot;</stringProp>
+        </IfController>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Endorsement Details" enabled="true">
             <stringProp name="filename">EndorsementDetails.csv</stringProp>
@@ -634,16 +644,7 @@ WDS.sampleResult.sampleEnd();
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
-              <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
-WDS.browser.get(&apos;${APP_URL}&apos;);
-WDS.sampleResult.sampleEnd();
-</stringProp>
-              <stringProp name="WebDriverSampler.parameters"></stringProp>
-              <stringProp name="WebDriverSampler.language">javascript</stringProp>
-            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-            <hashTree/>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login " enabled="true">
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login  ${flow}" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
@@ -1156,7 +1157,7 @@ WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&q
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 java.lang.Thread.sleep(2000);
-wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;))));
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;))));
 java.lang.Thread.sleep(2000);//Note: Wait added for headless mode
 WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
 WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;)).click();
@@ -1301,12 +1302,11 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - Cancellation" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">false</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <stringProp name="ThroughputController.percentThroughput">${__P(cancellation, 20.00)}</stringProp>
-        </ThroughputController>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Cancellation" enabled="true">
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">false</boolProp>
+          <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;Cancellation&quot;</stringProp>
+        </IfController>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Cancellation Details" enabled="true">
             <stringProp name="filename">CancellationDetails.csv</stringProp>
@@ -1324,38 +1324,13 @@ WDS.sampleResult.sampleEnd();
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
+          <hashTree/>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - Cancellation" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
           <hashTree>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
-              <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
-WDS.browser.get(&apos;${APP_URL}&apos;);
-WDS.sampleResult.sampleEnd();
-</stringProp>
-              <stringProp name="WebDriverSampler.parameters"></stringProp>
-              <stringProp name="WebDriverSampler.language">javascript</stringProp>
-            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-            <hashTree>
-              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
-                <stringProp name="cacheKey">true</stringProp>
-                <stringProp name="filename"></stringProp>
-                <stringProp name="parameters"></stringProp>
-                <stringProp name="script">import org.apache.jmeter.services.FileServer;
-
-def path = FileServer.getFileServer().getBaseDir();
-
-log.info(&quot;Path: &quot; + path);
-
-def separator = File.separator;
-
-def pdfPath = path + separator + &quot;UploadFile.pdf&quot;;
-
-vars.put(&quot;pdfFilePath&quot;, pdfPath);
-
-log.info(&quot;pdfFilePath: &quot; + pdfPath);</stringProp>
-                <stringProp name="scriptLanguage">groovy</stringProp>
-              </JSR223PreProcessor>
-              <hashTree/>
-            </hashTree>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login " enabled="true">
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login  ${flow}" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
@@ -1391,6 +1366,26 @@ WDS.sampleResult.sampleEnd();</stringProp>
                 <boolProp name="Assertion.assume_success">false</boolProp>
                 <intProp name="Assertion.test_type">2</intProp>
               </ResponseAssertion>
+              <hashTree/>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">import org.apache.jmeter.services.FileServer;
+
+def path = FileServer.getFileServer().getBaseDir();
+
+log.info(&quot;Path: &quot; + path);
+
+def separator = File.separator;
+
+def pdfPath = path + separator + &quot;UploadFile.pdf&quot;;
+
+vars.put(&quot;pdfFilePath&quot;, pdfPath);
+
+log.info(&quot;pdfFilePath: &quot; + pdfPath);</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223PreProcessor>
               <hashTree/>
             </hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Search" enabled="true">
@@ -1486,9 +1481,10 @@ WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, upload
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, uploadButton);
 
 wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
-java.lang.Thread.sleep(1000);//Loader bar appearing randomly
+java.lang.Thread.sleep(2000);
 //WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;C:/Users/kumarmohit1/Downloads/Cancellation_cogitate/jmeter-scripts-cogitate-ih/UploadFile.pdf&quot;]);
 WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;${__escapeOroRegexpChars(${pdfFilePath},)}&quot;]);
+
 java.lang.Thread.sleep(3000);//NOTE:Getting Loader Bar randomly in headless mode
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
@@ -1627,12 +1623,11 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - Reinstate" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">false</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <stringProp name="ThroughputController.percentThroughput">${__P(reinstatement, 10.00)}</stringProp>
-        </ThroughputController>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Reinstate" enabled="true">
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">false</boolProp>
+          <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;Reinstatement&quot;</stringProp>
+        </IfController>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Reinstatement Details" enabled="true">
             <stringProp name="filename">ReinstatementDetails.csv</stringProp>
@@ -1651,16 +1646,7 @@ WDS.sampleResult.sampleEnd();
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
-              <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
-WDS.browser.get(&apos;${APP_URL}&apos;);
-WDS.sampleResult.sampleEnd();
-</stringProp>
-              <stringProp name="WebDriverSampler.parameters"></stringProp>
-              <stringProp name="WebDriverSampler.language">javascript</stringProp>
-            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-            <hashTree/>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login " enabled="true">
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login  ${flow}" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
@@ -1899,12 +1885,11 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller - View" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">false</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <stringProp name="ThroughputController.percentThroughput">${__P(view, 20.00)}</stringProp>
-        </ThroughputController>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - View" enabled="true">
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">false</boolProp>
+          <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;View&quot;</stringProp>
+        </IfController>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Advanced Search" enabled="true">
             <stringProp name="delimiter">,</stringProp>
@@ -1923,7 +1908,7 @@ WDS.sampleResult.sampleEnd();
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="false">
               <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
 WDS.browser.get(&apos;${APP_URL}&apos;);
 WDS.sampleResult.sampleEnd();
@@ -1932,7 +1917,13 @@ WDS.sampleResult.sampleEnd();
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
             </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
             <hashTree/>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login " enabled="true">
+          </hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - View" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login  ${flow}" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
