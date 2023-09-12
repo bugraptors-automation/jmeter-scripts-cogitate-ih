@@ -1324,11 +1324,6 @@ WDS.sampleResult.sampleEnd();
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
-          <hashTree/>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - Cancellation" enabled="true">
-            <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
-          </TransactionController>
           <hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Login  ${flow}" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
@@ -1903,21 +1898,6 @@ WDS.sampleResult.sampleEnd();
             <stringProp name="variableNames"></stringProp>
           </CSVDataSet>
           <hashTree/>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - View" enabled="true">
-            <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
-          </TransactionController>
-          <hashTree>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="false">
-              <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
-WDS.browser.get(&apos;${APP_URL}&apos;);
-WDS.sampleResult.sampleEnd();
-</stringProp>
-              <stringProp name="WebDriverSampler.parameters"></stringProp>
-              <stringProp name="WebDriverSampler.language">javascript</stringProp>
-            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-            <hashTree/>
-          </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller - View" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
             <boolProp name="TransactionController.parent">true</boolProp>
