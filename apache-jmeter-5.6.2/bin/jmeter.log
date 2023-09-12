@@ -1,92 +1,181 @@
-2023-09-12 13:18:07,698 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2023-09-12 13:18:07,717 INFO o.a.j.JMeter: Loading user properties from: user.properties
-2023-09-12 13:18:07,718 INFO o.a.j.JMeter: Loading system properties from: system.properties
-2023-09-12 13:18:07,723 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
-2023-09-12 13:18:07,723 INFO o.a.j.JMeter: Version 5.6.2
-2023-09-12 13:18:07,723 INFO o.a.j.JMeter: java.version=11.0.16.1
-2023-09-12 13:18:07,723 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
-2023-09-12 13:18:07,723 INFO o.a.j.JMeter: os.name=Windows 10
-2023-09-12 13:18:07,723 INFO o.a.j.JMeter: os.arch=amd64
-2023-09-12 13:18:07,723 INFO o.a.j.JMeter: os.version=10.0
-2023-09-12 13:18:07,723 INFO o.a.j.JMeter: file.encoding=Cp1252
-2023-09-12 13:18:07,723 INFO o.a.j.JMeter: java.awt.headless=true
-2023-09-12 13:18:07,723 INFO o.a.j.JMeter: Max memory     =1073741824
-2023-09-12 13:18:07,723 INFO o.a.j.JMeter: Available Processors =8
-2023-09-12 13:18:07,731 INFO o.a.j.JMeter: Default Locale=English (EN)
-2023-09-12 13:18:07,731 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2023-09-12 13:18:07,731 INFO o.a.j.JMeter: JMeterHome=C:\Users\kumarmohit1\Downloads\Cogitate_demo_run\jmeter-scripts-cogitate-ih\apache-jmeter-5.6.2
-2023-09-12 13:18:07,731 INFO o.a.j.JMeter: user.dir  =C:\Users\kumarmohit1\Downloads\Cogitate_demo_run\jmeter-scripts-cogitate-ih\apache-jmeter-5.6.2\bin
-2023-09-12 13:18:07,732 INFO o.a.j.JMeter: PWD       =C:\Users\kumarmohit1\Downloads\Cogitate_demo_run\jmeter-scripts-cogitate-ih\apache-jmeter-5.6.2\bin
-2023-09-12 13:18:07,733 INFO o.a.j.JMeter: IP: 10.8.21.228 Name: MOHIT-HYLA-LT FullName: MOHIT-HYLA-LT.SEASIAINFOTECH.COM
-2023-09-12 13:18:07,745 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'C:\Users\kumarmohit1\Downloads\Cogitate_demo_run\jmeter-scripts-cogitate-ih\apache-jmeter-5.6.2\bin\logsfile'
-2023-09-12 13:18:07,748 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
-2023-09-12 13:18:07,748 INFO o.a.j.r.d.ReportGenerator: Will only generate report from results file: resultlogs.jtl
-2023-09-12 13:18:07,748 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: C:\Users\kumarmohit1\Downloads\Cogitate_demo_run\jmeter-scripts-cogitate-ih\apache-jmeter-5.6.2\bin\reportgenerator.properties
-2023-09-12 13:18:07,749 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
-2023-09-12 13:18:07,753 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
-2023-09-12 13:18:07,755 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
-2023-09-12 13:18:07,761 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
-2023-09-12 13:18:07,761 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
-2023-09-12 13:18:07,761 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
-2023-09-12 13:18:07,761 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
-2023-09-12 13:18:07,761 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
-2023-09-12 13:18:07,761 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
-2023-09-12 13:18:07,763 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
-2023-09-12 13:18:07,767 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
-2023-09-12 13:18:07,767 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
-2023-09-12 13:18:07,768 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
-2023-09-12 13:18:07,768 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
-2023-09-12 13:18:07,768 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
-2023-09-12 13:18:07,768 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
-2023-09-12 13:18:07,768 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2023-09-12 13:18:07,768 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2023-09-12 13:18:07,768 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
-2023-09-12 13:18:07,768 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2023-09-12 13:18:07,769 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
-2023-09-12 13:18:07,769 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
-2023-09-12 13:18:07,769 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
-2023-09-12 13:18:07,770 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
-2023-09-12 13:18:07,770 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
-2023-09-12 13:18:07,770 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
-2023-09-12 13:18:07,948 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2023-09-12 13:18:07,963 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2023-09-12 13:18:07,966 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2023-09-12 13:18:07,984 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
-2023-09-12 13:18:08,229 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
-2023-09-12 13:18:08,230 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
-2023-09-12 13:18:08,232 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
-2023-09-12 13:18:08,232 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
-2023-09-12 13:18:08,236 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
-2023-09-12 13:18:08,239 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
-2023-09-12 13:18:08,239 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
-2023-09-12 13:18:08,239 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
-2023-09-12 13:18:08,257 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
-2023-09-12 13:18:08,257 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
-2023-09-12 13:18:08,258 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
-2023-09-12 13:18:08,258 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
-2023-09-12 13:18:08,263 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
-2023-09-12 13:18:08,263 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 588 samples
-2023-09-12 13:18:08,263 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
-2023-09-12 13:18:08,263 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
-2023-09-12 13:18:08,263 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
-2023-09-12 13:18:08,265 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
-2023-09-12 13:18:08,265 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
-2023-09-12 13:18:08,265 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
-2023-09-12 13:18:08,275 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
-2023-09-12 13:18:08,276 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
-2023-09-12 13:18:08,276 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
-2023-09-12 13:18:08,276 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
-2023-09-12 13:18:08,276 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 1440 samples
-2023-09-12 13:18:08,276 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 288 samples
-2023-09-12 13:18:08,276 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 96 samples
-2023-09-12 13:18:08,277 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 96 samples produced in 269ms on channel 0
-2023-09-12 13:18:08,277 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
-2023-09-12 13:18:08,397 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
-2023-09-12 13:18:08,397 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
-2023-09-12 13:18:08,397 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
-2023-09-12 13:18:08,397 INFO o.a.j.r.d.JsonExporter: Checking output folder
-2023-09-12 13:18:08,399 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to C:\Users\kumarmohit1\Downloads\Cogitate_demo_run\jmeter-scripts-cogitate-ih\apache-jmeter-5.6.2\bin\logsfile\statistics.json
-2023-09-12 13:18:08,444 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
-2023-09-12 13:18:08,447 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: C:\Users\kumarmohit1\Downloads\Cogitate_demo_run\jmeter-scripts-cogitate-ih\apache-jmeter-5.6.2\bin\logsfile
-2023-09-12 13:18:08,595 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: C:\Users\kumarmohit1\Downloads\Cogitate_demo_run\jmeter-scripts-cogitate-ih\apache-jmeter-5.6.2\bin\logsfile, creating folder structure
-2023-09-12 13:18:08,598 INFO o.a.j.r.d.TemplateVisitor: Copying folder from 'C:\Users\kumarmohit1\Downloads\Cogitate_demo_run\jmeter-scripts-cogitate-ih\apache-jmeter-5.6.2\bin\report-template' to 'C:\Users\kumarmohit1\Downloads\Cogitate_demo_run\jmeter-scripts-cogitate-ih\apache-jmeter-5.6.2\bin\logsfile', got message: C:\Users\kumarmohit1\Downloads\Cogitate_demo_run\jmeter-scripts-cogitate-ih\apache-jmeter-5.6.2\bin\logsfile, found non empty folder with following content [C:\Users\kumarmohit1\Downloads\Cogitate_demo_run\jmeter-scripts-cogitate-ih\apache-jmeter-5.6.2\bin\logsfile\statistics.json], will be ignored
+2023-09-12 09:53:45,889 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-09-12 09:53:45,933 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2023-09-12 09:53:45,933 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2023-09-12 09:53:45,941 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
+2023-09-12 09:53:45,941 INFO o.a.j.JMeter: Version 5.6.2
+2023-09-12 09:53:45,941 INFO o.a.j.JMeter: java.version=11.0.20
+2023-09-12 09:53:45,941 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2023-09-12 09:53:45,941 INFO o.a.j.JMeter: os.name=Linux
+2023-09-12 09:53:45,942 INFO o.a.j.JMeter: os.arch=amd64
+2023-09-12 09:53:45,942 INFO o.a.j.JMeter: os.version=5.10.0-24-cloud-amd64
+2023-09-12 09:53:45,942 INFO o.a.j.JMeter: file.encoding=UTF-8
+2023-09-12 09:53:45,942 INFO o.a.j.JMeter: java.awt.headless=true
+2023-09-12 09:53:45,942 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-09-12 09:53:45,942 INFO o.a.j.JMeter: Available Processors =4
+2023-09-12 09:53:45,957 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-09-12 09:53:45,957 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-09-12 09:53:45,957 INFO o.a.j.JMeter: JMeterHome=/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2
+2023-09-12 09:53:45,958 INFO o.a.j.JMeter: user.dir  =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
+2023-09-12 09:53:45,958 INFO o.a.j.JMeter: PWD       =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
+2023-09-12 09:53:45,958 INFO o.a.j.JMeter: IP: 10.128.0.13 Name: master-demo FullName: master-demo.us-central1-a.c.ih-project-396106.internal
+2023-09-12 09:53:45,982 INFO o.a.j.s.FileServer: Default base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin'
+2023-09-12 09:53:45,984 INFO o.a.j.s.FileServer: Set new base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin'
+2023-09-12 09:53:46,279 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-09-12 09:53:46,314 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-09-12 09:53:46,320 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-09-12 09:53:46,326 INFO o.a.j.s.SaveService: Loading file: IH.jmx
+2023-09-12 09:53:46,634 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2023-09-12 09:53:46,634 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2023-09-12 09:53:46,634 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-09-12 09:53:46,634 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-09-12 09:53:47,246 INFO o.a.j.JMeter: Creating summariser <summary>
+2023-09-12 09:53:47,268 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-09-12 09:53:47,274 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-09-12 09:53:47,274 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-09-12 09:53:47,293 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2023-09-12 09:53:47,293 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2023-09-12 09:53:47,372 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-09-12 09:53:47,514 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-webdriver-4.10.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-09-12 09:53:47,529 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-09-12 09:53:47,532 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/tag-jmeter-extn-1.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-09-12 09:53:47,534 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-csvars-0.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-09-12 09:53:47,918 INFO o.a.j.JMeter: Running test (1694512427918)
+2023-09-12 09:53:47,961 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2023-09-12 09:53:47,961 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group Thread Group.
+2023-09-12 09:53:47,962 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2023-09-12 09:53:47,962 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-09-12 09:53:48,085 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2023-09-12 09:53:48,239 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2023-09-12 09:53:48,313 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-3
+2023-09-12 09:53:48,417 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-4
+2023-09-12 09:53:48,524 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-5
+2023-09-12 09:53:48,620 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-6
+2023-09-12 09:53:48,718 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-7
+2023-09-12 09:53:48,824 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-8
+2023-09-12 09:53:48,915 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-9
+2023-09-12 09:53:49,039 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-09-12 09:53:49,039 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-09-12 09:53:49,044 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-10
+2023-09-12 09:53:52,133 INFO o.a.j.s.FileServer: Stored: Flow.csv
+2023-09-12 09:54:00,070 INFO o.a.j.r.Summariser: summary +      1 in 00:00:12 =    0.1/s Avg:  5164 Min:  5164 Max:  5164 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+2023-09-12 09:54:00,260 INFO o.a.j.s.FileServer: Stored: EndorsementDetails.csv
+2023-09-12 09:54:00,532 INFO o.a.j.s.FileServer: Stored: AdvanceSearch.csv
+2023-09-12 09:54:00,570 INFO o.a.j.s.FileServer: Stored: NewBusinessCoveragesDetails.csv
+2023-09-12 09:54:00,598 INFO o.a.j.s.FileServer: Stored: NewBusinessVehiclesDetails.csv
+2023-09-12 09:54:00,607 INFO o.a.j.s.FileServer: Stored: NewBusinessDriversDetails.csv
+2023-09-12 09:54:00,616 INFO o.a.j.s.FileServer: Stored: NewBusinessPolicyInfo.csv
+2023-09-12 09:54:00,616 INFO o.a.j.s.FileServer: Stored: NewBusinessLoginDetails.csv
+2023-09-12 09:54:00,623 INFO o.a.j.s.FileServer: Stored: CancellationDetails.csv
+2023-09-12 09:54:00,682 INFO o.a.j.t.JMeterThread: Stop Thread seen for thread Thread Group 1-5, reason: org.apache.jorphan.util.JMeterStopThreadException: End of file:CancellationDetails.csv detected for CSV DataSet:CSV Data Set Config - Cancellation Details configured with stopThread:true, recycle:false
+2023-09-12 09:54:00,683 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-5
+2023-09-12 09:54:00,793 INFO o.a.j.s.FileServer: Stored: ReinstatementDetails.csv
+2023-09-12 09:54:01,891 INFO o.a.j.m.J.JSR223 PreProcessor: Path: /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
+2023-09-12 09:54:01,902 INFO o.a.j.m.J.JSR223 PreProcessor: pdfFilePath: /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/UploadFile.pdf
+2023-09-12 09:54:22,950 ERROR c.g.j.p.w.s.WebDriverSampler: element click intercepted: Element is not clickable at point (390, 733)
+  (Session info: chrome=116.0.5845.187)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-24-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ac53e795de4edfb389984e54cea32ac1, clickElement {id=A874EE2BC23AB315F668FF3FC95B64A1_element_30}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:44179/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (ac53e795de4edfb389984e54cea32ac1)] -> id: submitAdvSearch]
+Session ID: ac53e795de4edfb389984e54cea32ac1
+2023-09-12 09:54:22,964 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-10
+2023-09-12 09:54:22,964 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-10
+2023-09-12 09:54:23,178 ERROR c.g.j.p.w.s.WebDriverSampler: element click intercepted: Element is not clickable at point (390, 745)
+  (Session info: chrome=116.0.5845.187)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-24-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0b7417e198ccbdf91f948c0d7036828a, clickElement {id=8D67C445FEAE2E2EC286C17862183199_element_31}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45167}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:45167/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (0b7417e198ccbdf91f948c0d7036828a)] -> id: submitAdvSearch]
+Session ID: 0b7417e198ccbdf91f948c0d7036828a
+2023-09-12 09:54:23,180 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-8
+2023-09-12 09:54:23,180 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-8
+2023-09-12 09:54:23,410 ERROR c.g.j.p.w.s.WebDriverSampler: element click intercepted: Element is not clickable at point (390, 727)
+  (Session info: chrome=116.0.5845.187)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-24-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bd255c8ffba4b81d6c00379cefc28bb7, clickElement {id=3EF2EE4CAD970E67F2BBBE55C191985C_element_30}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46721}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:46721/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (bd255c8ffba4b81d6c00379cefc28bb7)] -> id: submitAdvSearch]
+Session ID: bd255c8ffba4b81d6c00379cefc28bb7
+2023-09-12 09:54:23,412 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-7
+2023-09-12 09:54:23,412 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-7
+2023-09-12 09:54:23,506 ERROR c.g.j.p.w.s.WebDriverSampler: Cannot locate option with text: 
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-24-cloud-amd64', java.version: '11.0.20'
+Driver info: driver.version: unknown
+2023-09-12 09:54:23,507 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2023-09-12 09:54:23,507 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2023-09-12 09:54:29,676 ERROR c.g.j.p.w.s.WebDriverSampler: element click intercepted: Element is not clickable at point (390, 488)
+  (Session info: chrome=116.0.5845.187)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-24-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb9b409f05424e5807ff02c5c4f2803d, clickElement {id=3B81150D61DDF4C4939EF13F8B336D50_element_46}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46795}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:46795/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (fb9b409f05424e5807ff02c5c4f2803d)] -> id: submitAdvSearch]
+Session ID: fb9b409f05424e5807ff02c5c4f2803d
+2023-09-12 09:54:29,677 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-2
+2023-09-12 09:54:29,677 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
+2023-09-12 09:55:02,005 ERROR c.g.j.p.w.s.WebDriverSampler: element click intercepted: Element <button type="button" class="btn btnStyle btnPrim">...</button> is not clickable at point (433, 19). Other element would receive the click: <div class="container-fluid h-100 px-0">...</div>
+  (Session info: chrome=116.0.5845.187)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-24-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d3b759b4646ca624e6ef7e2dd3ed887e, clickElement {id=74A1C3C36479058AACEDB15297451311_element_98}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:39861}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:39861/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (d3b759b4646ca624e6ef7e2dd3ed887e)] -> css selector: .col-md-6.my-auto.text-end .btn.btnStyle.btnPrim]
+Session ID: d3b759b4646ca624e6ef7e2dd3ed887e
+2023-09-12 09:55:02,025 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-6
+2023-09-12 09:55:02,025 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-6
+2023-09-12 09:55:02,074 ERROR c.g.j.p.w.s.WebDriverSampler: element click intercepted: Element <button type="button" class="btn btnStyle btnPrim">...</button> is not clickable at point (433, 19). Other element would receive the click: <div class="container-fluid h-100 px-0">...</div>
+  (Session info: chrome=116.0.5845.187)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-24-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f364f327e07fd50614b6ec11fcfae463, clickElement {id=890E5467C142B63F9756472607F53B5B_element_98}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37207}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:37207/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (f364f327e07fd50614b6ec11fcfae463)] -> css selector: .col-md-6.my-auto.text-end .btn.btnStyle.btnPrim]
+Session ID: f364f327e07fd50614b6ec11fcfae463
+2023-09-12 09:55:02,088 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-3
+2023-09-12 09:55:02,088 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-3
+2023-09-12 09:55:02,188 ERROR c.g.j.p.w.s.WebDriverSampler: element click intercepted: Element <button type="button" class="btn btnStyle btnPrim">...</button> is not clickable at point (433, 19). Other element would receive the click: <div class="container-fluid h-100 px-0">...</div>
+  (Session info: chrome=116.0.5845.187)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-24-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c150a49dfcdf03e3bb817abc7f95c0c9, clickElement {id=04553D0622D82EFE043629D8D0542E30_element_96}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42551}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:42551/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (c150a49dfcdf03e3bb817abc7f95c0c9)] -> css selector: .col-md-6.my-auto.text-end .btn.btnStyle.btnPrim]
+Session ID: c150a49dfcdf03e3bb817abc7f95c0c9
+2023-09-12 09:55:02,205 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-9
+2023-09-12 09:55:02,205 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-9
+2023-09-12 09:55:02,556 ERROR c.g.j.p.w.s.WebDriverSampler: element click intercepted: Element <button type="button" class="btn btnStyle btnPrim">...</button> is not clickable at point (433, 19). Other element would receive the click: <div class="container-fluid h-100 px-0">...</div>
+  (Session info: chrome=116.0.5845.187)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-24-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3638f1ca526db7d537a84ad06185ad60, clickElement {id=3839949EF60324E1671523EA8BDC1871_element_95}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.187, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41251}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:41251/devtoo..., se:cdpVersion: 116.0.5845.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (3638f1ca526db7d537a84ad06185ad60)] -> css selector: .col-md-6.my-auto.text-end .btn.btnStyle.btnPrim]
+Session ID: 3638f1ca526db7d537a84ad06185ad60
+2023-09-12 09:55:02,568 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-4
+2023-09-12 09:55:02,568 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-4
+2023-09-12 09:55:02,673 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-09-12 09:55:02,673 INFO o.a.j.s.FileServer: Close: NewBusinessLoginDetails.csv
+2023-09-12 09:55:02,674 INFO o.a.j.s.FileServer: Close: ReinstatementDetails.csv
+2023-09-12 09:55:02,674 INFO o.a.j.s.FileServer: Close: CancellationDetails.csv
+2023-09-12 09:55:02,675 INFO o.a.j.s.FileServer: Close: EndorsementDetails.csv
+2023-09-12 09:55:02,675 INFO o.a.j.s.FileServer: Close: Flow.csv
+2023-09-12 09:55:02,675 INFO o.a.j.s.FileServer: Close: NewBusinessCoveragesDetails.csv
+2023-09-12 09:55:02,675 INFO o.a.j.s.FileServer: Close: NewBusinessVehiclesDetails.csv
+2023-09-12 09:55:02,675 INFO o.a.j.s.FileServer: Close: AdvanceSearch.csv
+2023-09-12 09:55:02,675 INFO o.a.j.s.FileServer: Close: NewBusinessDriversDetails.csv
+2023-09-12 09:55:02,675 INFO o.a.j.s.FileServer: Close: NewBusinessPolicyInfo.csv
+2023-09-12 09:55:02,678 INFO o.a.j.r.Summariser: summary +      9 in 00:01:03 =    0.1/s Avg:  5495 Min:  5194 Max:  5758 Err:     0 (0.00%) Active: 0 Started: 10 Finished: 10
+2023-09-12 09:55:02,679 INFO o.a.j.r.Summariser: summary =     10 in 00:01:15 =    0.1/s Avg:  5462 Min:  5164 Max:  5758 Err:     0 (0.00%)
