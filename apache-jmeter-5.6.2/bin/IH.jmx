@@ -77,8 +77,8 @@
         </CSVDataSet>
         <hashTree/>
         <PoissonRandomTimer guiclass="PoissonRandomTimerGui" testclass="PoissonRandomTimer" testname="Poisson Random Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__P(constantDelay,2000)}</stringProp>
-          <stringProp name="RandomTimer.range">${__P(lambdaDelay,200)}</stringProp>
+          <stringProp name="ConstantTimer.delay">2000</stringProp>
+          <stringProp name="RandomTimer.range">200</stringProp>
         </PoissonRandomTimer>
         <hashTree/>
         <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
