@@ -16,7 +16,7 @@
           <stringProp name="LoopController.loops">1</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${__P(threads, 10)}</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(threads, 1)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(rampup, 1)}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">${__P(duration, 900)}</stringProp>
@@ -279,7 +279,7 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 
 WDS.sampleResult.sampleStart();
 
-java.lang.Thread.sleep(3000);
+java.lang.Thread.sleep(2000);
 //wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 if(${counter}&gt;1){
 	WDS.browser.findElement(pkg.By.cssSelector(&quot;.col-md-6.my-auto.text-end .btn.btnStyle.btnPrim&quot;)).click();
@@ -567,8 +567,9 @@ var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(120));
 
 WDS.sampleResult.sampleStart();
-wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+java.lang.Thread.sleep(4000);
 WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Order Report&apos;]&quot;)).click();
+java.lang.Thread.sleep(2000);
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
 WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
@@ -591,7 +592,7 @@ wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpa
 var selectDocumentType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;documentType&quot;)));
 selectDocumentType.selectByVisibleText(&quot;Signed New Business forms&quot;);
 
-WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;C:/Users/kumarmohit1/Downloads/Cancellation_cogitate/jmeter-scripts-cogitate-ih/UploadFile.pdf&quot;]);
+WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/UploadFile.pdf&quot;]);
 
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
@@ -1157,8 +1158,8 @@ WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&q
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 java.lang.Thread.sleep(2000);
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;))));
-java.lang.Thread.sleep(2000);//Note: Wait added for headless mode
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;))));
+java.lang.Thread.sleep(4000);//Note: Wait added for headless mode
 WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
 WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;)).click();
 
@@ -1315,8 +1316,8 @@ WDS.sampleResult.sampleEnd();
             <boolProp name="ignoreFirstLine">false</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
-            <boolProp name="recycle">false</boolProp>
-            <boolProp name="stopThread">true</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
             <stringProp name="shareMode">shareMode.all</stringProp>
           </CSVDataSet>
           <hashTree/>
@@ -1361,26 +1362,6 @@ WDS.sampleResult.sampleEnd();</stringProp>
                 <boolProp name="Assertion.assume_success">false</boolProp>
                 <intProp name="Assertion.test_type">2</intProp>
               </ResponseAssertion>
-              <hashTree/>
-              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
-                <stringProp name="cacheKey">true</stringProp>
-                <stringProp name="filename"></stringProp>
-                <stringProp name="parameters"></stringProp>
-                <stringProp name="script">import org.apache.jmeter.services.FileServer;
-
-def path = FileServer.getFileServer().getBaseDir();
-
-log.info(&quot;Path: &quot; + path);
-
-def separator = File.separator;
-
-def pdfPath = path + separator + &quot;UploadFile.pdf&quot;;
-
-vars.put(&quot;pdfFilePath&quot;, pdfPath);
-
-log.info(&quot;pdfFilePath: &quot; + pdfPath);</stringProp>
-                <stringProp name="scriptLanguage">groovy</stringProp>
-              </JSR223PreProcessor>
               <hashTree/>
             </hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Search" enabled="true">
@@ -1477,8 +1458,7 @@ WDS.browser.executeScript(&quot;arguments[0].click();&quot;, uploadButton);
 
 wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
 java.lang.Thread.sleep(2000);
-//WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;C:/Users/kumarmohit1/Downloads/Cancellation_cogitate/jmeter-scripts-cogitate-ih/UploadFile.pdf&quot;]);
-WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;${__escapeOroRegexpChars(${pdfFilePath},)}&quot;]);
+WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/UploadFile.pdf&quot;]);
 
 java.lang.Thread.sleep(3000);//NOTE:Getting Loader Bar randomly in headless mode
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
@@ -1631,8 +1611,8 @@ WDS.sampleResult.sampleEnd();
             <boolProp name="ignoreFirstLine">false</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
-            <boolProp name="recycle">false</boolProp>
-            <boolProp name="stopThread">true</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
             <stringProp name="shareMode">shareMode.all</stringProp>
           </CSVDataSet>
           <hashTree/>
@@ -1737,7 +1717,7 @@ WDS.browser.executeScript(&quot;arguments[0].click();&quot;, uploadButton);
 
 wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
 
-WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;C:/Users/kumarmohit1/Downloads/Cancellation_cogitate/jmeter-scripts-cogitate-ih/UploadFile.pdf&quot;]);
+WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/UploadFile.pdf&quot;]);
 
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 
