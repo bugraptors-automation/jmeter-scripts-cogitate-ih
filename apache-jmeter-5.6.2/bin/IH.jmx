@@ -56,11 +56,6 @@
               <stringProp name="Argument.value">https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="FILE_PATH" elementType="Argument">
-              <stringProp name="Argument.name">FILE_PATH</stringProp>
-              <stringProp name="Argument.value">${__BeanShell(import org.apache.jmeter.services.FileServer; FileServer.getFileServer().getBaseDir();)}${__BeanShell(import java.io.File;File.separator,)}UploadFile.pdf</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
