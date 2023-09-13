@@ -1165,7 +1165,7 @@ WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;)).click();
 
 wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
 
-WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;C:/Users/kumarmohit1/Downloads/Cancellation_cogitate/jmeter-scripts-cogitate-ih/UploadFile.pdf&quot;]);
+WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/UploadFile.pdf&quot;]);
 
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
