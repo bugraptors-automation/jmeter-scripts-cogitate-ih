@@ -1929,7 +1929,7 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 WDS.sampleResult.sampleStart();
 
 var selectStatus = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;status&quot;)));
-selectStatus.selectByVisibleText(&quot;${status}&quot;);
+selectStatus.selectByValue(&quot;${status}&quot;);
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
