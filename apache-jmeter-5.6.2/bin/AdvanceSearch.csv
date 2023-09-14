@@ -2,4 +2,4 @@ username,password,status,insuredName,fromDate,toDate,policyNo,applicationNo,phon
 ih.testga2,10#Hammer,Active Policy,,,,,,
 ih.william,10#Hammer,,abc,,,,,
 ih.testga2,10#Hammer,,,,,SGIH1GA233745,,
-ih.william,10#Hammer,Application,test,01082023,14082023,,,
+ih.william,10#Hammer,Application,test,1082023,14082023,,,
