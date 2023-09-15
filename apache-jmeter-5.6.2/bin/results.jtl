@@ -1,0 +1,277 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1694754346956,5287,Get Login,200,OK,10.150.0.2-Thread Group 1-2,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754348787,6164,Get Login,200,OK,10.128.0.27-Thread Group 1-8,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754346985,5305,Get Login,200,OK,10.150.0.2-Thread Group 1-7,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754346983,5312,Get Login,200,OK,10.150.0.2-Thread Group 1-1,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754346992,5050,Get Login,200,OK,10.150.0.2-Thread Group 1-8,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754346977,5157,Get Login,200,OK,10.150.0.2-Thread Group 1-10,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754346982,5581,Get Login,200,OK,10.150.0.2-Thread Group 1-9,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754346975,5552,Get Login,200,OK,10.150.0.2-Thread Group 1-3,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754346970,5524,Get Login,200,OK,10.150.0.2-Thread Group 1-5,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754346981,5697,Get Login,200,OK,10.150.0.2-Thread Group 1-6,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754346987,5709,Get Login,200,OK,10.150.0.2-Thread Group 1-4,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754352836,18654,Transaction Controller - View,500,"Number of samples in transaction : 2, number of failing samples : 1",10.150.0.2-Thread Group 1-3,,false,,31329,0,10,10,null,0,5556,0
+1694754355725,18018,Login  View,200,OK,10.150.0.2-Thread Group 1-3,text,true,,27012,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754376406,636,Search Filter,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""#nprogress""}
+  (Session info: chrome=117.0.5938.62)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a0eeb893823ad7b6afbd2a90da313930, findElement {using=id, value=nprogress}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41247}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:41247/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a0eeb893823ad7b6afbd2a90da313930",10.150.0.2-Thread Group 1-3,text,false,,4317,0,10,10,null,0,0,0
+1694754352711,21030,Transaction Controller - Reinstate,500,"Number of samples in transaction : 2, number of failing samples : 1",10.150.0.2-Thread Group 1-1,,false,,30379,0,9,9,null,0,5335,0
+1694754355533,18016,Login  Reinstatement,200,OK,10.150.0.2-Thread Group 1-1,text,true,,26285,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754376062,3014,Search,500,"element click intercepted: Element is not clickable at point (390, 714)
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [04fb555c282bdf286599a5fce344b68c, clickElement {id=D8ADBF2E7E1BF40D3C46E29B8489E1D9_element_34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:34729}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:34729/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (04fb555c282bdf286599a5fce344b68c)] -> id: submitAdvSearch]
+Session ID: 04fb555c282bdf286599a5fce344b68c",10.150.0.2-Thread Group 1-1,text,false,,4094,0,9,9,null,0,0,0
+1694754352831,21195,Transaction Controller - Cancellation,500,"Number of samples in transaction : 2, number of failing samples : 1",10.150.0.2-Thread Group 1-9,,false,,30379,0,8,8,null,0,5339,0
+1694754355508,18244,Login  Cancellation,200,OK,10.150.0.2-Thread Group 1-9,text,true,,26285,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754376414,2951,Search,500,"element click intercepted: Element is not clickable at point (390, 730)
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fc2c7105197c86c0c18200de7f1d3460, clickElement {id=A7F19E876D6114E0F69A6947AC7E5341_element_33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43221}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:43221/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (fc2c7105197c86c0c18200de7f1d3460)] -> id: submitAdvSearch]
+Session ID: fc2c7105197c86c0c18200de7f1d3460",10.150.0.2-Thread Group 1-9,text,false,,4094,0,8,8,null,0,0,0
+1694754352738,21266,Transaction Controller - Cancellation,500,"Number of samples in transaction : 2, number of failing samples : 1",10.150.0.2-Thread Group 1-10,,false,,31008,0,8,8,null,0,5432,0
+1694754355499,18378,Login  Cancellation,200,OK,10.150.0.2-Thread Group 1-10,text,true,,26914,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754376548,2888,Search,500,"element click intercepted: Element is not clickable at point (390, 699)
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2f07f976790be5164899bddb845c8050, clickElement {id=91F1CCB026C36EBB71E3D72D20D0CC6E_element_37}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42515}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:42515/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (2f07f976790be5164899bddb845c8050)] -> id: submitAdvSearch]
+Session ID: 2f07f976790be5164899bddb845c8050",10.150.0.2-Thread Group 1-10,text,false,,4094,0,8,8,null,0,0,0
+1694754352835,21566,Transaction Controller - Endorsement,500,"Number of samples in transaction : 2, number of failing samples : 1",10.150.0.2-Thread Group 1-6,,false,,30379,0,6,6,null,0,5322,0
+1694754355570,18481,Login  Endorsement,200,OK,10.150.0.2-Thread Group 1-6,text,true,,26285,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754376638,3085,Search,500,"element click intercepted: Element is not clickable at point (390, 714)
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5db052be1def004937d9145fa6ec569f, clickElement {id=1543DD40EEC0E86C420C4B870E3DAD8E_element_33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:35801}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:35801/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (5db052be1def004937d9145fa6ec569f)] -> id: submitAdvSearch]
+Session ID: 5db052be1def004937d9145fa6ec569f",10.150.0.2-Thread Group 1-6,text,false,,4094,0,6,6,null,0,0,0
+1694754352836,24429,Transaction Controller - View,500,"Number of samples in transaction : 3, number of failing samples : 1",10.150.0.2-Thread Group 1-5,,false,,71845,0,5,5,null,0,7930,0
+1694754355588,18112,Login  View,200,OK,10.150.0.2-Thread Group 1-5,text,true,,26285,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754376457,4129,Search Filter,200,OK,10.150.0.2-Thread Group 1-5,text,true,,41466,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754383007,2188,Advanced Search,500,"element click intercepted: Element is not clickable at point (390, 633)
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [819f15890406816fcc1cbf9bb5b7128a, clickElement {id=266B9B7D54A2A7C21C3B9F2DF75DCF25_element_50}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41661}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:41661/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (819f15890406816fcc1cbf9bb5b7128a)] -> id: submitAdvSearch]
+Session ID: 819f15890406816fcc1cbf9bb5b7128a",10.150.0.2-Thread Group 1-5,text,false,,4094,0,5,5,null,0,0,0
+1694754352842,44933,Transaction Controller -  New Business,500,"Number of samples in transaction : 7, number of failing samples : 1",10.150.0.2-Thread Group 1-4,,false,,127700,0,4,4,null,0,16638,0
+1694754355535,17946,Login   NewBusiness,200,OK,10.150.0.2-Thread Group 1-4,text,true,,26158,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754375963,2478,Select New Business,200,OK,10.150.0.2-Thread Group 1-4,text,true,,15087,0,9,9,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1694754380776,2820,Ineligible Risks,200,OK,10.150.0.2-Thread Group 1-4,text,true,,24151,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1694754385880,7589,Policy Info,200,OK,10.150.0.2-Thread Group 1-4,text,true,,38680,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754395703,2,BeanShell Sampler - Driver,200,OK,10.150.0.2-Thread Group 1-4,text,true,,0,0,4,4,null,0,0,0
+1694754397985,10940,Drivers,200,OK,10.150.0.2-Thread Group 1-4,text,true,,19333,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754411246,3158,Drivers,500,"element click intercepted: Element <button type=""button"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (433, 19). Other element would receive the click: <div class=""container-fluid h-100 px-0"">...</div>
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [95189dc1370ebf8718441e019afc273c, clickElement {id=69E57590514AA7B872CEBCD437E053B0_element_103}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40899}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:40899/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (95189dc1370ebf8718441e019afc273c)] -> css selector: .col-md-6.my-auto.text-end .btn.btnStyle.btnPrim]
+Session ID: 95189dc1370ebf8718441e019afc273c",10.150.0.2-Thread Group 1-4,text,false,,4291,0,4,4,null,0,0,0
+1694754352594,43476,Transaction Controller -  New Business,500,"Number of samples in transaction : 7, number of failing samples : 1",10.150.0.2-Thread Group 1-7,,false,,127827,0,4,4,null,0,18098,0
+1694754355496,17886,Login   NewBusiness,200,OK,10.150.0.2-Thread Group 1-7,text,true,,26285,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754375725,2346,Select New Business,200,OK,10.150.0.2-Thread Group 1-7,text,true,,15087,0,9,9,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1694754380382,2656,Ineligible Risks,200,OK,10.150.0.2-Thread Group 1-7,text,true,,24151,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1694754385354,6982,Policy Info,200,OK,10.150.0.2-Thread Group 1-7,text,true,,38680,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754394581,10,BeanShell Sampler - Driver,200,OK,10.150.0.2-Thread Group 1-7,text,true,,0,0,4,4,null,0,0,0
+1694754396864,10440,Drivers,200,OK,10.150.0.2-Thread Group 1-7,text,true,,19333,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754410998,3156,Drivers,500,"element click intercepted: Element <button type=""button"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (433, 19). Other element would receive the click: <div class=""container-fluid h-100 px-0"">...</div>
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8793aba6e46df43c5960070481678cf7, clickElement {id=88932CE8EB83765A5923D80AD9C0B374_element_103}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:39647}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:39647/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (8793aba6e46df43c5960070481678cf7)] -> css selector: .col-md-6.my-auto.text-end .btn.btnStyle.btnPrim]
+Session ID: 8793aba6e46df43c5960070481678cf7",10.150.0.2-Thread Group 1-7,text,false,,4291,0,4,4,null,0,0,0
+1694754352709,45607,Transaction Controller -  New Business,500,"Number of samples in transaction : 7, number of failing samples : 1",10.150.0.2-Thread Group 1-8,,false,,128300,0,2,2,null,0,16662,0
+1694754355510,17876,Login   NewBusiness,200,OK,10.150.0.2-Thread Group 1-8,text,true,,26285,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754375791,2991,Select New Business,200,OK,10.150.0.2-Thread Group 1-8,text,true,,15560,0,9,9,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1694754381098,2714,Ineligible Risks,200,OK,10.150.0.2-Thread Group 1-8,text,true,,24151,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1694754386126,7918,Policy Info,200,OK,10.150.0.2-Thread Group 1-8,text,true,,38680,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754396255,2,BeanShell Sampler - Driver,200,OK,10.150.0.2-Thread Group 1-8,text,true,,0,0,4,4,null,0,0,0
+1694754398523,10984,Drivers,200,OK,10.150.0.2-Thread Group 1-8,text,true,,19333,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754411847,3122,Drivers,500,"element click intercepted: Element <button type=""button"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (433, 19). Other element would receive the click: <div class=""container-fluid h-100 px-0"">...</div>
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7a3b8053937529cd4cc31023bcce5393, clickElement {id=8E9D7F0B53EB724322347A616FE38BD6_element_102}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:39007}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:39007/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (7a3b8053937529cd4cc31023bcce5393)] -> css selector: .col-md-6.my-auto.text-end .btn.btnStyle.btnPrim]
+Session ID: 7a3b8053937529cd4cc31023bcce5393",10.150.0.2-Thread Group 1-8,text,false,,4291,0,2,2,null,0,0,0
+1694754352736,45447,Transaction Controller -  New Business,500,"Number of samples in transaction : 7, number of failing samples : 1",10.150.0.2-Thread Group 1-2,,false,,127827,0,2,2,null,0,16876,0
+1694754355533,17982,Login   NewBusiness,200,OK,10.150.0.2-Thread Group 1-2,text,true,,26285,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754376041,2667,Select New Business,200,OK,10.150.0.2-Thread Group 1-2,text,true,,15087,0,9,9,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1694754381108,2870,Ineligible Risks,200,OK,10.150.0.2-Thread Group 1-2,text,true,,24151,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1694754386261,7862,Policy Info,200,OK,10.150.0.2-Thread Group 1-2,text,true,,38680,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754396364,2,BeanShell Sampler - Driver,200,OK,10.150.0.2-Thread Group 1-2,text,true,,0,0,4,4,null,0,0,0
+1694754398613,10952,Drivers,200,OK,10.150.0.2-Thread Group 1-2,text,true,,19333,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754411936,3112,Drivers,500,"element click intercepted: Element <button type=""button"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (433, 19). Other element would receive the click: <div class=""container-fluid h-100 px-0"">...</div>
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5d5636f7a1e20c7da63e78d2feed8e87, clickElement {id=FC0A9192F6929E2836DB10AB2F55655A_element_103}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44563}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:44563/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (5d5636f7a1e20c7da63e78d2feed8e87)] -> css selector: .col-md-6.my-auto.text-end .btn.btnStyle.btnPrim]
+Session ID: 5d5636f7a1e20c7da63e78d2feed8e87",10.150.0.2-Thread Group 1-2,text,false,,4291,0,2,2,null,0,0,0
+1694754348779,6339,Get Login,200,OK,10.128.0.27-Thread Group 1-4,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754348789,6382,Get Login,200,OK,10.128.0.27-Thread Group 1-7,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754348787,6266,Get Login,200,OK,10.128.0.27-Thread Group 1-5,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754348767,6560,Get Login,200,OK,10.128.0.27-Thread Group 1-3,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754348789,6534,Get Login,200,OK,10.128.0.27-Thread Group 1-2,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754348780,6683,Get Login,200,OK,10.128.0.27-Thread Group 1-10,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754348782,6737,Get Login,200,OK,10.128.0.27-Thread Group 1-9,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754348780,6823,Get Login,200,OK,10.128.0.27-Thread Group 1-6,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754348779,6838,Get Login,200,OK,10.128.0.27-Thread Group 1-1,text,true,,5884,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1694754355751,19275,Transaction Controller - Reinstate,500,"Number of samples in transaction : 2, number of failing samples : 1",10.128.0.27-Thread Group 1-9,,false,,30379,0,10,10,null,0,5608,0
+1694754358682,16848,Login  Reinstatement,200,OK,10.128.0.27-Thread Group 1-9,text,true,,26285,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754378192,2427,Search,500,"element click intercepted: Element is not clickable at point (390, 709)
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [592deed40bc404cc948c38b13b28e945, clickElement {id=8D82880E364FB02297113F9F062CFF6D_element_31}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38113}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:38113/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (592deed40bc404cc948c38b13b28e945)] -> id: submitAdvSearch]
+Session ID: 592deed40bc404cc948c38b13b28e945",10.128.0.27-Thread Group 1-9,text,false,,4094,0,10,10,null,0,0,0
+1694754355766,19880,Transaction Controller - View,500,"Number of samples in transaction : 2, number of failing samples : 1",10.128.0.27-Thread Group 1-3,,false,,31958,0,9,9,null,0,5906,0
+1694754358864,19247,Login  View,200,OK,10.128.0.27-Thread Group 1-3,text,true,,27641,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754380907,633,Search Filter,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""#nprogress""}
+  (Session info: chrome=117.0.5938.62)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [61d97a528ff4d6837c720eced7c8742c, findElement {using=id, value=nprogress}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42435}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:42435/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 61d97a528ff4d6837c720eced7c8742c",10.128.0.27-Thread Group 1-3,text,false,,4317,0,9,9,null,0,0,0
+1694754355760,21139,Transaction Controller - Cancellation,500,"Number of samples in transaction : 2, number of failing samples : 1",10.128.0.27-Thread Group 1-2,,false,,30379,0,8,8,null,0,5612,0
+1694754358835,17956,Login  Cancellation,200,OK,10.128.0.27-Thread Group 1-2,text,true,,26285,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754379327,3183,Search,500,"element click intercepted: Element is not clickable at point (390, 714)
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54e4b7a011a2314745816c9a67846ce5, clickElement {id=A777648680755D0A10A9160F2738A928_element_31}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:39259}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:39259/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (54e4b7a011a2314745816c9a67846ce5)] -> id: submitAdvSearch]
+Session ID: 54e4b7a011a2314745816c9a67846ce5",10.128.0.27-Thread Group 1-2,text,false,,4094,0,8,8,null,0,0,0
+1694754355786,21526,Transaction Controller - Cancellation,500,"Number of samples in transaction : 2, number of failing samples : 1",10.128.0.27-Thread Group 1-6,,false,,30379,0,7,7,null,0,5698,0
+1694754358863,18160,Login  Cancellation,200,OK,10.128.0.27-Thread Group 1-6,text,true,,26285,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754379643,3366,Search,500,"element click intercepted: Element is not clickable at point (390, 724)
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [73473219fdd670651cb3a8fd321a54df, clickElement {id=2A0057F127A8B24900EBFF99DBB20E11_element_33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43129}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:43129/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (73473219fdd670651cb3a8fd321a54df)] -> id: submitAdvSearch]
+Session ID: 73473219fdd670651cb3a8fd321a54df",10.128.0.27-Thread Group 1-6,text,false,,4094,0,7,7,null,0,0,0
+1694754355704,22135,Transaction Controller - Endorsement,500,"Number of samples in transaction : 2, number of failing samples : 1",10.128.0.27-Thread Group 1-10,,false,,31008,0,6,6,null,0,5641,0
+1694754358682,18897,Login  Endorsement,200,OK,10.128.0.27-Thread Group 1-10,text,true,,26914,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754380242,3238,Search,500,"element click intercepted: Element is not clickable at point (390, 732)
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [89fa747f2ec7c2b7247b62d3f49a4ae0, clickElement {id=D3D011426EC1D40DB74C7BF42AA0C694_element_35}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40485}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:40485/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (89fa747f2ec7c2b7247b62d3f49a4ae0)] -> id: submitAdvSearch]
+Session ID: 89fa747f2ec7c2b7247b62d3f49a4ae0",10.128.0.27-Thread Group 1-10,text,false,,4094,0,6,6,null,0,0,0
+1694754355726,35320,Transaction Controller - View,200,"Number of samples in transaction : 5, number of failing samples : 0",10.128.0.27-Thread Group 1-8,,true,,167234,0,5,5,null,0,12727,0
+1694754358718,18481,Login  View,200,OK,10.128.0.27-Thread Group 1-8,text,true,,26914,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754379720,4630,Search Filter,200,OK,10.128.0.27-Thread Group 1-8,text,true,,41466,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754386797,4349,Advanced Search,200,OK,10.128.0.27-Thread Group 1-8,text,true,,43738,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754393523,2953,View,200,OK,10.128.0.27-Thread Group 1-8,text,true,,26604,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/summary/,0,0,0
+1694754398842,4907,Logout,200,OK,10.128.0.27-Thread Group 1-8,text,true,,28512,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/summary/,0,0,0
+1694754355600,44273,Transaction Controller -  New Business,500,"Number of samples in transaction : 7, number of failing samples : 1",10.128.0.27-Thread Group 1-5,,false,,128300,0,4,4,null,0,18873,0
+1694754358667,18480,Login   NewBusiness,200,OK,10.128.0.27-Thread Group 1-5,text,true,,26285,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754379666,3038,Select New Business,200,OK,10.128.0.27-Thread Group 1-5,text,true,,15560,0,8,8,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1694754385036,2554,Ineligible Risks,200,OK,10.128.0.27-Thread Group 1-5,text,true,,24151,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1694754389917,6493,Policy Info,200,OK,10.128.0.27-Thread Group 1-5,text,true,,38680,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754398691,15,BeanShell Sampler - Driver,200,OK,10.128.0.27-Thread Group 1-5,text,true,,0,0,5,5,null,0,0,0
+1694754401080,10587,Drivers,200,OK,10.128.0.27-Thread Group 1-5,text,true,,19333,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754415630,3106,Drivers,500,"element click intercepted: Element <button type=""button"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (433, 19). Other element would receive the click: <div class=""container-fluid h-100 px-0"">...</div>
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a664d5d8470d89c2a307725abf83cbe8, clickElement {id=171A74E3E0D1710CB7DB8A310E006135_element_100}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41295}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:41295/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (a664d5d8470d89c2a307725abf83cbe8)] -> css selector: .col-md-6.my-auto.text-end .btn.btnStyle.btnPrim]
+Session ID: a664d5d8470d89c2a307725abf83cbe8",10.128.0.27-Thread Group 1-5,text,false,,4291,0,4,4,null,0,0,0
+1694754355573,46569,Transaction Controller -  New Business,500,"Number of samples in transaction : 7, number of failing samples : 1",10.128.0.27-Thread Group 1-4,,false,,127827,0,3,3,null,0,17357,0
+1694754358717,18857,Login   NewBusiness,200,OK,10.128.0.27-Thread Group 1-4,text,true,,26285,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754380260,2886,Select New Business,200,OK,10.128.0.27-Thread Group 1-4,text,true,,15087,0,7,7,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1694754385474,2917,Ineligible Risks,200,OK,10.128.0.27-Thread Group 1-4,text,true,,24151,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1694754390703,8021,Policy Info,200,OK,10.128.0.27-Thread Group 1-4,text,true,,38680,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754400937,2,BeanShell Sampler - Driver,200,OK,10.128.0.27-Thread Group 1-4,text,true,,0,0,5,5,null,0,0,0
+1694754403278,10733,Drivers,200,OK,10.128.0.27-Thread Group 1-4,text,true,,19333,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754416337,3153,Drivers,500,"element click intercepted: Element <button type=""button"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (433, 19). Other element would receive the click: <div class=""container-fluid h-100 px-0"">...</div>
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1173e0e1211c78ba1c96ed3d98d11ce0, clickElement {id=9BBF166037E1B8110AC9DD37D49A3DFC_element_101}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37405}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:37405/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (1173e0e1211c78ba1c96ed3d98d11ce0)] -> css selector: .col-md-6.my-auto.text-end .btn.btnStyle.btnPrim]
+Session ID: 1173e0e1211c78ba1c96ed3d98d11ce0",10.128.0.27-Thread Group 1-4,text,false,,4291,0,3,3,null,0,0,0
+1694754355574,48323,Transaction Controller -  New Business,500,"Number of samples in transaction : 7, number of failing samples : 1",10.128.0.27-Thread Group 1-7,,false,,128929,0,2,2,null,0,17391,0
+1694754358716,18919,Login   NewBusiness,200,OK,10.128.0.27-Thread Group 1-7,text,true,,26914,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754380324,3214,Select New Business,200,OK,10.128.0.27-Thread Group 1-7,text,true,,15560,0,6,6,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1694754385952,3178,Ineligible Risks,200,OK,10.128.0.27-Thread Group 1-7,text,true,,24151,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1694754391443,8927,Policy Info,200,OK,10.128.0.27-Thread Group 1-7,text,true,,38680,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754402612,2,BeanShell Sampler - Driver,200,OK,10.128.0.27-Thread Group 1-7,text,true,,0,0,5,5,null,0,0,0
+1694754404893,10961,Drivers,200,OK,10.128.0.27-Thread Group 1-7,text,true,,19333,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754418158,3122,Drivers,500,"element click intercepted: Element <button type=""button"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (433, 19). Other element would receive the click: <div class=""container-fluid h-100 px-0"">...</div>
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f5bb0d9aae7ff2a9a68432e7f2823fe4, clickElement {id=54B22EEF0487AECDAEF838DF420A745A_element_106}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42355}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:42355/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (f5bb0d9aae7ff2a9a68432e7f2823fe4)] -> css selector: .col-md-6.my-auto.text-end .btn.btnStyle.btnPrim]
+Session ID: f5bb0d9aae7ff2a9a68432e7f2823fe4",10.128.0.27-Thread Group 1-7,text,false,,4291,0,2,2,null,0,0,0
+1694754355772,48802,Transaction Controller -  New Business,500,"Number of samples in transaction : 7, number of failing samples : 1",10.128.0.27-Thread Group 1-1,,false,,128802,0,1,1,null,0,16894,0
+1694754358682,19426,Login   NewBusiness,200,OK,10.128.0.27-Thread Group 1-1,text,true,,26787,0,10,10,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1694754380618,3455,Select New Business,200,OK,10.128.0.27-Thread Group 1-1,text,true,,15560,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1694754386491,3032,Ineligible Risks,200,OK,10.128.0.27-Thread Group 1-1,text,true,,24151,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1694754391798,8813,Policy Info,200,OK,10.128.0.27-Thread Group 1-1,text,true,,38680,0,5,5,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754402833,1,BeanShell Sampler - Driver,200,OK,10.128.0.27-Thread Group 1-1,text,true,,0,0,5,5,null,0,0,0
+1694754405090,10932,Drivers,200,OK,10.128.0.27-Thread Group 1-1,text,true,,19333,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1694754418312,3143,Drivers,500,"element click intercepted: Element <button type=""button"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (433, 19). Other element would receive the click: <div class=""container-fluid h-100 px-0"">...</div>
+  (Session info: chrome=117.0.5938.62)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f3459c55bb650b7908ee7541f06f9ea6, clickElement {id=DFC7CE042E6F771109FD43D1767B59E9_element_104}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.62, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:34649}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:34649/devtoo..., se:cdpVersion: 117.0.5938.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (f3459c55bb650b7908ee7541f06f9ea6)] -> css selector: .col-md-6.my-auto.text-end .btn.btnStyle.btnPrim]
+Session ID: f3459c55bb650b7908ee7541f06f9ea6",10.128.0.27-Thread Group 1-1,text,false,,4291,0,1,1,null,0,0,0
