@@ -1,0 +1,57 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1695960420302,2085,Get Login,200,OK,Thread Group 1-2,text,true,,5884,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1695960420292,2096,Get Login,200,OK,Thread Group 1-4,text,true,,5884,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1695960420296,2190,Get Login,200,OK,Thread Group 1-1,text,true,,5884,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1695960420317,2198,Get Login,200,OK,Thread Group 1-3,text,true,,5884,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1695960422616,16774,Transaction Controller -  New Business,500,"Number of samples in transaction : 4, number of failing samples : 1",Thread Group 1-3,,false,,45989,0,4,4,null,0,9833,0
+1695960422604,16701,Transaction Controller -  New Business,500,"Number of samples in transaction : 4, number of failing samples : 1",Thread Group 1-4,,false,,45989,0,4,4,null,0,9918,0
+1695960425299,9482,Login   NewBusiness,200,OK,Thread Group 1-4,text,true,,13031,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1695960425290,9580,Login   NewBusiness,200,OK,Thread Group 1-3,text,true,,13031,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1695960437324,2664,Select New Business,200,OK,Thread Group 1-4,text,true,,15560,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1695960437322,2638,Select New Business,200,OK,Thread Group 1-3,text,true,,15560,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1695960442341,2492,Ineligible Risks,200,OK,Thread Group 1-4,text,true,,13078,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1695960442341,2513,Ineligible Risks,200,OK,Thread Group 1-3,text,true,,13078,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1695960447156,2063,Policy Info,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""#firstname""}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [215a7dddd5bccde8a09292ebac6a2d68, findElement {using=id, value=firstname}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:44089/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 215a7dddd5bccde8a09292ebac6a2d68",Thread Group 1-4,text,false,,4320,0,4,4,null,0,0,0
+1695960447176,2043,Policy Info,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""#firstname""}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [86d2618688515d2bb020911425474d01, findElement {using=id, value=firstname}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:34801}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:34801/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 86d2618688515d2bb020911425474d01",Thread Group 1-3,text,false,,4320,0,4,4,null,0,0,0
+1695960422491,17579,Transaction Controller -  New Business,500,"Number of samples in transaction : 4, number of failing samples : 1",Thread Group 1-2,,false,,45516,0,2,2,null,0,9814,0
+1695960425290,10580,Login   NewBusiness,200,OK,Thread Group 1-2,text,true,,13031,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1695960438291,2410,Select New Business,200,OK,Thread Group 1-2,text,true,,15087,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1695960443001,2556,Ineligible Risks,200,OK,Thread Group 1-2,text,true,,13078,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1695960447849,2033,Policy Info,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""#firstname""}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [71788944fb0af8f2d4b7461b89eda694, findElement {using=id, value=firstname}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44551}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:44551/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 71788944fb0af8f2d4b7461b89eda694",Thread Group 1-2,text,false,,4320,0,2,2,null,0,0,0
+1695960422592,17649,Transaction Controller -  New Business,500,"Number of samples in transaction : 4, number of failing samples : 1",Thread Group 1-1,,false,,45516,0,1,1,null,0,9754,0
+1695960425299,10548,Login   NewBusiness,200,OK,Thread Group 1-1,text,true,,13031,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1695960438274,2421,Select New Business,200,OK,Thread Group 1-1,text,true,,15087,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1695960443018,2636,Ineligible Risks,200,OK,Thread Group 1-1,text,true,,13078,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1695960447950,2044,Policy Info,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""#firstname""}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [12b6178069815e2e4b380dfd97261e4b, findElement {using=id, value=firstname}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:32801}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:32801/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 12b6178069815e2e4b380dfd97261e4b",Thread Group 1-1,text,false,,4320,0,1,1,null,0,0,0
