@@ -301,7 +301,7 @@ selectDriverType.selectByVisibleText(&quot;${__V(driverTypeDriver${counter})}&qu
 }
 WDS.browser.findElement(pkg.By.id(&quot;driversLicenseNo&quot;)).sendKeys(&quot;${__V(licenseNoDriver${counter})}&quot;);
 
-if(&quot;${addViolationDriver}&quot; == &quot;Yes&quot;)
+if(&quot;${addViolation}&quot; == &quot;Yes&quot;)
 {
 WDS.browser.findElement(pkg.By.id(&quot;violationDate&quot;)).sendKeys(&quot;${__V(violationDateDriver${counter})}&quot;);
 java.lang.Thread.sleep(1000);
@@ -409,7 +409,7 @@ java.lang.Thread.sleep(1000);
 }
 
 //Lien Holder &quot;Yes&quot;
-if(&quot;${lienHolderVehicle1}&quot; == &quot;Yes&quot;){
+if(&quot;${lienHolder}&quot; == &quot;Yes&quot;){
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-hasAdditionalInterestDetails-0&apos;]&quot;)));
 java.lang.Thread.sleep(1000);
 var selectLhType = WDS.browser.findElement(pkg.By.id(&quot;Type&quot;));
