@@ -301,7 +301,7 @@ selectDriverType.selectByVisibleText(&quot;${__V(driverTypeDriver${counter})}&qu
 }
 WDS.browser.findElement(pkg.By.id(&quot;driversLicenseNo&quot;)).sendKeys(&quot;${__V(licenseNoDriver${counter})}&quot;);
 
-if(&quot;${addViolationDriver}&quot; == &quot;Yes&quot;)
+if(&quot;${addViolation}&quot; == &quot;Yes&quot;)
 {
 WDS.browser.findElement(pkg.By.id(&quot;violationDate&quot;)).sendKeys(&quot;${__V(violationDateDriver${counter})}&quot;);
 java.lang.Thread.sleep(1000);
@@ -575,14 +575,17 @@ wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.i
 WDS.browser.navigate().refresh();
 java.lang.Thread.sleep(2000);
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+java.lang.Thread.sleep(1000);
+WDS.browser.executeScript(&quot;window.scrollTo(0,document.body.scrollHeight)&quot;);
+
 WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
 WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;)).click();
-
 wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
 var selectDocumentType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;documentType&quot;)));
 selectDocumentType.selectByVisibleText(&quot;Signed New Business forms&quot;);
 
-WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/UploadFile.pdf&quot;]);
+WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys(&quot;/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/UploadFile.pdf&quot;);
 
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
