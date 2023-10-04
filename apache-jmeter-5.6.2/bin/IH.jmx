@@ -564,7 +564,7 @@ wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.i
 WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
 java.lang.Thread.sleep(500);
 WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 java.lang.Thread.sleep(6000); //Note: website taking time show next progress loader
 //wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Make a Payment&apos;]&quot;)).click();
