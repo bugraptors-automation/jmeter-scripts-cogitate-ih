@@ -40,7 +40,7 @@ Note:
 	iii) 'underwriterAprrovalReq' - Accepted values for this column are either 'Yes' or 'No'. Provide it as 'Yes' if the endorsement required approval from Underwriter Role.
 	 iv) 'editDriver' - Accepted values for this column are 'Add', 'Delete', 'Edit' and 'No', based on user preference whether we want to add, delete or edit the driver. If we do not want to make any changes in driver section we'll pass it as 'No'.
 	  v) 'editVehicle' - Accepted values for this column are 'Add', 'Delete', 'Edit' and 'No', based on user preference whether we want to add, delete or edit the vehicle. If we do not want to make any changes in vehicle section we'll pass it as 'No'.
-	 vi) 'underwriter' - Accepted values for this column are either 'Yes' or 'No'. Provide it as 'Yes' if underwriting screen will appear for endorsement i.e. if we are adding new driver/vehicle during endorsement, else provide it as 'No'.
+	 vi) 'underwriting' - Accepted values for this column are either 'Yes' or 'No'. Provide it as 'Yes' if underwriting screen will appear for endorsement i.e. if we are adding new driver/vehicle during endorsement, else provide it as 'No'.
 
 8. CancellationDetails
 	  i) 'primaryRole' - Provide the Agent Role via which the endorsement will be performed.
