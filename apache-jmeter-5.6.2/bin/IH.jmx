@@ -559,13 +559,14 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 WDS.sampleResult.sampleStart();
 java.lang.Thread.sleep(4000);
 WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Order Report&apos;]&quot;)).click();
+java.lang.Thread.sleep(2000);
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
 WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
 java.lang.Thread.sleep(500);
 WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-java.lang.Thread.sleep(6000); //Note: website taking time show next progress loader
+java.lang.Thread.sleep(5000); //Note: website taking time show next progress loader
 //wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Make a Payment&apos;]&quot;)).click();
 WDS.browser.findElement(pkg.By.cssSelector(&quot;tr:nth-child(1) input[name=&apos;groupOptions&apos;]&quot;)).click();
