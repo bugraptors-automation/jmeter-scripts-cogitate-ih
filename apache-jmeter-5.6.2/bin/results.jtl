@@ -1,0 +1,125 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1696479168849,2044,Get Login,200,OK,10.150.0.6-Thread Group 1-1,text,true,,5884,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1696479169832,1221,Get Login,200,OK,10.142.0.11-Thread Group 1-1,text,true,,5884,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1696479170068,1326,Get Login,200,OK,10.142.0.11-Thread Group 1-2,text,true,,5884,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1696479170383,1421,Get Login,200,OK,10.142.0.11-Thread Group 1-3,text,true,,5884,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1696479170653,1328,Get Login,200,OK,10.142.0.11-Thread Group 1-4,text,true,,5884,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1696479171504,21019,Transaction Controller -  New Business,500,"Number of samples in transaction : 6, number of failing samples : 1",10.142.0.11-Thread Group 1-1,,false,,112280,0,4,4,null,0,382,0
+1696479171585,4141,Login   NewBusiness,200,OK,10.142.0.11-Thread Group 1-1,text,true,,29533,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1696479175766,676,Select New Business,200,OK,10.142.0.11-Thread Group 1-1,text,true,,15556,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1696479176545,1830,Ineligible Risks,200,OK,10.142.0.11-Thread Group 1-1,text,true,,24147,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1696479178424,5924,Policy Info,200,OK,10.142.0.11-Thread Group 1-1,text,true,,38677,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1696479184367,5,BeanShell Sampler - Driver,200,OK,10.142.0.11-Thread Group 1-1,text,true,,0,0,4,4,null,0,0,0
+1696479184426,8443,Drivers,500,"element click intercepted: Element <button type=""submit"" form=""setViolationForm"" id=""submitsetViolationForm"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (397, 439). Other element would receive the click: <button type=""submit"" id=""btnnext"" form=""singleDriverForm"" class=""btn btnStyle btnSecon me-0"">...</button>
+  (Session info: chrome=117.0.5938.132)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e21abbb78070abec91723554bcfec757, clickElement {id=9398F03D48F7BE294C97A43B63F84E5B_element_106}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40879}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:40879/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (e21abbb78070abec91723554bcfec757)] -> id: submitsetViolationForm]
+Session ID: e21abbb78070abec91723554bcfec757",10.142.0.11-Thread Group 1-1,text,false,,4367,0,4,4,null,0,0,0
+1696479171840,20922,Transaction Controller -  New Business,500,"Number of samples in transaction : 6, number of failing samples : 1",10.142.0.11-Thread Group 1-3,,false,,114291,0,3,3,null,0,338,0
+1696479171938,4061,Login   NewBusiness,200,OK,10.142.0.11-Thread Group 1-3,text,true,,32017,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1696479176039,680,Select New Business,200,OK,10.142.0.11-Thread Group 1-3,text,true,,15084,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1696479176785,1739,Ineligible Risks,200,OK,10.142.0.11-Thread Group 1-3,text,true,,24148,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1696479178568,6020,Policy Info,200,OK,10.142.0.11-Thread Group 1-3,text,true,,38675,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1696479184607,2,BeanShell Sampler - Driver,200,OK,10.142.0.11-Thread Group 1-3,text,true,,0,0,4,4,null,0,0,0
+1696479184672,8420,Drivers,500,"element click intercepted: Element <button type=""submit"" form=""setViolationForm"" id=""submitsetViolationForm"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (397, 439). Other element would receive the click: <button type=""submit"" id=""btnnext"" form=""singleDriverForm"" class=""btn btnStyle btnSecon me-0"">...</button>
+  (Session info: chrome=117.0.5938.132)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6a9793c13cee8dbbc2426a5612b141af, clickElement {id=E210FC12A1C7FDE7A514FC8EC1AAB4BC_element_105}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33981}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:33981/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (6a9793c13cee8dbbc2426a5612b141af)] -> id: submitsetViolationForm]
+Session ID: 6a9793c13cee8dbbc2426a5612b141af",10.142.0.11-Thread Group 1-3,text,false,,4367,0,3,3,null,0,0,0
+1696479171432,21404,Transaction Controller -  New Business,500,"Number of samples in transaction : 6, number of failing samples : 1",10.142.0.11-Thread Group 1-2,,false,,114839,0,3,3,null,0,353,0
+1696479171540,4710,Login   NewBusiness,200,OK,10.142.0.11-Thread Group 1-2,text,true,,32081,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1696479176298,773,Select New Business,200,OK,10.142.0.11-Thread Group 1-2,text,true,,15560,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1696479177141,1800,Ineligible Risks,200,OK,10.142.0.11-Thread Group 1-2,text,true,,24151,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1696479178987,5923,Policy Info,200,OK,10.142.0.11-Thread Group 1-2,text,true,,38680,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1696479184932,1,BeanShell Sampler - Driver,200,OK,10.142.0.11-Thread Group 1-2,text,true,,0,0,4,4,null,0,0,0
+1696479184984,8197,Drivers,500,"element click intercepted: Element <button type=""submit"" form=""setViolationForm"" id=""submitsetViolationForm"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (397, 439). Other element would receive the click: <button type=""submit"" id=""btnnext"" form=""singleDriverForm"" class=""btn btnStyle btnSecon me-0"">...</button>
+  (Session info: chrome=117.0.5938.132)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9ddf31a9e47cb5d8aa319ef3b6697a48, clickElement {id=BADFDDFE14C780DFF52FCDD9F365369B_element_106}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43805}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:43805/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (9ddf31a9e47cb5d8aa319ef3b6697a48)] -> id: submitsetViolationForm]
+Session ID: 9ddf31a9e47cb5d8aa319ef3b6697a48",10.142.0.11-Thread Group 1-2,text,false,,4367,0,3,3,null,0,0,0
+1696479172034,22476,Transaction Controller -  New Business,500,"Number of samples in transaction : 6, number of failing samples : 1",10.142.0.11-Thread Group 1-4,,false,,111815,0,1,1,null,0,426,0
+1696479172110,4158,Login   NewBusiness,200,OK,10.142.0.11-Thread Group 1-4,text,true,,29535,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1696479176309,2327,Select New Business,200,OK,10.142.0.11-Thread Group 1-4,text,true,,15085,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1696479178672,2781,Ineligible Risks,200,OK,10.142.0.11-Thread Group 1-4,text,true,,24149,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1696479181588,5724,Policy Info,200,OK,10.142.0.11-Thread Group 1-4,text,true,,38679,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1696479187329,2,BeanShell Sampler - Driver,200,OK,10.142.0.11-Thread Group 1-4,text,true,,0,0,4,4,null,0,0,0
+1696479187445,7484,Drivers,500,"element click intercepted: Element <button type=""submit"" form=""setViolationForm"" id=""submitsetViolationForm"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (397, 439). Other element would receive the click: <button type=""submit"" id=""btnnext"" form=""singleDriverForm"" class=""btn btnStyle btnSecon me-0"">...</button>
+  (Session info: chrome=117.0.5938.132)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ffd694f90b4cfe12245c0e68ad9b65bc, clickElement {id=EFE9C58DD160E3C27CDFDF6F5B1152F6_element_105}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33947}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:33947/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (ffd694f90b4cfe12245c0e68ad9b65bc)] -> id: submitsetViolationForm]
+Session ID: ffd694f90b4cfe12245c0e68ad9b65bc",10.142.0.11-Thread Group 1-4,text,false,,4367,0,1,1,null,0,0,0
+1696479169348,1996,Get Login,200,OK,10.150.0.6-Thread Group 1-2,text,true,,5884,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1696479169670,2173,Get Login,200,OK,10.150.0.6-Thread Group 1-3,text,true,,5884,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1696479170125,1826,Get Login,200,OK,10.150.0.6-Thread Group 1-4,text,true,,5884,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing,0,0,0
+1696479171894,5838,Transaction Controller -  New Business,500,"Number of samples in transaction : 2, number of failing samples : 1",10.150.0.6-Thread Group 1-3,,false,,36355,0,4,4,null,0,270,0
+1696479172037,5355,Login   NewBusiness,200,OK,10.150.0.6-Thread Group 1-3,text,true,,32017,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1696479177519,483,Select New Business,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""#nprogress""}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6d052bc064c5880d7aa7990aba953a38, findElement {using=id, value=nprogress}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:32809}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:32809/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6d052bc064c5880d7aa7990aba953a38",10.150.0.6-Thread Group 1-3,text,false,,4338,0,4,4,null,0,0,0
+1696479171422,21538,Transaction Controller -  New Business,500,"Number of samples in transaction : 6, number of failing samples : 1",10.150.0.6-Thread Group 1-2,,false,,112280,0,3,3,null,0,557,0
+1696479171527,4869,Login   NewBusiness,200,OK,10.150.0.6-Thread Group 1-2,text,true,,29533,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1696479176499,858,Select New Business,200,OK,10.150.0.6-Thread Group 1-2,text,true,,15556,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1696479177463,1356,Ineligible Risks,200,OK,10.150.0.6-Thread Group 1-2,text,true,,24147,0,3,3,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1696479178892,6144,Policy Info,200,OK,10.150.0.6-Thread Group 1-2,text,true,,38677,0,3,3,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1696479185064,3,BeanShell Sampler - Driver,200,OK,10.150.0.6-Thread Group 1-2,text,true,,0,0,3,3,null,0,0,0
+1696479185145,8308,Drivers,500,"element click intercepted: Element <button type=""submit"" form=""setViolationForm"" id=""submitsetViolationForm"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (397, 439). Other element would receive the click: <button type=""submit"" id=""btnnext"" form=""singleDriverForm"" class=""btn btnStyle btnSecon me-0"">...</button>
+  (Session info: chrome=117.0.5938.132)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c8f6aafd3dedf123a93d1ad125518820, clickElement {id=E7E2102AE0E1D72EB69D132FF1BB8414_element_106}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:39817}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:39817/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (c8f6aafd3dedf123a93d1ad125518820)] -> id: submitsetViolationForm]
+Session ID: c8f6aafd3dedf123a93d1ad125518820",10.150.0.6-Thread Group 1-2,text,false,,4367,0,3,3,null,0,0,0
+1696479171267,22051,Transaction Controller -  New Business,500,"Number of samples in transaction : 6, number of failing samples : 1",10.150.0.6-Thread Group 1-1,,false,,114366,0,2,2,null,0,503,0
+1696479171422,4807,Login   NewBusiness,200,OK,10.150.0.6-Thread Group 1-1,text,true,,32081,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1696479176313,923,Select New Business,200,OK,10.150.0.6-Thread Group 1-1,text,true,,15087,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1696479177303,1411,Ineligible Risks,200,OK,10.150.0.6-Thread Group 1-1,text,true,,24151,0,3,3,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1696479178790,6666,Policy Info,200,OK,10.150.0.6-Thread Group 1-1,text,true,,38680,0,3,3,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1696479185482,2,BeanShell Sampler - Driver,200,OK,10.150.0.6-Thread Group 1-1,text,true,,0,0,3,3,null,0,0,0
+1696479185556,8242,Drivers,500,"element click intercepted: Element <button type=""submit"" form=""setViolationForm"" id=""submitsetViolationForm"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (397, 439). Other element would receive the click: <button type=""submit"" id=""btnnext"" form=""singleDriverForm"" class=""btn btnStyle btnSecon me-0"">...</button>
+  (Session info: chrome=117.0.5938.132)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c664695c524d44ece390a62b930ccd88, clickElement {id=45EAE20ED748235328614485B22B7F10_element_108}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46281}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:46281/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (c664695c524d44ece390a62b930ccd88)] -> id: submitsetViolationForm]
+Session ID: c664695c524d44ece390a62b930ccd88",10.150.0.6-Thread Group 1-1,text,false,,4367,0,2,2,null,0,0,0
+1696479172020,24431,Transaction Controller -  New Business,500,"Number of samples in transaction : 6, number of failing samples : 1",10.150.0.6-Thread Group 1-4,,false,,111815,0,1,1,null,0,588,0
+1696479172216,4997,Login   NewBusiness,200,OK,10.150.0.6-Thread Group 1-4,text,true,,29535,0,4,4,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/dashboard/accounthub/,0,0,0
+1696479177286,2533,Select New Business,200,OK,10.150.0.6-Thread Group 1-4,text,true,,15085,0,3,3,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/ineligibleinfo/,0,0,0
+1696479179884,2344,Ineligible Risks,200,OK,10.150.0.6-Thread Group 1-4,text,true,,24149,0,3,3,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/policyinfo/,0,0,0
+1696479182360,6220,Policy Info,200,OK,10.150.0.6-Thread Group 1-4,text,true,,38679,0,3,3,https://ctsdiep2devstorage.z13.web.core.windows.net/ih-load-testing/personal/auto/application/driverinfo/,0,0,0
+1696479188608,3,BeanShell Sampler - Driver,200,OK,10.150.0.6-Thread Group 1-4,text,true,,0,0,3,3,null,0,0,0
+1696479188694,8334,Drivers,500,"element click intercepted: Element <button type=""submit"" form=""setViolationForm"" id=""submitsetViolationForm"" class=""btn btnStyle btnPrim"">...</button> is not clickable at point (397, 439). Other element would receive the click: <button type=""submit"" id=""btnnext"" form=""singleDriverForm"" class=""btn btnStyle btnSecon me-0"">...</button>
+  (Session info: chrome=117.0.5938.132)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [265f99e98c5da28bce7cf1ab5b07ffb9, clickElement {id=D53E912E294831489789A59E784ADD72_element_108}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:34039}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:34039/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (265f99e98c5da28bce7cf1ab5b07ffb9)] -> id: submitsetViolationForm]
+Session ID: 265f99e98c5da28bce7cf1ab5b07ffb9",10.150.0.6-Thread Group 1-4,text,false,,4367,0,1,1,null,0,0,0
