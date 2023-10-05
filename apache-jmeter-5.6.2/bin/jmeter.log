@@ -1,110 +1,110 @@
-2023-10-05 04:12:44,135 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2023-10-05 04:12:44,169 INFO o.a.j.JMeter: Loading user properties from: user.properties
-2023-10-05 04:12:44,170 INFO o.a.j.JMeter: Loading system properties from: system.properties
-2023-10-05 04:12:44,177 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
-2023-10-05 04:12:44,177 INFO o.a.j.JMeter: Version 5.6.2
-2023-10-05 04:12:44,177 INFO o.a.j.JMeter: java.version=11.0.20
-2023-10-05 04:12:44,177 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
-2023-10-05 04:12:44,177 INFO o.a.j.JMeter: os.name=Linux
-2023-10-05 04:12:44,177 INFO o.a.j.JMeter: os.arch=amd64
-2023-10-05 04:12:44,177 INFO o.a.j.JMeter: os.version=5.10.0-25-cloud-amd64
-2023-10-05 04:12:44,177 INFO o.a.j.JMeter: file.encoding=UTF-8
-2023-10-05 04:12:44,178 INFO o.a.j.JMeter: java.awt.headless=true
-2023-10-05 04:12:44,178 INFO o.a.j.JMeter: Max memory     =1073741824
-2023-10-05 04:12:44,178 INFO o.a.j.JMeter: Available Processors =4
-2023-10-05 04:12:44,188 INFO o.a.j.JMeter: Default Locale=English (EN)
-2023-10-05 04:12:44,188 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2023-10-05 04:12:44,188 INFO o.a.j.JMeter: JMeterHome=/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2
-2023-10-05 04:12:44,188 INFO o.a.j.JMeter: user.dir  =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
-2023-10-05 04:12:44,188 INFO o.a.j.JMeter: PWD       =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
-2023-10-05 04:12:44,189 INFO o.a.j.JMeter: IP: 10.128.0.34 Name: master-gcp FullName: master-gcp.us-central1-a.c.ih-project-396106.internal
-2023-10-05 04:12:44,205 INFO o.a.j.s.FileServer: Default base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin'
-2023-10-05 04:12:44,207 INFO o.a.j.s.FileServer: Set new base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin'
-2023-10-05 04:12:44,529 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2023-10-05 04:12:44,553 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2023-10-05 04:12:44,557 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2023-10-05 04:12:44,562 INFO o.a.j.s.SaveService: Loading file: IH.jmx
-2023-10-05 04:12:44,875 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2023-10-05 04:12:44,875 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
-2023-10-05 04:12:44,875 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2023-10-05 04:12:44,875 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2023-10-05 04:12:45,492 INFO o.a.j.JMeter: Creating summariser <summary>
-2023-10-05 04:12:45,497 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 10.142.0.11
-2023-10-05 04:12:46,254 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 10.150.0.6
-2023-10-05 04:12:46,641 INFO o.a.j.e.DistributedRunner: Starting distributed test with remote engines: [10.150.0.6, 10.142.0.11] @ 2023 Oct 5 04:12:46 UTC (1696479166632)
-2023-10-05 04:12:46,641 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
-2023-10-05 04:12:46,650 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2023-10-05 04:12:46,650 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2023-10-05 04:12:46,717 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:46,848 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-webdriver-4.10.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:46,862 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:46,864 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/tag-jmeter-extn-1.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:46,866 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-csvars-0.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:46,875 INFO o.a.j.r.RmiUtils: System property 'java.rmi.server.hostname' is not defined, using localHost address
-2023-10-05 04:12:46,875 INFO o.a.j.r.RmiUtils: Local IP address=10.128.0.34
-2023-10-05 04:12:46,878 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2023-10-05 04:12:46,880 INFO o.a.j.r.SSLRMIServerSocketFactory: Created SSLSocket: [SSL: ServerSocket[addr=master-gcp/10.128.0.34,localport=34395]]
-2023-10-05 04:12:46,888 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
-2023-10-05 04:12:46,888 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
-2023-10-05 04:12:46,889 INFO o.a.j.r.RmiUtils: System property 'java.rmi.server.hostname' is not defined, using localHost address
-2023-10-05 04:12:46,889 INFO o.a.j.r.RmiUtils: Local IP address=10.128.0.34
-2023-10-05 04:12:46,893 INFO o.a.j.r.SSLRMIServerSocketFactory: Created SSLSocket: [SSL: ServerSocket[addr=master-gcp/10.128.0.34,localport=37397]]
-2023-10-05 04:12:46,895 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.threads.RemoteThreadsLifeCycleListener], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:46,897 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-webdriver-4.10.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.threads.RemoteThreadsLifeCycleListener], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:46,897 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.threads.RemoteThreadsLifeCycleListener], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:46,899 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/tag-jmeter-extn-1.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.threads.RemoteThreadsLifeCycleListener], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:46,900 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-csvars-0.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.threads.RemoteThreadsLifeCycleListener], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:46,900 INFO o.a.j.r.RmiUtils: System property 'java.rmi.server.hostname' is not defined, using localHost address
-2023-10-05 04:12:46,900 INFO o.a.j.r.RmiUtils: Local IP address=10.128.0.34
-2023-10-05 04:12:46,901 INFO o.a.j.r.SSLRMIServerSocketFactory: Created SSLSocket: [SSL: ServerSocket[addr=master-gcp/10.128.0.34,localport=42629]]
-2023-10-05 04:12:46,903 INFO o.a.j.r.RmiUtils: System property 'java.rmi.server.hostname' is not defined, using localHost address
-2023-10-05 04:12:46,903 INFO o.a.j.r.RmiUtils: Local IP address=10.128.0.34
-2023-10-05 04:12:46,906 INFO o.a.j.r.SSLRMIServerSocketFactory: Created SSLSocket: [SSL: ServerSocket[addr=master-gcp/10.128.0.34,localport=39491]]
-2023-10-05 04:12:46,910 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
-2023-10-05 04:12:46,910 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
-2023-10-05 04:12:46,910 INFO o.a.j.r.RmiUtils: System property 'java.rmi.server.hostname' is not defined, using localHost address
-2023-10-05 04:12:46,910 INFO o.a.j.r.RmiUtils: Local IP address=10.128.0.34
-2023-10-05 04:12:46,912 INFO o.a.j.r.SSLRMIServerSocketFactory: Created SSLSocket: [SSL: ServerSocket[addr=master-gcp/10.128.0.34,localport=38867]]
-2023-10-05 04:12:46,912 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
-2023-10-05 04:12:46,912 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
-2023-10-05 04:12:47,760 INFO o.a.j.e.ClientJMeterEngine: sent test to 10.150.0.6 basedir='.'
-2023-10-05 04:12:47,760 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
-2023-10-05 04:12:47,812 INFO o.a.j.e.ClientJMeterEngine: sent run command to 10.150.0.6
-2023-10-05 04:12:47,812 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
-2023-10-05 04:12:47,813 INFO o.a.j.r.RmiUtils: System property 'java.rmi.server.hostname' is not defined, using localHost address
-2023-10-05 04:12:47,813 INFO o.a.j.r.RmiUtils: Local IP address=10.128.0.34
-2023-10-05 04:12:47,815 INFO o.a.j.r.SSLRMIServerSocketFactory: Created SSLSocket: [SSL: ServerSocket[addr=master-gcp/10.128.0.34,localport=46573]]
-2023-10-05 04:12:47,816 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
-2023-10-05 04:12:47,816 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
-2023-10-05 04:12:47,819 INFO o.a.j.r.RmiUtils: System property 'java.rmi.server.hostname' is not defined, using localHost address
-2023-10-05 04:12:47,820 INFO o.a.j.r.RmiUtils: Local IP address=10.128.0.34
-2023-10-05 04:12:47,821 INFO o.a.j.r.SSLRMIServerSocketFactory: Created SSLSocket: [SSL: ServerSocket[addr=master-gcp/10.128.0.34,localport=33475]]
-2023-10-05 04:12:47,823 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.threads.RemoteThreadsLifeCycleListener], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:47,825 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-webdriver-4.10.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.threads.RemoteThreadsLifeCycleListener], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:47,825 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.threads.RemoteThreadsLifeCycleListener], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:47,827 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/tag-jmeter-extn-1.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.threads.RemoteThreadsLifeCycleListener], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:47,827 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-csvars-0.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.threads.RemoteThreadsLifeCycleListener], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-05 04:12:47,827 INFO o.a.j.r.RmiUtils: System property 'java.rmi.server.hostname' is not defined, using localHost address
-2023-10-05 04:12:47,828 INFO o.a.j.r.RmiUtils: Local IP address=10.128.0.34
-2023-10-05 04:12:47,829 INFO o.a.j.r.SSLRMIServerSocketFactory: Created SSLSocket: [SSL: ServerSocket[addr=master-gcp/10.128.0.34,localport=41415]]
-2023-10-05 04:12:47,829 INFO o.a.j.r.RmiUtils: System property 'java.rmi.server.hostname' is not defined, using localHost address
-2023-10-05 04:12:47,829 INFO o.a.j.r.RmiUtils: Local IP address=10.128.0.34
-2023-10-05 04:12:47,831 INFO o.a.j.r.SSLRMIServerSocketFactory: Created SSLSocket: [SSL: ServerSocket[addr=master-gcp/10.128.0.34,localport=35073]]
-2023-10-05 04:12:47,831 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
-2023-10-05 04:12:47,832 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
-2023-10-05 04:12:47,832 INFO o.a.j.r.RmiUtils: System property 'java.rmi.server.hostname' is not defined, using localHost address
-2023-10-05 04:12:47,832 INFO o.a.j.r.RmiUtils: Local IP address=10.128.0.34
-2023-10-05 04:12:47,833 INFO o.a.j.r.SSLRMIServerSocketFactory: Created SSLSocket: [SSL: ServerSocket[addr=master-gcp/10.128.0.34,localport=38291]]
-2023-10-05 04:12:47,833 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
-2023-10-05 04:12:47,833 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
-2023-10-05 04:12:48,018 INFO o.a.j.JMeter: Started remote host:  10.150.0.6 (1696479168018)
-2023-10-05 04:12:48,852 INFO o.a.j.e.ClientJMeterEngine: sent test to 10.142.0.11 basedir='.'
-2023-10-05 04:12:48,852 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
-2023-10-05 04:12:48,921 INFO o.a.j.e.ClientJMeterEngine: sent run command to 10.142.0.11
-2023-10-05 04:12:48,921 INFO o.a.j.e.DistributedRunner: Remote engines have been started:[10.150.0.6, 10.142.0.11]
-2023-10-05 04:12:49,166 INFO o.a.j.JMeter: Started remote host:  10.142.0.11 (1696479169166)
-2023-10-05 04:13:15,762 INFO o.a.j.JMeter: Finished remote host: 10.142.0.11 (1696479195762)
-2023-10-05 04:13:17,678 INFO o.a.j.r.Summariser: summary =      8 in 00:00:30 =    0.3/s Avg:  1666 Min:  1221 Max:  2173 Err:     0 (0.00%)
-2023-10-05 04:13:17,792 INFO o.a.j.JMeter: Finished remote host: 10.150.0.6 (1696479197792)
-2023-10-05 04:13:17,793 INFO o.a.j.JMeter: All remote engines have ended test, starting RemoteTestStopper thread
-2023-10-05 04:13:22,798 INFO o.a.j.JMeter: Interrupting RMI Reaper
+2023-10-05 05:09:29,441 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-10-05 05:09:29,475 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2023-10-05 05:09:29,475 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2023-10-05 05:09:29,482 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
+2023-10-05 05:09:29,482 INFO o.a.j.JMeter: Version 5.6.2
+2023-10-05 05:09:29,483 INFO o.a.j.JMeter: java.version=11.0.20
+2023-10-05 05:09:29,483 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2023-10-05 05:09:29,483 INFO o.a.j.JMeter: os.name=Linux
+2023-10-05 05:09:29,483 INFO o.a.j.JMeter: os.arch=amd64
+2023-10-05 05:09:29,483 INFO o.a.j.JMeter: os.version=5.10.0-25-cloud-amd64
+2023-10-05 05:09:29,483 INFO o.a.j.JMeter: file.encoding=UTF-8
+2023-10-05 05:09:29,483 INFO o.a.j.JMeter: java.awt.headless=true
+2023-10-05 05:09:29,484 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-10-05 05:09:29,484 INFO o.a.j.JMeter: Available Processors =4
+2023-10-05 05:09:29,493 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-10-05 05:09:29,493 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-10-05 05:09:29,494 INFO o.a.j.JMeter: JMeterHome=/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2
+2023-10-05 05:09:29,494 INFO o.a.j.JMeter: user.dir  =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
+2023-10-05 05:09:29,494 INFO o.a.j.JMeter: PWD       =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
+2023-10-05 05:09:29,494 INFO o.a.j.JMeter: IP: 10.128.0.34 Name: master-gcp FullName: master-gcp.us-central1-a.c.ih-project-396106.internal
+2023-10-05 05:09:29,511 INFO o.a.j.s.FileServer: Default base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin'
+2023-10-05 05:09:29,513 INFO o.a.j.s.FileServer: Set new base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin'
+2023-10-05 05:09:29,799 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-10-05 05:09:29,828 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-10-05 05:09:29,832 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-10-05 05:09:29,837 INFO o.a.j.s.SaveService: Loading file: IH.jmx
+2023-10-05 05:09:30,089 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2023-10-05 05:09:30,089 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2023-10-05 05:09:30,089 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-10-05 05:09:30,089 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-10-05 05:09:30,707 INFO o.a.j.JMeter: Creating summariser <summary>
+2023-10-05 05:09:30,730 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-10-05 05:09:30,732 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-10-05 05:09:30,732 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-10-05 05:09:30,749 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2023-10-05 05:09:30,750 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2023-10-05 05:09:30,842 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-10-05 05:09:31,004 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-webdriver-4.10.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-10-05 05:09:31,025 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-10-05 05:09:31,029 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/tag-jmeter-extn-1.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-10-05 05:09:31,032 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-csvars-0.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-10-05 05:09:31,469 INFO o.a.j.JMeter: Running test (1696482571469)
+2023-10-05 05:09:31,504 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2023-10-05 05:09:31,505 INFO o.a.j.e.StandardJMeterEngine: Starting 4 threads for group Thread Group.
+2023-10-05 05:09:31,505 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2023-10-05 05:09:31,505 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=4 ramp-up=1 delayedStart=false
+2023-10-05 05:09:31,607 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2023-10-05 05:09:31,874 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-10-05 05:09:31,874 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-10-05 05:09:31,897 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2023-10-05 05:09:32,088 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-3
+2023-10-05 05:09:32,385 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-4
+2023-10-05 05:09:35,059 INFO o.a.j.s.FileServer: Stored: Flow.csv
+2023-10-05 05:09:37,336 INFO o.a.j.s.FileServer: Stored: NewBusinessCoveragesDetails.csv
+2023-10-05 05:09:37,339 INFO o.a.j.s.FileServer: Stored: NewBusinessVehiclesDetails.csv
+2023-10-05 05:09:37,350 INFO o.a.j.s.FileServer: Stored: NewBusinessDriversDetails.csv
+2023-10-05 05:09:37,356 INFO o.a.j.s.FileServer: Stored: NewBusinessPolicyInfo.csv
+2023-10-05 05:09:37,368 INFO o.a.j.s.FileServer: Stored: NewBusinessLoginDetails.csv
+2023-10-05 05:09:44,094 ERROR c.g.j.p.w.s.WebDriverSampler: no such element: Unable to locate element: {"method":"css selector","selector":"#nprogress"}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bb7c0f70a74e69c0b27641aec3333db5, findElement {using=id, value=nprogress}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:34453}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:34453/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bb7c0f70a74e69c0b27641aec3333db5
+2023-10-05 05:09:44,104 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-2
+2023-10-05 05:09:44,104 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
+2023-10-05 05:09:44,162 ERROR c.g.j.p.w.s.WebDriverSampler: no such element: Unable to locate element: {"method":"css selector","selector":"#nprogress"}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bc61c39bcc204bf8f4cff2da2bb1fb6f, findElement {using=id, value=nprogress}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41091}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:41091/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bc61c39bcc204bf8f4cff2da2bb1fb6f
+2023-10-05 05:09:44,164 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-3
+2023-10-05 05:09:44,164 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-3
+2023-10-05 05:10:01,604 ERROR c.g.j.p.w.s.WebDriverSampler: element click intercepted: Element <button type="submit" form="setViolationForm" id="submitsetViolationForm" class="btn btnStyle btnPrim">...</button> is not clickable at point (397, 439). Other element would receive the click: <button type="submit" id="btnnext" form="singleDriverForm" class="btn btnStyle btnSecon me-0">...</button>
+  (Session info: chrome=117.0.5938.132)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7787e4937b4f6f784589f3f18a61bf6a, clickElement {id=A6372C110D1E53001FF0C1900753BCD9_element_109}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43033}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:43033/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (7787e4937b4f6f784589f3f18a61bf6a)] -> id: submitsetViolationForm]
+Session ID: 7787e4937b4f6f784589f3f18a61bf6a
+2023-10-05 05:10:01,645 ERROR c.g.j.p.w.s.WebDriverSampler: element click intercepted: Element <button type="submit" form="setViolationForm" id="submitsetViolationForm" class="btn btnStyle btnPrim">...</button> is not clickable at point (397, 439). Other element would receive the click: <button type="submit" id="btnnext" form="singleDriverForm" class="btn btnStyle btnSecon me-0">...</button>
+  (Session info: chrome=117.0.5938.132)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-25-cloud-amd64', java.version: '11.0.20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [687b8a44f99dc698b058e8e217158e53, clickElement {id=83669BFAF152E15169925DB3B208128F_element_107}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.62 (25a7172909a4..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43699}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:43699/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (687b8a44f99dc698b058e8e217158e53)] -> id: submitsetViolationForm]
+Session ID: 687b8a44f99dc698b058e8e217158e53
+2023-10-05 05:10:02,614 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-4
+2023-10-05 05:10:02,614 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-4
+2023-10-05 05:10:02,617 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2023-10-05 05:10:02,618 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2023-10-05 05:10:02,775 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-10-05 05:10:02,776 INFO o.a.j.s.FileServer: Close: NewBusinessLoginDetails.csv
+2023-10-05 05:10:02,779 INFO o.a.j.s.FileServer: Close: Flow.csv
+2023-10-05 05:10:02,779 INFO o.a.j.s.FileServer: Close: NewBusinessCoveragesDetails.csv
+2023-10-05 05:10:02,780 INFO o.a.j.s.FileServer: Close: NewBusinessVehiclesDetails.csv
+2023-10-05 05:10:02,780 INFO o.a.j.s.FileServer: Close: NewBusinessDriversDetails.csv
+2023-10-05 05:10:02,780 INFO o.a.j.s.FileServer: Close: NewBusinessPolicyInfo.csv
+2023-10-05 05:10:02,783 INFO o.a.j.r.Summariser: summary =      4 in 00:00:31 =    0.1/s Avg:  2112 Min:  1824 Max:  2460 Err:     0 (0.00%)
