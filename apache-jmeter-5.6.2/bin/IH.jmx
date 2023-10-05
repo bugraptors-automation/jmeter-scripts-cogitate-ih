@@ -615,7 +615,7 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Endorsement" enabled="false">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Endorsement" enabled="true">
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">false</boolProp>
           <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;Endorsement&quot;</stringProp>
@@ -1296,7 +1296,7 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Cancellation" enabled="false">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Cancellation" enabled="true">
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">false</boolProp>
           <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;Cancellation&quot;</stringProp>
@@ -1591,7 +1591,7 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Reinstate" enabled="false">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Reinstate" enabled="true">
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">false</boolProp>
           <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;Reinstatement&quot;</stringProp>
@@ -1853,7 +1853,7 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - View" enabled="false">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - View" enabled="true">
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">false</boolProp>
           <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;View&quot;</stringProp>
