@@ -504,7 +504,7 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(120));
 
 WDS.sampleResult.sampleStart();
 java.lang.Thread.sleep(500);
@@ -576,7 +576,11 @@ WDS.browser.navigate().refresh();
 java.lang.Thread.sleep(2000);
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
-WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;)).click();
+
+var uploadBtn = WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;));
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, uploadBtn);
+java.lang.Thread.sleep(500);
+uploadBtn.click();
 
 wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
 var selectDocumentType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;documentType&quot;)));
