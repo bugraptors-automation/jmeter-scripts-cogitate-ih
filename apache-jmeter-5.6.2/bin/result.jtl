@@ -1,9 +1,0 @@
-timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1698818763628,898,Get Login,500,"unknown error: result.webdriverValue.value list is missing or empty in Runtime.callFunctionOn response
-  (Session info: chrome=119.0.6045.105)
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f63ecde8c2b9169fc2b06927ee81d712, getPageSource {}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37397}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:37397/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f63ecde8c2b9169fc2b06927ee81d712",Thread Group 1-1,text,false,,3093,0,1,1,null,0,0,0

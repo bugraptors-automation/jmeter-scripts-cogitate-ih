@@ -240,7 +240,7 @@ WDS.browser.findElement(pkg.By.id(&quot;streetname&quot;)).sendKeys(&quot;${stre
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)).click();
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;30002&apos;]&quot;)).click();
 
-WDS.browser.findElement(pkg.By.id(&quot;policyeffectivedate&quot;)).sendKeys(&quot;1-11&quot;);
+WDS.browser.findElement(pkg.By.id(&quot;policyeffectivedate&quot;)).sendKeys(&quot;01-11&quot;);//dd-mm date
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-authorizationforreports-0&apos;]&quot;)));
 
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-authorizationforinsurancecreditscore-0&apos;]&quot;)));
@@ -588,7 +588,7 @@ wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpa
 var selectDocumentType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;documentType&quot;)));
 selectDocumentType.selectByVisibleText(&quot;Signed New Business forms&quot;);
 
-WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;C:/Users/kumarmohit1/Downloads/Cogitate_demo_run/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/UploadFile.pdf&quot;]);
+WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/UploadFile.pdf&quot;]);
 
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
