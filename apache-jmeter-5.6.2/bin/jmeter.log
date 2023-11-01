@@ -1,0 +1,107 @@
+2023-11-01 06:00:51,935 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-11-01 06:00:51,981 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2023-11-01 06:00:51,982 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2023-11-01 06:00:51,990 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
+2023-11-01 06:00:51,990 INFO o.a.j.JMeter: Version 5.6.2
+2023-11-01 06:00:51,990 INFO o.a.j.JMeter: java.version=11.0.21
+2023-11-01 06:00:51,990 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2023-11-01 06:00:51,990 INFO o.a.j.JMeter: os.name=Linux
+2023-11-01 06:00:51,990 INFO o.a.j.JMeter: os.arch=amd64
+2023-11-01 06:00:51,990 INFO o.a.j.JMeter: os.version=5.10.0-26-cloud-amd64
+2023-11-01 06:00:51,990 INFO o.a.j.JMeter: file.encoding=UTF-8
+2023-11-01 06:00:51,990 INFO o.a.j.JMeter: java.awt.headless=true
+2023-11-01 06:00:51,991 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-11-01 06:00:51,991 INFO o.a.j.JMeter: Available Processors =4
+2023-11-01 06:00:52,005 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-11-01 06:00:52,005 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-11-01 06:00:52,006 INFO o.a.j.JMeter: JMeterHome=/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2
+2023-11-01 06:00:52,006 INFO o.a.j.JMeter: user.dir  =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
+2023-11-01 06:00:52,006 INFO o.a.j.JMeter: PWD       =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
+2023-11-01 06:00:52,006 INFO o.a.j.JMeter: IP: 10.128.0.37 Name: demo-master FullName: demo-master.us-central1-a.c.ih-project-396106.internal
+2023-11-01 06:00:52,025 INFO o.a.j.s.FileServer: Default base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin'
+2023-11-01 06:00:52,027 INFO o.a.j.s.FileServer: Set new base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin'
+2023-11-01 06:00:52,351 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-11-01 06:00:52,379 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-11-01 06:00:52,383 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-11-01 06:00:52,387 INFO o.a.j.s.SaveService: Loading file: IH.jmx
+2023-11-01 06:00:52,666 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2023-11-01 06:00:52,666 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2023-11-01 06:00:52,666 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-11-01 06:00:52,666 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-11-01 06:00:53,257 INFO o.a.j.JMeter: Creating summariser <summary>
+2023-11-01 06:00:53,274 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-01 06:00:53,275 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-01 06:00:53,275 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-01 06:00:53,289 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2023-11-01 06:00:53,290 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2023-11-01 06:00:53,386 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-11-01 06:00:53,571 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-webdriver-4.10.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-11-01 06:00:53,587 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-11-01 06:00:53,590 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/tag-jmeter-extn-1.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-11-01 06:00:53,595 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-csvars-0.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-11-01 06:00:53,918 INFO o.a.j.JMeter: Running test (1698818453918)
+2023-11-01 06:00:53,964 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2023-11-01 06:00:53,965 INFO o.a.j.e.StandardJMeterEngine: Starting 5 threads for group Thread Group.
+2023-11-01 06:00:53,965 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2023-11-01 06:00:53,965 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=5 ramp-up=1 delayedStart=false
+2023-11-01 06:00:54,046 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2023-11-01 06:00:54,192 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-01 06:00:54,192 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-01 06:00:54,249 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2023-11-01 06:00:54,430 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-3
+2023-11-01 06:00:54,597 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-4
+2023-11-01 06:00:54,822 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-5
+2023-11-01 06:00:56,382 INFO o.a.j.s.FileServer: Stored: Flow.csv
+2023-11-01 06:00:58,965 ERROR c.g.j.p.w.s.WebDriverSampler: unknown error: result.webdriverValue.value list is missing or empty in Runtime.callFunctionOn response
+  (Session info: chrome=119.0.6045.105)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ecce77dad470e48823481cfcbd2d247c, getPageSource {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36197}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:36197/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ecce77dad470e48823481cfcbd2d247c
+2023-11-01 06:00:58,988 ERROR c.g.j.p.w.s.WebDriverSampler: unknown error: result.webdriverValue.value list is missing or empty in Runtime.callFunctionOn response
+  (Session info: chrome=119.0.6045.105)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [94b317da93096e760e0522c98bf50288, getPageSource {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36789}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:36789/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 94b317da93096e760e0522c98bf50288
+2023-11-01 06:00:58,996 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-2
+2023-11-01 06:00:58,997 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
+2023-11-01 06:00:59,009 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2023-11-01 06:00:59,009 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2023-11-01 06:00:59,033 ERROR c.g.j.p.w.s.WebDriverSampler: unknown error: result.webdriverValue.value list is missing or empty in Runtime.callFunctionOn response
+  (Session info: chrome=119.0.6045.105)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5e77a74f5e83c24dcfa357e5d141ac8, getPageSource {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38081}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:38081/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5e77a74f5e83c24dcfa357e5d141ac8
+2023-11-01 06:00:59,035 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-3
+2023-11-01 06:00:59,035 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-3
+2023-11-01 06:00:59,225 ERROR c.g.j.p.w.s.WebDriverSampler: unknown error: result.webdriverValue.value list is missing or empty in Runtime.callFunctionOn response
+  (Session info: chrome=119.0.6045.105)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [efe48bc2884739383b49bdb31ca7047e, getPageSource {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:43837/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: efe48bc2884739383b49bdb31ca7047e
+2023-11-01 06:00:59,227 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-4
+2023-11-01 06:00:59,227 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-4
+2023-11-01 06:00:59,232 ERROR c.g.j.p.w.s.WebDriverSampler: unknown error: result.webdriverValue.value list is missing or empty in Runtime.callFunctionOn response
+  (Session info: chrome=119.0.6045.105)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f9cda482fed975f36312b06ad73e7faa, getPageSource {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46195}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:46195/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f9cda482fed975f36312b06ad73e7faa
+2023-11-01 06:00:59,234 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-5
+2023-11-01 06:00:59,234 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-5
+2023-11-01 06:00:59,332 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-01 06:00:59,332 INFO o.a.j.s.FileServer: Close: Flow.csv
+2023-11-01 06:00:59,335 INFO o.a.j.r.Summariser: summary =      5 in 00:00:05 =    0.9/s Avg:  1919 Min:   217 Max:  2546 Err:     5 (100.00%)
