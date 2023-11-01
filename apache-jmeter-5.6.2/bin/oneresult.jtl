@@ -1,0 +1,53 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1698823472470,1591,Get Login,200,OK,Thread Group 1-4,text,true,,5689,0,4,4,https://testapps.cogitate.us/ih,0,0,0
+1698823472468,1704,Get Login,200,OK,Thread Group 1-2,text,true,,5689,0,4,4,https://testapps.cogitate.us/ih,0,0,0
+1698823472472,1820,Get Login,200,OK,Thread Group 1-3,text,true,,5689,0,4,4,https://testapps.cogitate.us/ih,0,0,0
+1698823472475,1783,Get Login,200,OK,Thread Group 1-1,text,true,,5689,0,4,4,https://testapps.cogitate.us/ih,0,0,0
+1698823474254,6057,Transaction Controller -  New Business,500,"Number of samples in transaction : 2, number of failing samples : 1",Thread Group 1-2,,false,,37872,0,4,4,null,0,670,0
+1698823474729,5603,Login   NewBusiness,200,OK,Thread Group 1-2,text,true,,33534,0,4,4,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1698823480525,454,Select New Business,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""#nprogress""}
+  (Session info: chrome=119.0.6045.105)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [19d47a9e9a04ef8d5b6b1da50dd9d394, findElement {using=id, value=nprogress}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:35143}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:35143/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 19d47a9e9a04ef8d5b6b1da50dd9d394",Thread Group 1-2,text,false,,4338,0,4,4,null,0,0,0
+1698823474208,6058,Transaction Controller -  New Business,500,"Number of samples in transaction : 2, number of failing samples : 1",Thread Group 1-4,,false,,37872,0,4,4,null,0,725,0
+1698823474736,5652,Login   NewBusiness,200,OK,Thread Group 1-4,text,true,,33534,0,4,4,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1698823480585,406,Select New Business,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""#nprogress""}
+  (Session info: chrome=119.0.6045.105)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3477091c0fa493948294e6316455d900, findElement {using=id, value=nprogress}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42673}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:42673/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3477091c0fa493948294e6316455d900",Thread Group 1-4,text,false,,4338,0,4,4,null,0,0,0
+1698823474388,10637,Transaction Controller -  New Business,500,"Number of samples in transaction : 4, number of failing samples : 1",Thread Group 1-1,,false,,77641,0,2,2,null,0,841,0
+1698823474729,5208,Login   NewBusiness,200,OK,Thread Group 1-1,text,true,,33534,0,4,4,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1698823480138,940,Select New Business,200,OK,Thread Group 1-1,text,true,,15389,0,4,4,https://testapps.cogitate.us/ih/personal/auto/application/ineligibleinfo/,0,0,0
+1698823481239,1495,Ineligible Risks,200,OK,Thread Group 1-1,text,true,,24587,0,2,2,https://testapps.cogitate.us/ih/personal/auto/application/policyinfo/,0,0,0
+1698823482872,2994,Policy Info,500,"element click intercepted: Element is not clickable at point (461, 882)
+  (Session info: chrome=119.0.6045.105)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [20cc4361dc230af7bdcd91ab34a23135, clickElement {id=09194D1F561AA88E6D4A712988C2F984_element_62}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36653}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:36653/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (20cc4361dc230af7bdcd91ab34a23135)] -> xpath: //div[@class=' css-1xc3v61-indicatorContainer']]
+Session ID: 20cc4361dc230af7bdcd91ab34a23135",Thread Group 1-1,text,false,,4131,0,2,2,null,0,0,0
+1698823474381,10788,Transaction Controller -  New Business,500,"Number of samples in transaction : 4, number of failing samples : 1",Thread Group 1-3,,false,,76539,0,1,1,null,0,1033,0
+1698823474733,5524,Login   NewBusiness,200,OK,Thread Group 1-3,text,true,,33534,0,4,4,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1698823480553,464,Select New Business,200,OK,Thread Group 1-3,text,true,,14916,0,4,4,https://testapps.cogitate.us/ih/personal/auto/application/ineligibleinfo/,0,0,0
+1698823481235,2024,Ineligible Risks,200,OK,Thread Group 1-3,text,true,,23958,0,2,2,https://testapps.cogitate.us/ih/personal/auto/application/policyinfo/,0,0,0
+1698823483426,2776,Policy Info,500,"element click intercepted: Element is not clickable at point (461, 758)
+  (Session info: chrome=119.0.6045.105)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f5b85a6a2ea81a35491c24e8a1bb3383, clickElement {id=96C2EABC32F39788D2AE142E1EEA6B59_element_61}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:39145}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:39145/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (f5b85a6a2ea81a35491c24e8a1bb3383)] -> xpath: //div[@class=' css-1xc3v61-indicatorContainer']]
+Session ID: f5b85a6a2ea81a35491c24e8a1bb3383",Thread Group 1-3,text,false,,4131,0,1,1,null,0,0,0
