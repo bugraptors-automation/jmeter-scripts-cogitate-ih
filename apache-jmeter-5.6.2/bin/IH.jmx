@@ -236,12 +236,12 @@ WDS.browser.findElement(pkg.By.id(&quot;lastname&quot;)).sendKeys(&quot;${lastNa
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-addmanualaddress-0&apos;]&quot;)));
 
 //WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;addmanualaddress&apos;]&quot;)));
-//WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.cssSelector(&quot;label[for=&apos;State&apos;]&quot;)));
-//WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.id(&quot;City&quot;)));
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.cssSelector(&quot;label[for=&apos;State&apos;]&quot;)));
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.id(&quot;City&quot;)));
 
 WDS.browser.findElement(pkg.By.id(&quot;streetname&quot;)).sendKeys(&quot;${streetAddress}&quot;);
 
-WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//span[text()=&apos;Policy Effective Date*&apos;]&quot;)));
+//WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//span[text()=&apos;Policy Effective Date*&apos;]&quot;)));
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)).click();
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;30002&apos;]&quot;)).click();
 

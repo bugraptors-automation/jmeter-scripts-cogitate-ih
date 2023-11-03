@@ -1,7 +1,7 @@
 CSV Details
 
 Note: 
-	a) For every date field, the accepted format is ddmmyyyy.
+	a) For every date field, the accepted format is ddmm.
 	b) For selecting dropdown field option, we provide the exact text displayed on UI.
 
 1. AdvanceSearch
