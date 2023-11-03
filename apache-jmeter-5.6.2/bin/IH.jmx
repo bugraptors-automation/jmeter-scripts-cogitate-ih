@@ -25,13 +25,17 @@
         <boolProp name="ThreadGroup.delayedStart">false</boolProp>
       </ThreadGroup>
       <hashTree>
+        <com.tag.jmeter.ext.config.PropertyReader guiclass="TestBeanGUI" testclass="com.tag.jmeter.ext.config.PropertyReader" testname="Property File Reader" enabled="true">
+          <stringProp name="propFilePath">C:/Users/kumarmohit1/Downloads/Cogitate_demo_run/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/user.properties</stringProp>
+        </com.tag.jmeter.ext.config.PropertyReader>
+        <hashTree/>
         <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="Chrome Driver Config" enabled="true">
-          <boolProp name="WebDriverConfig.acceptinsecurecerts">true</boolProp>
+          <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
           <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
-          <stringProp name="WebDriverConfig.driver_path">chromedriver-linux64/chromedriver</stringProp>
-          <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
-          <boolProp name="WebDriverConfig.headless">true</boolProp>
-          <boolProp name="WebDriverConfig.maximize_browser">false</boolProp>
+          <stringProp name="WebDriverConfig.driver_path">C:/Users/kumarmohit1/Downloads/chromedrivernew/chromedriver.exe</stringProp>
+          <boolProp name="WebDriverConfig.dev_mode">true</boolProp>
+          <boolProp name="WebDriverConfig.headless">false</boolProp>
+          <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
           <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
           <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
           <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
@@ -155,7 +159,7 @@ WDS.sampleResult.sampleEnd();
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
 
 WDS.sampleResult.sampleStart();
 
@@ -232,20 +236,25 @@ wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.
 WDS.browser.findElement(pkg.By.id(&quot;firstname&quot;)).sendKeys(&quot;${firstName}&quot;);
 WDS.browser.findElement(pkg.By.id(&quot;lastname&quot;)).sendKeys(&quot;${lastName}&quot;);
 
+
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-addmanualaddress-0&apos;]&quot;)));
 
-WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;addmanualaddress&apos;]&quot;)));
+//WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;addmanualaddress&apos;]&quot;)));
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.cssSelector(&quot;label[for=&apos;State&apos;]&quot;)));
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.id(&quot;City&quot;)));
 
 WDS.browser.findElement(pkg.By.id(&quot;streetname&quot;)).sendKeys(&quot;${streetAddress}&quot;);
+
+//WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//span[text()=&apos;Policy Effective Date*&apos;]&quot;)));
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)).click();
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;30002&apos;]&quot;)).click();
 
-WDS.browser.findElement(pkg.By.id(&quot;policyeffectivedate&quot;)).sendKeys(&quot;01-11&quot;);//dd-mm date
+WDS.browser.findElement(pkg.By.id(&quot;policyeffectivedate&quot;)).sendKeys(&quot;${currentDate}&quot;);//dd-mm date
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-authorizationforreports-0&apos;]&quot;)));
 
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-authorizationforinsurancecreditscore-0&apos;]&quot;)));
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
-
+wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
 WDS.sampleResult.sampleEnd();</stringProp>
@@ -342,7 +351,7 @@ vars.put(&quot;counter&quot;,Integer.toString(counter));</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
 
@@ -404,7 +413,7 @@ WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findEle
 WDS.browser.findElement(pkg.By.id(&quot;garagingaddressdetailsstreetname&quot;)).sendKeys(&quot;${__V(garagingAddressVehicle${counterV})}&quot;);
 
 WDS.browser.findElement(pkg.By.id(&quot;garagingaddressdetailsaptsuite&quot;)).sendKeys(&quot;${__V(apartmentVehicle${counterV})}&quot;);
-//java.lang.Thread.sleep(500);
+
 WDS.browser.findElement(pkg.By.xpath(&quot;/html/body/div/div/div[2]/div[1]/div[2]/div/div/div/form/div[3]/div/div/div[6]/div/div/div[1]/div[2]/input&quot;)).sendKeys(&quot;${__V(zipVehicle${counterV})}&quot;);
 selectZip.sendKeys(org.openqa.selenium.Keys.ENTER);
 selectViolation.sendKeys(org.openqa.selenium.Keys.ENTER);
@@ -457,7 +466,7 @@ vars.put(&quot;counterV&quot;,Integer.toString(counterV));</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
 
 WDS.sampleResult.sampleStart();
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
@@ -507,7 +516,7 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(120));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
 wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;selectstackedum&quot;)));
@@ -556,39 +565,41 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(120));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
 
 WDS.sampleResult.sampleStart();
-java.lang.Thread.sleep(1500);
+//if(ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;))){
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));}
+
 WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Order Report&apos;]&quot;)).click();
+java.lang.Thread.sleep(1500);
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;successBTN&quot;)));
+WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
+java.lang.Thread.sleep(500);// both dialog box have same id
+WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 java.lang.Thread.sleep(1000);
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-
-WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
-java.lang.Thread.sleep(500);
-WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
-wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-java.lang.Thread.sleep(2000); //Note: website taking time show next progress loader
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Make a Payment&apos;]&quot;)).click();
 WDS.browser.findElement(pkg.By.cssSelector(&quot;tr:nth-child(1) input[name=&apos;groupOptions&apos;]&quot;)).click();
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;,WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;PAY &amp; BIND&apos;]&quot;)));
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 WDS.browser.navigate().refresh();
-java.lang.Thread.sleep(2000);
+wait.until(ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;)));
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
 
 var uploadBtn = WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;));
 WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, uploadBtn);
-java.lang.Thread.sleep(500);
+java.lang.Thread.sleep(500);//we are scrolling here to element
 uploadBtn.click();
 
 wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
 var selectDocumentType = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;documentType&quot;)));
 selectDocumentType.selectByVisibleText(&quot;Signed New Business forms&quot;);
 
-WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/UploadFile.pdf&quot;]);
+WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;C:/Users/kumarmohit1/Downloads/Cogitate_demo_run/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/UploadFile.pdf&quot;]);
 
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
@@ -602,7 +613,7 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
 
 WDS.sampleResult.sampleStart();
 
@@ -723,14 +734,16 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
 
-java.lang.Thread.sleep(3000);
+
 WDS.browser.findElement(pkg.By.id(&quot;endorsementeffectivedate&quot;)).sendKeys(&quot;${endorseEffectiveDate}&quot;);
 wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.cssSelector(&quot;button[form=&apos;endorsementForm&apos;]&quot;))));
 WDS.browser.findElement(pkg.By.cssSelector(&quot;button[form=&apos;endorsementForm&apos;]&quot;)).click();
+
+wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
@@ -741,9 +754,13 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
+if(ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;))){
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));}
+
+wait.until(ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.id(&quot;btnnext&quot;)));
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
@@ -763,13 +780,12 @@ WDS.sampleResult.sampleEnd();</stringProp>
                 <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 
 WDS.sampleResult.sampleStart();
 
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-java.lang.Thread.sleep(2000);//website taking time for loading
+
 wait.until(ui.ExpectedConditions.elementToBeClickable(WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;ADD DRIVER&apos;]&quot;))));
 WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;ADD DRIVER&apos;]&quot;)).click();
 
@@ -785,14 +801,15 @@ WDS.sampleResult.sampleEnd();
                 <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
-java.lang.Thread.sleep(1000);//website taking time for loading
+
+wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;firstname&quot;)));
 WDS.browser.findElement(pkg.By.cssSelector(&quot;input[id=&apos;firstname&apos;]&quot;)).sendKeys(&quot;${firstName}&quot;);
 WDS.browser.findElement(pkg.By.cssSelector(&quot;input[id=&apos;lastname&apos;]&quot;)).sendKeys(&quot;${lastName}&quot;);
 WDS.browser.findElement(pkg.By.cssSelector(&quot;input[id=&apos;dob&apos;]&quot;)).sendKeys(&quot;${dateOfBirth}&quot;);
-java.lang.Thread.sleep(1000);//date takes time get entered in field
+java.lang.Thread.sleep(500);//date takes time get entered in field
 var selectRelation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;relationship&quot;)));
 selectRelation.selectByVisibleText(&quot;${relationToApplicant}&quot;);
 WDS.browser.findElement(pkg.By.id(&quot;OccupationDescribe&quot;)).sendKeys(&quot;${description}&quot;);
@@ -800,20 +817,22 @@ WDS.browser.findElement(pkg.By.id(&quot;OccupationDescribe&quot;)).sendKeys(&quo
 var selectDriverType = new ui.Select(WDS.browser.findElement(pkg.By.cssSelector(&quot;select[id=&apos;drivertypeGA&apos;]&quot;)));
 selectDriverType.selectByVisibleText(&quot;${driverType}&quot;);
 WDS.browser.findElement(pkg.By.id(&quot;driversLicenseNo&quot;)).sendKeys(&quot;${driverLicenseNo}&quot;);
+
 WDS.browser.findElement(pkg.By.id(&quot;violationDate&quot;)).sendKeys(&quot;${violationDate}&quot;);
 
-var selectViolation = WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-hlgwow&apos;]//div[text()=&apos;Please Select&apos;]&quot;));
+var selectViolation = WDS.browser.findElement(pkg.By.xpath(&quot;/html/body/div/div/div[2]/div[1]/div[2]/div/div[2]/div/div[1]/div[1]/div/form/div/div/div/div[3]/div/div/div[1]/div[2]/input&quot;));
 selectViolation.sendKeys(&quot;${violation}&quot;);
 selectViolation.sendKeys(org.openqa.selenium.Keys.ENTER);
 
-var selectAccidentViolation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;accidentWithViolation&quot;)));
-selectAccidentViolation.selectByVisibleText(&quot;${accidentWithVoilation}&quot;);
-java.lang.Thread.sleep(2000);//NOTE: needed this wait as there is delay in website itself.
-wait.until(ui.ExpectedConditions.elementToBeClickable(WDS.browser.findElement(pkg.By.cssSelector(&quot;button[id=&apos;submitsetViolationForm&apos;]&quot;))));
-WDS.browser.findElement(pkg.By.cssSelector(&quot;button[id=&apos;submitsetViolationForm&apos;]&quot;)).click();
+var selectAccidentWithViolation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;accidentWithViolation&quot;)));
+selectAccidentWithViolation.selectByValue(&quot;${accidentWithVoilation}&quot;);
+java.lang.Thread.sleep(500);//to click submit violation button
+
+WDS.browser.findElement(pkg.By.id(&quot;submitsetViolationForm&quot;)).click();
+
 
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
 WDS.sampleResult.sampleEnd();</stringProp>
                 <stringProp name="WebDriverSampler.parameters"></stringProp>
                 <stringProp name="WebDriverSampler.language">javascript</stringProp>
@@ -830,7 +849,7 @@ WDS.sampleResult.sampleEnd();</stringProp>
                 <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
 
@@ -854,12 +873,12 @@ WDS.sampleResult.sampleEnd();</stringProp>
                 <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
 WDS.browser.findElement(pkg.By.cssSelector(&quot;a[title=&apos;Edit&apos;]&quot;)).click();
 WDS.browser.findElement(pkg.By.cssSelector(&quot;input[id=&apos;dob&apos;]&quot;)).sendKeys(&quot;${dateOfBirth}&quot;);
-java.lang.Thread.sleep(1000);//date takes time get entered in field
+java.lang.Thread.sleep(500);//date takes time get entered in field
 
 WDS.browser.findElement(pkg.By.id(&quot;OccupationDescribe&quot;)).sendKeys(&quot;${description}&quot;);
 
@@ -874,7 +893,7 @@ selectViolation.sendKeys(org.openqa.selenium.Keys.ENTER);
 
 var selectAccidentViolation = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;accidentWithViolation&quot;)));
 selectAccidentViolation.selectByVisibleText(&quot;${accidentWithVoilation}&quot;);
-java.lang.Thread.sleep(2000);//NOTE: needed this wait as there is delay in website itself.
+java.lang.Thread.sleep(500);//NOTE: needed this wait as there is delay in website itself.
 wait.until(ui.ExpectedConditions.elementToBeClickable(WDS.browser.findElement(pkg.By.cssSelector(&quot;button[id=&apos;submitsetViolationForm&apos;]&quot;))));
 WDS.browser.findElement(pkg.By.cssSelector(&quot;button[id=&apos;submitsetViolationForm&apos;]&quot;)).click();
 
@@ -890,10 +909,10 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
-java.lang.Thread.sleep(2000);
+
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
@@ -913,13 +932,13 @@ WDS.sampleResult.sampleEnd();</stringProp>
                 <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
-java.lang.Thread.sleep(2500);
+
 WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;ADD VEHICLE&apos;]&quot;)).click();
-java.lang.Thread.sleep(2000);
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
 WDS.sampleResult.sampleEnd();</stringProp>
                 <stringProp name="WebDriverSampler.parameters"></stringProp>
@@ -930,20 +949,20 @@ WDS.sampleResult.sampleEnd();</stringProp>
                 <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
-java.lang.Thread.sleep(2000);
+wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;vehiclevin&quot;)));
 var enterVIN = WDS.browser.findElement(pkg.By.cssSelector(&quot;input[id=&apos;vehiclevin&apos;]&quot;));
 enterVIN.sendKeys(&quot;${vehicleIdenficationNum}&quot;);
 enterVIN.sendKeys(org.openqa.selenium.Keys.ENTER);
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-java.lang.Thread.sleep(1000);//Taking time to load in headless execution
+
 var selectVehicleUse = new ui.Select(WDS.browser.findElement(pkg.By.cssSelector(&quot;select[id=&apos;vehicleuse&apos;]&quot;)));
 selectVehicleUse.selectByVisibleText(&quot;${vehicleUse}&quot;);
-java.lang.Thread.sleep(1000);
+
 WDS.browser.findElement(pkg.By.xpath(&quot;//*[@id=&apos;singleVehicleForm&apos;]/div[1]/div/div/div[9]/div/div/div/label[2]&quot;)).click();
-java.lang.Thread.sleep(1000);//wait for next field 
+
 var selectVehicleMileage = new ui.Select(WDS.browser.findElement(pkg.By.cssSelector(&quot;select[id=&apos;annualmileage&apos;]&quot;)));
 selectVehicleMileage.selectByValue(&quot;${annualMileage}&quot;);
 
@@ -959,7 +978,7 @@ var selectZip = WDS.browser.findElement(pkg.By.xpath(&quot;/html/body/div/div/di
 selectZip.sendKeys(&quot;${zip}&quot;);
 selectZip.sendKeys(org.openqa.selenium.Keys.ENTER);
 
-java.lang.Thread.sleep(1000);
+java.lang.Thread.sleep(500);//takes time to submit garging details
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 //wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 WDS.sampleResult.sampleEnd();</stringProp>
@@ -978,7 +997,7 @@ WDS.sampleResult.sampleEnd();</stringProp>
                 <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
 
@@ -1002,7 +1021,7 @@ WDS.sampleResult.sampleEnd();</stringProp>
                 <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
 WDS.browser.findElement(pkg.By.cssSelector(&quot;a[title=&apos;Edit&apos;]&quot;)).click();
@@ -1035,7 +1054,6 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 
 WDS.sampleResult.sampleStart();
 
-java.lang.Thread.sleep(2000);
 
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
@@ -1055,7 +1073,7 @@ WDS.sampleResult.sampleEnd();</stringProp>
                 <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
 if(&quot;${editDriver}&quot;==&quot;Add&quot; &amp;&amp; &quot;$driverType&quot; != &quot;Excluded&quot;)
@@ -1106,10 +1124,10 @@ WDS.sampleResult.sampleEnd();
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
-
+wait.until(ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.id(&quot;medicalpaymentlimitsGA&quot;)));
 var selectMEdicalPaymentLimit = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;medicalpaymentlimitsGA&quot;)));
 selectMEdicalPaymentLimit.selectByValue(&quot;${medicalPaymentLimit}&quot;);
 
@@ -1134,30 +1152,35 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(60));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
 
 if(&quot;${editDriver}&quot; == &quot;Add&quot; &amp;&amp; &quot;${driverType}&quot; != &quot;Excluded&quot;){
-java.lang.Thread.sleep(1000);
+	
 WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Order Reports&apos;]&quot;)).click();
+java.lang.Thread.sleep(1000);//Note:Site taking wait 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-java.lang.Thread.sleep(8000);//Note:Site taking wait 
+java.lang.Thread.sleep(500);//Note:Site taking wait 
 WDS.browser.findElement(pkg.By.id(&quot;successBTN&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-java.lang.Thread.sleep(8000);
+java.lang.Thread.sleep(6000);//Note:Site taking wait 
+//wait.until(ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;)));
 WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;)).click();
-}
-else {
-java.lang.Thread.sleep(4000);
-WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;)).click();
+} else {
+
+WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;)).click();}
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-java.lang.Thread.sleep(2000);
-wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;))));
-java.lang.Thread.sleep(4000);//Note: Wait added for headless mode
+
+wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;))));
+
 WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
-WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;)).click();
+
+var uploadBtn = WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;));
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, uploadBtn);
+java.lang.Thread.sleep(500);//we are scrolling here to element
+uploadBtn.click();
 
 wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//h5[text()=&apos;MANUAL UPLOAD&apos;]&quot;))));
 
@@ -1165,7 +1188,7 @@ WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;/home
 
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-}
+
 
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
@@ -1973,7 +1996,7 @@ WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,viewBtn
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, viewBtn);
 
 wait.until(ui.ExpectedConditions.invisibilityOf(viewBtn));
-//java.lang.Thread.sleep(1000);//NOTE: needed this wait as there is delay in website itself.
+
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 

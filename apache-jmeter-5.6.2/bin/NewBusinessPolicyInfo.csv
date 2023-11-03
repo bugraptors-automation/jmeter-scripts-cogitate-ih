@@ -1,6 +1,6 @@
-firstName,lastName,streetAddress
-Rickie,Mart,6662 City
-Michael,Kors,311 GA-49
-Test,Load,1335 6th Avenue
-Garry,Walter,20 Woodfield Rd
-Test,Load,1335 6th Avenue
+firstName,lastName,streetAddress,currentDate
+Rickie,Mart,6662 City,02-11
+Michael,Kors,311 GA-49,02-11
+Test,Load,1335 6th Avenue,02-11
+Garry,Walter,20 Woodfield Rd,02-11
+Test,Load,1335 6th Avenue,02-11

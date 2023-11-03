@@ -15,6 +15,7 @@ Note:
 	  
 3. NewBusinessPolicyInfo
 	  i) It contains the fields necessary to provide Policy Information.
+	  ii) 'currentDate' - Accpeted values for date should be in dd-mm format.
 	  
 4. NewBusinessDriverDetails
 	  i) The driver count is driven by properties file.
