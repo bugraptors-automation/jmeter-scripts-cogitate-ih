@@ -1,0 +1,13 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1698983494128,684,Get Login,200,OK,Thread Group 1-1,text,true,,5689,0,1,1,https://testapps.cogitate.us/ih,0,0,0
+1698983494894,5080,Transaction Controller -  New Business,500,"Number of samples in transaction : 2, number of failing samples : 1",Thread Group 1-1,,false,,35721,0,1,1,null,0,369,0
+1698983495144,4880,Login   NewBusiness,200,OK,Thread Group 1-1,text,true,,31384,0,1,1,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1698983500138,200,Select New Business,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""#nprogress""}
+  (Session info: chrome=119.0.6045.105)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a687ad2ea75f7aaeb6f38d307d89100c, findElement {using=id, value=nprogress}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45551}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:45551/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a687ad2ea75f7aaeb6f38d307d89100c",Thread Group 1-1,text,false,,4337,0,1,1,null,0,0,0
