@@ -1,0 +1,9 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1698982357299,2102,Get Login,200,OK,Thread Group 1-1,text,true,,5689,0,1,1,https://testapps.cogitate.us/ih,0,0,0
+1698982359495,10742,Transaction Controller -  New Business,500,"Number of samples in transaction : 1, number of failing samples : 1",Thread Group 1-1,,false,,2869,0,1,1,null,0,271,0
+1698982359763,10742,Login   NewBusiness,500,"Expected condition failed: waiting for invisibility of [[ChromeDriver: chrome on linux (7fe0da2eab0e0e7d1917cd9bea665f4c)] -> id: nprogress] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44593}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:44593/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7fe0da2eab0e0e7d1917cd9bea665f4c",Thread Group 1-1,text,false,Test failed: text expected to contain /Account Dashboard/,2869,0,1,1,null,0,0,0
