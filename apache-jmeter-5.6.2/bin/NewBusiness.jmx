@@ -209,7 +209,6 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 
 WDS.sampleResult.sampleStart();
 
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;firstname&quot;)));
 
 WDS.browser.findElement(pkg.By.id(&quot;firstname&quot;)).sendKeys(&quot;${firstName}&quot;);
@@ -233,7 +232,7 @@ WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findEle
 
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-authorizationforinsurancecreditscore-0&apos;]&quot;)));
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
-wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;)));
+//wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;)));
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
 WDS.sampleResult.sampleEnd();</stringProp>
@@ -258,7 +257,7 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 
 WDS.sampleResult.sampleStart();
 
-wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;dob&quot;)));
+//wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;dob&quot;)));
 //wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 if(${counter}&gt;1){
 	WDS.browser.findElement(pkg.By.cssSelector(&quot;.col-md-6.my-auto.text-end .btn.btnStyle.btnPrim&quot;)).click();
@@ -362,7 +361,7 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 WDS.sampleResult.sampleStart();
 
 
-wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;vehiclevin&quot;)));
+//wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;vehiclevin&quot;)));
 if(${counterV}&gt;1){
 	WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;ADD VEHICLE&apos;]&quot;)).click();
 }
@@ -451,7 +450,7 @@ WDS.sampleResult.sampleStart();
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.xpath(&quot;//label[@for=&apos;radio-physicalImpairment-1&apos;]&quot;)));
+//wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.xpath(&quot;//label[@for=&apos;radio-physicalImpairment-1&apos;]&quot;)));
 //Q1=No
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-physicalImpairment-1&apos;]&quot;)));
 //Q2=Yes
@@ -499,7 +498,7 @@ var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
-wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;selectstackedum&quot;)));
+//wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;selectstackedum&quot;)));
 var selectStackedUninsured = new ui.Select(WDS.browser.findElement(pkg.By.id(&quot;selectstackedum&quot;)));
 selectStackedUninsured.selectByVisibleText(&quot;${stackedUninsuredMotorist}&quot;);
 
@@ -573,7 +572,7 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 
 WDS.sampleResult.sampleStart();
 
-wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;)));
+//wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;)));
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Make a Payment&apos;]&quot;)).click();
 WDS.browser.findElement(pkg.By.cssSelector(&quot;tr:nth-child(1) input[name=&apos;groupOptions&apos;]&quot;)).click();
@@ -595,7 +594,7 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 
 WDS.sampleResult.sampleStart();
 
-wait.until(ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;)));
+//wait.until(ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;)));
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
 
