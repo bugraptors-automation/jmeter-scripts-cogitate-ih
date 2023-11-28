@@ -636,7 +636,41 @@ WDS.sampleResult.sampleEnd();
               <stringProp name="WebDriverSampler.parameters"></stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
             </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-            <hashTree/>
+            <hashTree>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+                <stringProp name="RegexExtractor.refname">getPolicyNumber</stringProp>
+                <stringProp name="RegexExtractor.regex">&lt;p class=&quot;textBlack fw-bold&quot;&gt;Policy Number&lt;\/p&gt;&lt;p class=&quot;textBlack&quot;&gt;([A-Za-z0-9]+)&lt;\/p&gt;</stringProp>
+                <stringProp name="RegexExtractor.default">Not_Found</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">// Import for File class (optional, but included for clarity)
+import java.io.File
+
+// Get the extracted value from the Regular Expression Extractor
+def policyNumber = vars.get(&quot;policyNumber&quot;)
+
+// Define the path to the CSV file
+def csvFilePath =&quot;/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin/PolicyNumbers.csv&quot;
+
+// Create a new line with the extracted value
+def line = &quot;${getPolicyNumber}&quot;
+
+// Write the line to the CSV file
+new File(csvFilePath).withWriterAppend { writer -&gt;
+    writer.writeLine(line)
+}
+</stringProp>
+              </JSR223PostProcessor>
+              <hashTree/>
+            </hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Logout" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
