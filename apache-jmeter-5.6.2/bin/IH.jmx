@@ -73,7 +73,7 @@
         <hashTree/>
         <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
           <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
-WDS.browser.executeScript(&quot;document.documentElement.style.zoom = &apos;90%&apos;&quot;);
+WDS.browser.executeScript(&quot;document.documentElement.style.zoom = &apos;80%&apos;&quot;);
 WDS.browser.get(&apos;${APP_URL}&apos;);
 WDS.sampleResult.sampleEnd();
 </stringProp>
