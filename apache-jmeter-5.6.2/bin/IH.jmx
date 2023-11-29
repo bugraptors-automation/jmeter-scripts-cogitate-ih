@@ -248,7 +248,7 @@ WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findEle
 
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-authorizationforinsurancecreditscore-0&apos;]&quot;)));
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
-java.lang.Thread.sleep(500);
+java.lang.Thread.sleep(700);
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)).click();
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;30002&apos;]&quot;)).click();
 
@@ -617,7 +617,8 @@ WDS.sampleResult.sampleStart();
 
 wait.until(ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;)));
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)));
+//WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
 
 var uploadBtn = WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;));
 WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, uploadBtn);
