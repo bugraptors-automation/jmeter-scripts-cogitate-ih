@@ -73,6 +73,7 @@
         <hashTree/>
         <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login" enabled="true">
           <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
+WDS.browser.executeScript(&quot;document.documentElement.style.zoom = &apos;90%&apos;&quot;);
 WDS.browser.get(&apos;${APP_URL}&apos;);
 WDS.sampleResult.sampleEnd();
 </stringProp>
@@ -165,8 +166,8 @@ WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${agen
 WDS.browser.findElement(pkg.By.cssSelector(&quot;.buttonLogin&quot;)).click();
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-//if(ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;))){
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));}
+if(ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;))){
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));}
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
@@ -241,9 +242,7 @@ WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.b
 
 
 WDS.browser.findElement(pkg.By.id(&quot;streetname&quot;)).sendKeys(&quot;${streetAddress}&quot;);
-java.lang.Thread.sleep(500);
-WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.cssSelector(&quot;.css-1xc3v61-indicatorContainer&quot;)));
-java.lang.Thread.sleep(500);
+
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)).click();
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;30002&apos;]&quot;)).click();
 
