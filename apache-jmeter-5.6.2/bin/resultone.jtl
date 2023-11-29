@@ -1,0 +1,12 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1701241120694,1328,Get Login,200,OK,Thread Group 1-1,text,true,,5689,0,1,1,https://testapps.cogitate.us/ih,0,0,0
+1701241122099,25957,Transaction Controller -  New Business,500,"Number of samples in transaction : 4, number of failing samples : 1",Thread Group 1-1,,false,,56615,0,1,1,null,0,817,0
+1701241122386,4077,Login   NewBusiness,200,OK,Thread Group 1-1,text,true,,34331,0,1,1,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1701241126580,154,Select New Business,200,OK,Thread Group 1-1,text,true,,14849,0,1,1,https://testapps.cogitate.us/ih/personal/auto/application/ineligibleinfo/,0,0,0
+1701241127023,1391,Ineligible Risks,200,OK,Thread Group 1-1,text,true,,4619,0,1,1,https://testapps.cogitate.us/ih/personal/auto/application/policyinfo/,0,0,0
+1701241128535,20335,Policy Info,500,"Expected condition failed: waiting for visibility of element located by By.id: firstname (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:39207}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:39207/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ccfc9a6fd7f27b9f0a90a7a95afaab4",Thread Group 1-1,text,false,,2816,0,1,1,null,0,0,0
