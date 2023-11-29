@@ -238,11 +238,12 @@ WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findEle
 
 WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;addmanualaddress&apos;]&quot;)));
 //WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.cssSelector(&quot;label[for=&apos;State&apos;]&quot;)));
-//WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.id(&quot;City&quot;)));
+
 
 WDS.browser.findElement(pkg.By.id(&quot;streetname&quot;)).sendKeys(&quot;${streetAddress}&quot;);
-
-
+java.lang.Thread.sleep(500);
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.cssSelector(&quot;.css-1xc3v61-indicatorContainer&quot;)));
+java.lang.Thread.sleep(500);
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)).click();
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;30002&apos;]&quot;)).click();
 
