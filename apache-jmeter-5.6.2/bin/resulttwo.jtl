@@ -1,0 +1,57 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1701231955682,1157,Get Login,200,OK,Thread Group 1-2,text,true,,5689,0,4,4,https://testapps.cogitate.us/ih,0,0,0
+1701231955693,1544,Get Login,200,OK,Thread Group 1-1,text,true,,5689,0,4,4,https://testapps.cogitate.us/ih,0,0,0
+1701231955682,3115,Get Login,200,OK,Thread Group 1-4,text,true,,5689,0,4,4,https://testapps.cogitate.us/ih,0,0,0
+1701231955691,3119,Get Login,200,OK,Thread Group 1-3,text,true,,5689,0,4,4,https://testapps.cogitate.us/ih,0,0,0
+1701231957386,11497,Transaction Controller -  New Business,500,"Number of samples in transaction : 4, number of failing samples : 1",Thread Group 1-1,,false,,84367,0,4,4,null,0,1342,0
+1701231957792,5024,Login   NewBusiness,200,OK,Thread Group 1-1,text,true,,41282,0,4,4,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1701231963136,444,Select New Business,200,OK,Thread Group 1-1,text,true,,14849,0,4,4,https://testapps.cogitate.us/ih/personal/auto/application/ineligibleinfo/,0,0,0
+1701231963904,1875,Ineligible Risks,200,OK,Thread Group 1-1,text,true,,23886,0,4,4,https://testapps.cogitate.us/ih/personal/auto/application/policyinfo/,0,0,0
+1701231966068,4154,Policy Info,500,"element click intercepted: Element <div class="" css-1xc3v61-indicatorContainer"" aria-hidden=""true"">...</div> is not clickable at point (461, 392). Other element would receive the click: <button type=""submit"" id=""btnnext"" form=""pageChangeForm"" class=""btn btnStyle btnSecon me-0"">...</button>
+  (Session info: chrome=119.0.6045.105)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [738c3cd02ae8fb74ad002413cd3a8e8f, clickElement {id=4F467ED0DB59A2F84443001C43683158_element_57}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37735}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:37735/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (738c3cd02ae8fb74ad002413cd3a8e8f)] -> xpath: //div[@class=' css-1xc3v61-indicatorContainer']]
+Session ID: 738c3cd02ae8fb74ad002413cd3a8e8f",Thread Group 1-1,text,false,,4350,0,4,4,null,0,0,0
+1701231957012,11729,Transaction Controller -  New Business,500,"Number of samples in transaction : 4, number of failing samples : 1",Thread Group 1-2,,false,,84999,0,4,4,null,0,1557,0
+1701231957794,5501,Login   NewBusiness,200,OK,Thread Group 1-2,text,true,,41914,0,4,4,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1701231963552,411,Select New Business,200,OK,Thread Group 1-2,text,true,,14849,0,4,4,https://testapps.cogitate.us/ih/personal/auto/application/ineligibleinfo/,0,0,0
+1701231964239,1966,Ineligible Risks,200,OK,Thread Group 1-2,text,true,,23886,0,4,4,https://testapps.cogitate.us/ih/personal/auto/application/policyinfo/,0,0,0
+1701231966446,3851,Policy Info,500,"element click intercepted: Element <div class="" css-1xc3v61-indicatorContainer"" aria-hidden=""true"">...</div> is not clickable at point (461, 392). Other element would receive the click: <button type=""submit"" id=""btnnext"" form=""pageChangeForm"" class=""btn btnStyle btnSecon me-0"">...</button>
+  (Session info: chrome=119.0.6045.105)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00bd1a66e9286b93e1d05a411d194335, clickElement {id=4D6927BA86CAA675773EE97EDA6366DD_element_60}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:34837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:34837/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (00bd1a66e9286b93e1d05a411d194335)] -> xpath: //div[@class=' css-1xc3v61-indicatorContainer']]
+Session ID: 00bd1a66e9286b93e1d05a411d194335",Thread Group 1-2,text,false,,4350,0,4,4,null,0,0,0
+1701231958923,9834,Transaction Controller -  New Business,500,"Number of samples in transaction : 4, number of failing samples : 1",Thread Group 1-3,,false,,55286,0,2,2,null,0,2912,0
+1701231959204,3634,Login   NewBusiness,200,OK,Thread Group 1-3,text,true,,11947,0,4,4,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1701231964724,644,Select New Business,200,OK,Thread Group 1-3,text,true,,15322,0,4,4,https://testapps.cogitate.us/ih/personal/auto/application/ineligibleinfo/,0,0,0
+1701231965805,1776,Ineligible Risks,200,OK,Thread Group 1-3,text,true,,23886,0,4,4,https://testapps.cogitate.us/ih/personal/auto/application/policyinfo/,0,0,0
+1701231967888,3780,Policy Info,500,"element click intercepted: Element is not clickable at point (461, 718)
+  (Session info: chrome=119.0.6045.105)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e0f50944f129ed6436a7a454fd94175d, clickElement {id=CAAB6B033134D1CC1483A6C73B83F63A_element_59}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43429}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:43429/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (e0f50944f129ed6436a7a454fd94175d)] -> xpath: //div[@class=' css-1xc3v61-indicatorContainer']]
+Session ID: e0f50944f129ed6436a7a454fd94175d",Thread Group 1-3,text,false,,4131,0,2,2,null,0,0,0
+1701231958905,9883,Transaction Controller -  New Business,500,"Number of samples in transaction : 4, number of failing samples : 1",Thread Group 1-4,,false,,84707,0,2,2,null,0,2912,0
+1701231959213,3870,Login   NewBusiness,200,OK,Thread Group 1-4,text,true,,41841,0,4,4,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1701231964987,418,Select New Business,200,OK,Thread Group 1-4,text,true,,14849,0,4,4,https://testapps.cogitate.us/ih/personal/auto/application/ineligibleinfo/,0,0,0
+1701231965816,2192,Ineligible Risks,200,OK,Thread Group 1-4,text,true,,23886,0,4,4,https://testapps.cogitate.us/ih/personal/auto/application/policyinfo/,0,0,0
+1701231968296,3403,Policy Info,500,"element click intercepted: Element is not clickable at point (461, 757)
+  (Session info: chrome=119.0.6045.105)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3d22747a4a68b5849ceda47ab37fd87b, clickElement {id=9CEC72E6FB7AE5FB4580FDBEF79A9238_element_58}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:32931}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:32931/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (3d22747a4a68b5849ceda47ab37fd87b)] -> xpath: //div[@class=' css-1xc3v61-indicatorContainer']]
+Session ID: 3d22747a4a68b5849ceda47ab37fd87b",Thread Group 1-4,text,false,,4131,0,2,2,null,0,0,0
