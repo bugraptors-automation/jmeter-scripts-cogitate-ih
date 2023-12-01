@@ -1,68 +1,69 @@
-2023-12-01 10:38:43,469 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2023-12-01 10:38:43,583 INFO o.a.j.JMeter: Loading user properties from: user.properties
-2023-12-01 10:38:43,608 INFO o.a.j.JMeter: Loading system properties from: system.properties
-2023-12-01 10:38:43,634 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
-2023-12-01 10:38:43,634 INFO o.a.j.JMeter: Version 5.6.2
-2023-12-01 10:38:43,634 INFO o.a.j.JMeter: java.version=11.0.21
-2023-12-01 10:38:43,634 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
-2023-12-01 10:38:43,635 INFO o.a.j.JMeter: os.name=Linux
-2023-12-01 10:38:43,635 INFO o.a.j.JMeter: os.arch=amd64
-2023-12-01 10:38:43,635 INFO o.a.j.JMeter: os.version=5.10.0-26-cloud-amd64
-2023-12-01 10:38:43,635 INFO o.a.j.JMeter: file.encoding=UTF-8
-2023-12-01 10:38:43,635 INFO o.a.j.JMeter: java.awt.headless=true
-2023-12-01 10:38:43,635 INFO o.a.j.JMeter: Max memory     =1073741824
-2023-12-01 10:38:43,635 INFO o.a.j.JMeter: Available Processors =4
-2023-12-01 10:38:43,690 INFO o.a.j.JMeter: Default Locale=English (EN)
-2023-12-01 10:38:43,691 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2023-12-01 10:38:43,691 INFO o.a.j.JMeter: JMeterHome=/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2
-2023-12-01 10:38:43,691 INFO o.a.j.JMeter: user.dir  =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
-2023-12-01 10:38:43,691 INFO o.a.j.JMeter: PWD       =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
-2023-12-01 10:38:43,691 INFO o.a.j.JMeter: IP: 10.128.0.45 Name: demo-run FullName: demo-run.us-central1-a.c.ih-project-396106.internal
-2023-12-01 10:38:43,858 INFO o.a.j.s.FileServer: Default base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin'
-2023-12-01 10:38:43,863 INFO o.a.j.s.FileServer: Set new base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin'
-2023-12-01 10:38:44,415 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2023-12-01 10:38:44,507 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2023-12-01 10:38:44,512 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2023-12-01 10:38:44,519 INFO o.a.j.s.SaveService: Loading file: IH.jmx
-2023-12-01 10:38:45,147 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2023-12-01 10:38:45,147 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
-2023-12-01 10:38:45,147 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2023-12-01 10:38:45,147 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2023-12-01 10:38:46,814 INFO o.a.j.JMeter: Creating summariser <summary>
-2023-12-01 10:38:46,873 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2023-12-01 10:38:46,885 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2023-12-01 10:38:46,885 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2023-12-01 10:38:46,921 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2023-12-01 10:38:46,921 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2023-12-01 10:38:47,045 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-12-01 10:38:47,401 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-webdriver-4.10.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-12-01 10:38:47,481 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-12-01 10:38:47,484 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/tag-jmeter-extn-1.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-12-01 10:38:47,488 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-csvars-0.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-12-01 10:38:47,576 INFO o.a.j.JMeter: Running test (1701427127575)
-2023-12-01 10:38:47,619 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
-2023-12-01 10:38:47,620 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
-2023-12-01 10:38:47,620 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
-2023-12-01 10:38:47,620 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
-2023-12-01 10:38:47,659 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2023-12-01 10:38:47,660 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2023-12-01 10:38:48,074 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
-2023-12-01 10:39:04,553 INFO o.a.j.s.FileServer: Stored: Flow.csv
-2023-12-01 10:39:06,698 INFO o.a.j.s.FileServer: Stored: EndorsementDetails.csv
-2023-12-01 10:39:06,700 INFO o.a.j.s.FileServer: Stored: NewPolicyNumbers.csv
-2023-12-01 10:39:43,201 ERROR c.g.j.p.w.s.WebDriverSampler: element click intercepted: Element is not clickable at point (512, 533)
+2023-12-01 10:51:57,053 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-12-01 10:51:57,091 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2023-12-01 10:51:57,091 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2023-12-01 10:51:57,098 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
+2023-12-01 10:51:57,099 INFO o.a.j.JMeter: Version 5.6.2
+2023-12-01 10:51:57,099 INFO o.a.j.JMeter: java.version=11.0.21
+2023-12-01 10:51:57,099 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2023-12-01 10:51:57,099 INFO o.a.j.JMeter: os.name=Linux
+2023-12-01 10:51:57,099 INFO o.a.j.JMeter: os.arch=amd64
+2023-12-01 10:51:57,099 INFO o.a.j.JMeter: os.version=5.10.0-26-cloud-amd64
+2023-12-01 10:51:57,099 INFO o.a.j.JMeter: file.encoding=UTF-8
+2023-12-01 10:51:57,100 INFO o.a.j.JMeter: java.awt.headless=true
+2023-12-01 10:51:57,100 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-12-01 10:51:57,100 INFO o.a.j.JMeter: Available Processors =4
+2023-12-01 10:51:57,110 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-12-01 10:51:57,110 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-12-01 10:51:57,110 INFO o.a.j.JMeter: JMeterHome=/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2
+2023-12-01 10:51:57,111 INFO o.a.j.JMeter: user.dir  =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
+2023-12-01 10:51:57,111 INFO o.a.j.JMeter: PWD       =/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin
+2023-12-01 10:51:57,111 INFO o.a.j.JMeter: IP: 10.128.0.45 Name: demo-run FullName: demo-run.us-central1-a.c.ih-project-396106.internal
+2023-12-01 10:51:57,128 INFO o.a.j.s.FileServer: Default base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin'
+2023-12-01 10:51:57,129 INFO o.a.j.s.FileServer: Set new base='/home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/bin'
+2023-12-01 10:51:57,452 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-12-01 10:51:57,494 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-12-01 10:51:57,499 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-12-01 10:51:57,504 INFO o.a.j.s.SaveService: Loading file: IH.jmx
+2023-12-01 10:51:57,759 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2023-12-01 10:51:57,760 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2023-12-01 10:51:57,760 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-12-01 10:51:57,760 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-12-01 10:51:58,330 INFO o.a.j.JMeter: Creating summariser <summary>
+2023-12-01 10:51:58,347 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-12-01 10:51:58,360 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-12-01 10:51:58,360 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-12-01 10:51:58,371 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2023-12-01 10:51:58,371 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2023-12-01 10:51:58,437 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-12-01 10:51:58,586 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-webdriver-4.10.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-12-01 10:51:58,602 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-12-01 10:51:58,605 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/tag-jmeter-extn-1.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-12-01 10:51:58,608 INFO o.a.j.r.ClassFinder: Will scan jar /home/auto_bugraptors/jmeter-scripts-cogitate-ih/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-csvars-0.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-12-01 10:51:58,646 INFO o.a.j.JMeter: Running test (1701427918646)
+2023-12-01 10:51:58,678 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2023-12-01 10:51:58,678 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2023-12-01 10:51:58,678 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2023-12-01 10:51:58,679 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2023-12-01 10:51:58,713 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-12-01 10:51:58,713 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-12-01 10:51:58,781 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2023-12-01 10:52:00,057 INFO o.a.j.s.FileServer: Stored: Flow.csv
+2023-12-01 10:52:01,095 INFO o.a.j.r.Summariser: summary +      1 in 00:00:02 =    0.4/s Avg:   839 Min:   839 Max:   839 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2023-12-01 10:52:01,119 INFO o.a.j.s.FileServer: Stored: EndorsementDetails.csv
+2023-12-01 10:52:01,120 INFO o.a.j.s.FileServer: Stored: NewPolicyNumbers.csv
+2023-12-01 10:52:35,842 ERROR c.g.j.p.w.s.WebDriverSampler: no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Order Reports']"}
   (Session info: chrome=119.0.6045.199)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9148d4b48efd61792ddba1f6064f68a3, clickElement {id=3BB36CFA903B713D94EE449B109E2597_element_182}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:35425}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:35425/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on linux (9148d4b48efd61792ddba1f6064f68a3)] -> xpath: //button[text()='Submit']]
-Session ID: 9148d4b48efd61792ddba1f6064f68a3
-2023-12-01 10:39:43,256 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
-2023-12-01 10:39:43,257 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
-2023-12-01 10:39:43,363 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2023-12-01 10:39:43,363 INFO o.a.j.s.FileServer: Close: EndorsementDetails.csv
-2023-12-01 10:39:43,383 INFO o.a.j.s.FileServer: Close: Flow.csv
-2023-12-01 10:39:43,384 INFO o.a.j.s.FileServer: Close: NewPolicyNumbers.csv
-2023-12-01 10:39:43,386 INFO o.a.j.r.Summariser: summary =      1 in 00:00:56 =    0.0/s Avg:  1678 Min:  1678 Max:  1678 Err:     0 (0.00%)
+Command: [6e2c356bd88e0abe0820ee4cd3d8eb91, findElement {using=xpath, value=//button[text()='Order Reports']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37877}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:37877/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e2c356bd88e0abe0820ee4cd3d8eb91
+2023-12-01 10:52:35,850 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2023-12-01 10:52:35,851 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2023-12-01 10:52:35,965 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-12-01 10:52:35,966 INFO o.a.j.s.FileServer: Close: EndorsementDetails.csv
+2023-12-01 10:52:35,968 INFO o.a.j.s.FileServer: Close: Flow.csv
+2023-12-01 10:52:35,968 INFO o.a.j.s.FileServer: Close: NewPolicyNumbers.csv
+2023-12-01 10:52:35,969 INFO o.a.j.r.Summariser: summary =      1 in 00:00:37 =    0.0/s Avg:   839 Min:   839 Max:   839 Err:     0 (0.00%)
