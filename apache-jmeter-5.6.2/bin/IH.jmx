@@ -250,6 +250,7 @@ WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findEle
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 java.lang.Thread.sleep(500);
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)).click();
+
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;30002&apos;]&quot;)).click();
 
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
