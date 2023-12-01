@@ -1287,7 +1287,8 @@ wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.i
 
 wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;summary-tabs-tab-documents&quot;)));
 
-WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
+//WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)));
 
 var uploadBtn = WDS.browser.findElement(pkg.By.className(&quot;summaryEdit&quot;));
 WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, uploadBtn);
