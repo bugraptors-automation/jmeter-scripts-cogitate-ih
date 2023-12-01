@@ -1285,9 +1285,7 @@ WDS.sampleResult.sampleStart();
 if(WDS.browser.findElements(org.openqa.selenium.By.id(&quot;nprogress&quot;)).size() &gt;0) {
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));}
 
-wait.until(ui.ExpectedConditions.visibilityOf(WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;))));
-if(WDS.browser.findElements(org.openqa.selenium.By.id(&quot;nprogress&quot;)).size() &gt;0) {
-wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));}
+wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;summary-tabs-tab-documents&quot;)));
 
 WDS.browser.findElement(pkg.By.id(&quot;summary-tabs-tab-documents&quot;)).click();
 
