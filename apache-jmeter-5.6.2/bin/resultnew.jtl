@@ -1,0 +1,23 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1701427144948,1678,Get Login ,200,OK,Thread Group 1-1,text,true,,5689,0,1,1,https://testapps.cogitate.us/ih,0,0,0
+1701427146701,35132,Transaction Controller - Endorsement,500,"Number of samples in transaction : 12, number of failing samples : 1",Thread Group 1-1,,false,,242858,0,1,1,null,0,1422,0
+1701427146972,4266,Login  Endorsement,200,OK,Thread Group 1-1,text,true,,31881,0,1,1,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1701427151387,952,Search,200,OK,Thread Group 1-1,text,true,,18690,0,1,1,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1701427152447,662,Select Policy,200,OK,Thread Group 1-1,text,true,,9237,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/landing/,0,0,0
+1701427153196,1421,Start Endorsement,200,OK,Thread Group 1-1,text,true,,22602,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/policyinfo/,0,0,0
+1701427154709,940,Policy Info,200,OK,Thread Group 1-1,text,true,,15724,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/driverinfo/,0,0,0
+1701427155748,748,Add Driver,200,OK,Thread Group 1-1,text,true,,34333,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/driverinfo/,0,0,0
+1701427156598,4152,Add Driver Details,200,OK,Thread Group 1-1,text,true,,20558,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/driverinfo/,0,0,0
+1701427160835,719,Driver Information,200,OK,Thread Group 1-1,text,true,,18975,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/vehicleinfo/,0,0,0
+1701427161645,708,Vehicle Information,200,OK,Thread Group 1-1,text,true,,21098,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/underwritinginfo/,0,0,0
+1701427162430,6867,Underwriting ,200,OK,Thread Group 1-1,text,true,,33613,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/coverageinfo/,0,0,0
+1701427169393,7194,Coverages,200,OK,Thread Group 1-1,text,true,,12037,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/summary/,0,0,0
+1701427176751,6503,Endorsement Summary,500,"element click intercepted: Element is not clickable at point (512, 533)
+  (Session info: chrome=119.0.6045.199)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9148d4b48efd61792ddba1f6064f68a3, clickElement {id=3BB36CFA903B713D94EE449B109E2597_element_182}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:35425}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:35425/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (9148d4b48efd61792ddba1f6064f68a3)] -> xpath: //button[text()='Submit']]
+Session ID: 9148d4b48efd61792ddba1f6064f68a3",Thread Group 1-1,text,false,,4110,0,1,1,null,0,0,0
