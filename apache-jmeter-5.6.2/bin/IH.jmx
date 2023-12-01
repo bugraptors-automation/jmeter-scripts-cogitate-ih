@@ -779,7 +779,8 @@ WDS.sampleResult.sampleStart();
 
 WDS.browser.findElement(pkg.By.cssSelector(&quot;.advSearch&quot;)).click();
 WDS.browser.findElement(pkg.By.id(&quot;policynumber&quot;)).sendKeys(&quot;${policyNum}&quot;);
-WDS.browser.findElement(pkg.By.id(&quot;submitAdvSearch&quot;)).click();
+//WDS.browser.findElement(pkg.By.id(&quot;submitAdvSearch&quot;)).click();
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;submitAdvSearch&quot;)));
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
