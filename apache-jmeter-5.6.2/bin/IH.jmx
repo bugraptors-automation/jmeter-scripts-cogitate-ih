@@ -1259,13 +1259,29 @@ wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.x
 if(WDS.browser.findElements(org.openqa.selenium.By.id(&quot;nprogress&quot;)).size() &gt;0) {
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));}
 
-WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;)).click();
+//WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;)).click();
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;)));
 
 } else {
 wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;)));
 WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Submit&apos;]&quot;)).click();}
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Upload Document" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
+var ui = JavaImporter(org.openqa.selenium.support.ui);
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+
+WDS.sampleResult.sampleStart();
+
 if(WDS.browser.findElements(org.openqa.selenium.By.id(&quot;nprogress&quot;)).size() &gt;0) {
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));}
 
@@ -1287,8 +1303,8 @@ WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;/home
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
-
-WDS.sampleResult.sampleEnd();</stringProp>
+WDS.sampleResult.sampleEnd();
+</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
             </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
