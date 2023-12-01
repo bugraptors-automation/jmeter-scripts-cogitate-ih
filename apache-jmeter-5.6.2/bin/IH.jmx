@@ -249,7 +249,9 @@ WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findEle
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-authorizationforinsurancecreditscore-0&apos;]&quot;)));
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 java.lang.Thread.sleep(500);
-WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)).click();
+//WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)).click();
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)));
+
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;30002&apos;]&quot;)).click();
 
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
@@ -909,7 +911,8 @@ var selectAccidentWithViolation = new ui.Select(WDS.browser.findElement(pkg.By.i
 selectAccidentWithViolation.selectByValue(&quot;${accidentWithVoilation}&quot;);
 java.lang.Thread.sleep(500);//to click submit violation button
 
-WDS.browser.findElement(pkg.By.id(&quot;submitsetViolationForm&quot;)).click();
+//WDS.browser.findElement(pkg.By.id(&quot;submitsetViolationForm&quot;)).click();
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;submitsetViolationForm&quot;)));
 
 
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
