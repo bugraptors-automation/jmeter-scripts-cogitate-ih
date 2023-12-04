@@ -198,7 +198,6 @@ wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.i
 
 WDS.browser.findElement(pkg.By.xpath(&quot;//img[@alt=&apos;New Business&apos;]&quot;)).click();
 
-
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
@@ -231,7 +230,6 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 
 WDS.sampleResult.sampleStart();
 
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;firstname&quot;)));
 
 WDS.browser.findElement(pkg.By.id(&quot;firstname&quot;)).sendKeys(&quot;${firstName}&quot;);
