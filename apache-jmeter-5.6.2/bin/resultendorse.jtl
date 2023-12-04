@@ -1,0 +1,17 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1701682928474,940,Get Login ,200,OK,Thread Group 1-1,text,true,,5689,0,1,1,https://testapps.cogitate.us/ih,0,0,0
+1701682929457,51820,Transaction Controller - Endorsement,200,"Number of samples in transaction : 14, number of failing samples : 0",Thread Group 1-1,,true,,311861,0,1,1,null,0,1353,0
+1701682929707,9346,Login  Endorsement,200,OK,Thread Group 1-1,text,true,,31334,0,1,1,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1701682939157,971,Search,200,OK,Thread Group 1-1,text,true,,18690,0,1,1,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1701682940219,1186,Select Policy,200,OK,Thread Group 1-1,text,true,,9236,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/landing/,0,0,0
+1701682941491,1895,Start Endorsement,200,OK,Thread Group 1-1,text,true,,22602,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/policyinfo/,0,0,0
+1701682943472,1324,Policy Info,200,OK,Thread Group 1-1,text,true,,15724,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/driverinfo/,0,0,0
+1701682944869,1241,Add Driver,200,OK,Thread Group 1-1,text,true,,34333,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/driverinfo/,0,0,0
+1701682946205,4084,Add Driver Details,200,OK,Thread Group 1-1,text,true,,20558,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/driverinfo/,0,0,0
+1701682950360,1211,Driver Information,200,OK,Thread Group 1-1,text,true,,18975,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/vehicleinfo/,0,0,0
+1701682951644,707,Vehicle Information,200,OK,Thread Group 1-1,text,true,,21098,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/underwritinginfo/,0,0,0
+1701682952426,7864,Underwriting ,200,OK,Thread Group 1-1,text,true,,33613,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/coverageinfo/,0,0,0
+1701682960363,8633,Coverages,200,OK,Thread Group 1-1,text,true,,22314,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/summary/,0,0,0
+1701682969081,10369,Endorsement Summary,200,OK,Thread Group 1-1,text,true,,21664,0,1,1,https://testapps.cogitate.us/ih/personal/auto/endorsement/summary/,0,0,0
+1701682979553,2172,Upload Document,200,OK,Thread Group 1-1,text,true,,33796,0,1,1,https://testapps.cogitate.us/ih/personal/auto/application/summary/,0,0,0
+1701682981798,817,Logout,200,OK,Thread Group 1-1,text,true,,7924,0,1,1,https://testapps.cogitate.us/ih/?name=logout,0,0,0
