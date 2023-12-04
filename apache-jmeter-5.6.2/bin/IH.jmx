@@ -72,20 +72,8 @@
         </CSVDataSet>
         <hashTree/>
         <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login " enabled="true">
-          <stringProp name="WebDriverSampler.script">var robot = new java.awt.Robot();
-
-WDS.sampleResult.sampleStart();
+          <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
 WDS.browser.get(&apos;${APP_URL}&apos;);
-
-// Press and hold the CONTROL key
-robot.keyPress(java.awt.event.KeyEvent.VK_CONTROL);
-// Press the MINUS key
-robot.keyPress(java.awt.event.KeyEvent.VK_MINUS);
-// Release the MINUS key
-robot.keyRelease(java.awt.event.KeyEvent.VK_MINUS);
-// Release the CONTROL key
-robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
-
 WDS.sampleResult.sampleEnd();
 </stringProp>
           <stringProp name="WebDriverSampler.parameters"></stringProp>
@@ -168,8 +156,18 @@ WDS.sampleResult.sampleEnd();
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
+//var robot = new java.awt.Robot();
 
 WDS.sampleResult.sampleStart();
+
+//// Press and hold the CONTROL key
+//robot.keyPress(java.awt.event.KeyEvent.VK_CONTROL);
+//// Press the MINUS key
+//robot.keyPress(java.awt.event.KeyEvent.VK_MINUS);
+//// Release the MINUS key
+//robot.keyRelease(java.awt.event.KeyEvent.VK_MINUS);
+//// Release the CONTROL key
+//robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
 
 WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${agentUsername}&quot;);
 WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${agentPassword}&quot;);
@@ -2161,7 +2159,7 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
           <boolProp name="displayJMeterProperties">false</boolProp>
           <boolProp name="displayJMeterVariables">true</boolProp>
           <boolProp name="displaySystemProperties">false</boolProp>
