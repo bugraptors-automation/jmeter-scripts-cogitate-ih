@@ -1,0 +1,17 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1701678733328,884,Get Login ,200,OK,Thread Group 1-1,text,true,,5689,0,1,1,https://testapps.cogitate.us/ih,0,0,0
+1701678734282,13562,Transaction Controller -  New Business,500,"Number of samples in transaction : 6, number of failing samples : 1",Thread Group 1-1,,false,,110090,0,1,1,null,0,2715,0
+1701678734525,3793,Login   NewBusiness,200,OK,Thread Group 1-1,text,true,,28902,0,1,1,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1701678738432,165,Select New Business,200,OK,Thread Group 1-1,text,true,,14849,0,1,1,https://testapps.cogitate.us/ih/personal/auto/application/ineligibleinfo/,0,0,0
+1701678738718,818,Ineligible Risks,200,OK,Thread Group 1-1,text,true,,23886,0,1,1,https://testapps.cogitate.us/ih/personal/auto/application/policyinfo/,0,0,0
+1701678739686,5343,Policy Info,200,OK,Thread Group 1-1,text,true,,38348,0,1,1,https://testapps.cogitate.us/ih/personal/auto/application/driverinfo/,0,0,0
+1701678745051,26,BeanShell Sampler - Driver,200,OK,Thread Group 1-1,text,true,,0,0,1,1,null,0,0,0
+1701678745187,3417,Drivers,500,"element click intercepted: Element is not clickable at point (938, 1034)
+  (Session info: chrome=119.0.6045.199)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a9d4321f09245244281aeee15f20c240, clickElement {id=4DA2A980CF61A135C77B945B4B2CF491_element_134}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44259}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:44259/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (a9d4321f09245244281aeee15f20c240)] -> id: submitsetViolationForm]
+Session ID: a9d4321f09245244281aeee15f20c240",Thread Group 1-1,text,false,,4105,0,1,1,null,0,0,0
