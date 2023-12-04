@@ -1,0 +1,15 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1701674346434,2754,Get Login ,200,OK,Thread Group 1-1,text,true,,5689,0,1,1,https://testapps.cogitate.us/ih,0,0,0
+1701674349287,10433,Transaction Controller -  New Business,500,"Number of samples in transaction : 4, number of failing samples : 1",Thread Group 1-1,,false,,71060,0,1,1,null,0,847,0
+1701674349544,4364,Login   NewBusiness,200,OK,Thread Group 1-1,text,true,,28060,0,1,1,https://testapps.cogitate.us/ih/dashboard/accounthub/,0,0,0
+1701674354010,250,Select New Business,200,OK,Thread Group 1-1,text,true,,14849,0,1,1,https://testapps.cogitate.us/ih/personal/auto/application/ineligibleinfo/,0,0,0
+1701674354606,1328,Ineligible Risks,200,OK,Thread Group 1-1,text,true,,23858,0,1,1,https://testapps.cogitate.us/ih/personal/auto/application/policyinfo/,0,0,0
+1701674356073,4491,Policy Info,500,"element click intercepted: Element <div class="" css-1xc3v61-indicatorContainer"" aria-hidden=""true"">...</div> is not clickable at point (461, 48). Other element would receive the click: <div class=""container-fluid h-100 px-0"">...</div>
+  (Session info: chrome=119.0.6045.199)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.0-26-cloud-amd64', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [24a04d4b141ab6e67d74ea12299cd017, clickElement {id=93A26F3248F07F9462F07D9B35F870BD_element_66}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33931}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(system), se:cdp: ws://localhost:33931/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (24a04d4b141ab6e67d74ea12299cd017)] -> xpath: //div[@class=' css-1xc3v61-indicatorContainer']]
+Session ID: 24a04d4b141ab6e67d74ea12299cd017",Thread Group 1-1,text,false,,4293,0,1,1,null,0,0,0
