@@ -156,18 +156,18 @@ WDS.sampleResult.sampleEnd();
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
-//var robot = new java.awt.Robot();
+var robot = new java.awt.Robot();
 
 WDS.sampleResult.sampleStart();
 
-//// Press and hold the CONTROL key
-//robot.keyPress(java.awt.event.KeyEvent.VK_CONTROL);
-//// Press the MINUS key
-//robot.keyPress(java.awt.event.KeyEvent.VK_MINUS);
-//// Release the MINUS key
-//robot.keyRelease(java.awt.event.KeyEvent.VK_MINUS);
-//// Release the CONTROL key
-//robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
+// Press and hold the CONTROL key
+robot.keyPress(java.awt.event.KeyEvent.VK_CONTROL);
+// Press the MINUS key
+robot.keyPress(java.awt.event.KeyEvent.VK_MINUS);
+// Release the MINUS key
+robot.keyRelease(java.awt.event.KeyEvent.VK_MINUS);
+// Release the CONTROL key
+robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
 
 WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${agentUsername}&quot;);
 WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${agentPassword}&quot;);
