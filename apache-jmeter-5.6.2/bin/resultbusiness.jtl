@@ -1,2 +1,0 @@
-timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1701669577525,0,Get Login ,500,java.awt.AWTException: headless environment,Thread Group 1-1,text,false,,1159,0,1,1,null,0,0,0
