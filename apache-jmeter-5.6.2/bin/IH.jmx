@@ -80,7 +80,7 @@ WDS.sampleResult.sampleEnd();
           <stringProp name="WebDriverSampler.language">javascript</stringProp>
         </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
         <hashTree/>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - NewBusiness" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - NewBusiness" enabled="false">
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">false</boolProp>
           <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;NewBusiness&quot;</stringProp>
@@ -703,7 +703,7 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Endorsement" enabled="false">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Endorsement" enabled="true">
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">false</boolProp>
           <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;Endorsement&quot;</stringProp>
