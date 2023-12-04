@@ -261,8 +261,6 @@ WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;30002&apos;]&quot;
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;)));
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-// Reset the window size to the default
-WDS.browser.manage().window().setSize(defaultSize);
 
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
