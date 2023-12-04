@@ -72,15 +72,27 @@
         </CSVDataSet>
         <hashTree/>
         <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login " enabled="true">
-          <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
+          <stringProp name="WebDriverSampler.script">var robot = new java.awt.Robot();
+
+WDS.sampleResult.sampleStart();
 WDS.browser.get(&apos;${APP_URL}&apos;);
+
+// Press and hold the CONTROL key
+robot.keyPress(java.awt.event.KeyEvent.VK_CONTROL);
+// Press the MINUS key
+robot.keyPress(java.awt.event.KeyEvent.VK_MINUS);
+// Release the MINUS key
+robot.keyRelease(java.awt.event.KeyEvent.VK_MINUS);
+// Release the CONTROL key
+robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
+
 WDS.sampleResult.sampleEnd();
 </stringProp>
           <stringProp name="WebDriverSampler.parameters"></stringProp>
           <stringProp name="WebDriverSampler.language">javascript</stringProp>
         </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
         <hashTree/>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - NewBusiness" enabled="false">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - NewBusiness" enabled="true">
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">false</boolProp>
           <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;NewBusiness&quot;</stringProp>
@@ -191,6 +203,8 @@ var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
+if(WDS.browser.findElements(org.openqa.selenium.By.id(&quot;nprogress&quot;)).size() &gt;0) {
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));}
 
 WDS.browser.findElement(pkg.By.xpath(&quot;//img[@alt=&apos;New Business&apos;]&quot;)).click();
 
@@ -249,8 +263,8 @@ WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findEle
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-authorizationforinsurancecreditscore-0&apos;]&quot;)));
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
 java.lang.Thread.sleep(500);
-//WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)).click();
-WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)));
+WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)).click();
+//WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)));
 
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;30002&apos;]&quot;)).click();
 
@@ -467,7 +481,7 @@ vars.put(&quot;counterV&quot;,Integer.toString(counterV));</stringProp>
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium);
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait);
 var ui = JavaImporter(org.openqa.selenium.support.ui);
-var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
+var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
@@ -573,7 +587,9 @@ WDS.sampleResult.sampleStart();
 if(WDS.browser.findElements(org.openqa.selenium.By.id(&quot;nprogress&quot;)).size() &gt;0) {
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));}
 
-WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Order Report&apos;]&quot;)).click();
+//wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.cssSelector(&quot;#summ-sec3-butt button:nth-child(1)&quot;)));
+//WDS.browser.findElement(pkg.By.xpath(&quot;//button[text()=&apos;Order Report&apos;]&quot;)).click();
+WDS.browser.findElement(pkg.By.cssSelector(&quot;#summ-sec3-butt button:nth-child(1)&quot;)).click();
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;successBTN&quot;)));
@@ -635,6 +651,8 @@ WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;/home
 
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
+//
+//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;Document Uploaded Successfully&apos;]&quot;))));
 
 WDS.sampleResult.sampleEnd();
 </stringProp>
@@ -696,7 +714,7 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Endorsement" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Endorsement" enabled="false">
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">false</boolProp>
           <stringProp name="IfController.condition">&quot;${flow}&quot; == &quot;Endorsement&quot;</stringProp>
