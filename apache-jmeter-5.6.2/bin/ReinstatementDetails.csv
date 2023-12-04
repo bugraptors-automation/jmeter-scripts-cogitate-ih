@@ -1,0 +1,3 @@
+primaryRole,agentUsername,agentPassword,underwriterUsername,underwriterPasssword,underwriterApprovalReq,policyNumToReinstate,reinstatementTerms
+agent,testagent@agency.us,10#Hammer,,,No,GAPA009003543,test
+agent,testagent@agency.us,10#Hammer,,,No,GAPA009003558,test
