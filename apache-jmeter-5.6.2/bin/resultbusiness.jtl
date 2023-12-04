@@ -1,4 +1,0 @@
-timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1701675507716,719,Get Login ,200,OK,Thread Group 1-1,text,true,,5689,0,1,1,https://testapps.cogitate.us/ih,0,0,0
-1701675508518,0,Transaction Controller -  New Business,500,"Number of samples in transaction : 1, number of failing samples : 1",Thread Group 1-1,,false,,1159,0,1,1,null,0,395,0
-1701675508911,0,Login   NewBusiness,500,java.awt.AWTException: headless environment,Thread Group 1-1,text,false,Test failed: text expected to contain /Account Dashboard/,1159,0,1,1,null,0,0,0

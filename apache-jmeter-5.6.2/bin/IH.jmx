@@ -159,6 +159,7 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 //var robot = new java.awt.Robot();
 
 WDS.sampleResult.sampleStart();
+WDS.browser.manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
 
 //// Press and hold the CONTROL key
 //robot.keyPress(java.awt.event.KeyEvent.VK_CONTROL);
