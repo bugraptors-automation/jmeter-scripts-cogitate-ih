@@ -26,12 +26,12 @@
       </ThreadGroup>
       <hashTree>
         <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="Chrome Driver Config" enabled="true">
-          <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+          <boolProp name="WebDriverConfig.acceptinsecurecerts">true</boolProp>
           <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
           <stringProp name="WebDriverConfig.driver_path">chromedriver-linux64/chromedriver</stringProp>
           <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
           <boolProp name="WebDriverConfig.headless">true</boolProp>
-          <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+          <boolProp name="WebDriverConfig.maximize_browser">false</boolProp>
           <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
           <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
           <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
@@ -72,20 +72,8 @@
         </CSVDataSet>
         <hashTree/>
         <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Get Login " enabled="true">
-          <stringProp name="WebDriverSampler.script">var robot = new java.awt.Robot();
-
-WDS.sampleResult.sampleStart();
+          <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
 WDS.browser.get(&apos;${APP_URL}&apos;);
-
-// Press and hold the CONTROL key
-//robot.keyPress(java.awt.event.KeyEvent.VK_CONTROL);
-// Press the MINUS key
-//robot.keyPress(java.awt.event.KeyEvent.VK_MINUS);
-//// Release the MINUS key
-//robot.keyRelease(java.awt.event.KeyEvent.VK_MINUS);
-// Release the CONTROL key
-//robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
-
 WDS.sampleResult.sampleEnd();
 </stringProp>
           <stringProp name="WebDriverSampler.parameters"></stringProp>
@@ -170,6 +158,7 @@ var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(20));
 
 WDS.sampleResult.sampleStart();
+WDS.browser.manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
 
 WDS.browser.findElement(pkg.By.name(&quot;username&quot;)).sendKeys(&quot;${agentUsername}&quot;);
 WDS.browser.findElement(pkg.By.name(&quot;password&quot;)).sendKeys(&quot;${agentPassword}&quot;);
@@ -180,6 +169,7 @@ wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.i
 //if(ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.id(&quot;nprogress&quot;))){
 if(WDS.browser.findElements(org.openqa.selenium.By.id(&quot;nprogress&quot;)).size() &gt;0) {
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));}
+
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
               <stringProp name="WebDriverSampler.language">javascript</stringProp>
@@ -207,8 +197,6 @@ if(WDS.browser.findElements(org.openqa.selenium.By.id(&quot;nprogress&quot;)).si
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));}
 
 WDS.browser.findElement(pkg.By.xpath(&quot;//img[@alt=&apos;New Business&apos;]&quot;)).click();
-
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
 WDS.sampleResult.sampleEnd();</stringProp>
               <stringProp name="WebDriverSampler.parameters"></stringProp>
@@ -242,7 +230,6 @@ var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSecond
 
 WDS.sampleResult.sampleStart();
 
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 wait.until(ui.ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.id(&quot;firstname&quot;)));
 
 WDS.browser.findElement(pkg.By.id(&quot;firstname&quot;)).sendKeys(&quot;${firstName}&quot;);
@@ -256,13 +243,14 @@ WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.b
 
 
 WDS.browser.findElement(pkg.By.id(&quot;streetname&quot;)).sendKeys(&quot;${streetAddress}&quot;);
-java.lang.Thread.sleep(100);
+java.lang.Thread.sleep(1000);//wait to get date get picked automatically
 //WDS.browser.findElement(pkg.By.id(&quot;policyeffectivedate&quot;)).sendKeys(&quot;${currentDate}&quot;);//dd-mm date
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-authorizationforreports-0&apos;]&quot;)));
 
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//label[@for=&apos;radio-authorizationforinsurancecreditscore-0&apos;]&quot;)));
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
-java.lang.Thread.sleep(500);
+java.lang.Thread.sleep(500);//wait for country field to located
+WDS.browser.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,  WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)));
 WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)).click();
 //WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.xpath(&quot;//div[@class=&apos; css-1xc3v61-indicatorContainer&apos;]&quot;)));
 
@@ -339,12 +327,11 @@ var selectAccidentWithViolation = new ui.Select(WDS.browser.findElement(pkg.By.i
 selectAccidentWithViolation.selectByValue(&quot;${__V(accidentWithViolationDriver${counter})}&quot;);
 java.lang.Thread.sleep(500);//to click submit violation button
 
-WDS.browser.findElement(pkg.By.id(&quot;submitsetViolationForm&quot;)).click();
+//WDS.browser.findElement(pkg.By.id(&quot;submitsetViolationForm&quot;)).click();
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;submitsetViolationForm&quot;)));
 }
 
 WDS.browser.findElement(pkg.By.id(&quot;btnnext&quot;)).click();
-
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
 
 WDS.sampleResult.sampleEnd();</stringProp>
                 <stringProp name="WebDriverSampler.parameters"></stringProp>
@@ -651,8 +638,7 @@ WDS.browser.findElement(pkg.By.id(&quot;fileupload&quot;)).sendKeys([&quot;/home
 
 WDS.browser.findElement(pkg.By.id(&quot;submitManualUpload&quot;)).click();
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
-//
-//wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;Document Uploaded Successfully&apos;]&quot;))));
+
 
 WDS.sampleResult.sampleEnd();
 </stringProp>
@@ -701,7 +687,8 @@ var ui = JavaImporter(org.openqa.selenium.support.ui);
 var wait = new support_ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(10));
 
 WDS.sampleResult.sampleStart();
-
+wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.xpath(&quot;//div[text()=&apos;Document Uploaded Successfully&apos;]&quot;))));
+java.lang.Thread.sleep(1000);//wait to capture policy number
 WDS.browser.executeScript(&quot;arguments[0].click();&quot;, WDS.browser.findElement(pkg.By.id(&quot;logout&quot;)));
 
 wait.until(ui.ExpectedConditions.invisibilityOf(WDS.browser.findElement(pkg.By.id(&quot;nprogress&quot;))));
